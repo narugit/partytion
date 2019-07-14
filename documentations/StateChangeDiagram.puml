@@ -1,0 +1,41 @@
+@startuml
+
+title 状態遷移図
+skinparam shadowing false
+
+
+state load as "ロード画面" 
+state home as "ホーム画面" 
+    home : 使い方ボタン
+    home : スタートボタン
+
+state howTo as "HowTo画面"
+    howTo : 次へボタン
+    howTo : 前へボタン
+    howTo : ホームボタン
+
+state players as "プレイヤー数入力画面"
+state question as "質問入力画面"
+    question : ジャンル選択
+    question : 質問入力フォーム
+
+state answer as "回答画面"
+    answer : Yesボタン
+    answer : Noボタン
+
+state result as "結果発表画面"
+    result : ホームボタン
+
+[*] --> load : アプリ起動
+load --> home : ロード完了
+home --> howTo : 使い方ボタンタップ
+howTo --> home : ホームボタンタップ
+howTo --> howTo : 次へ or 前へボタンタップ
+home --> players : スタートボタンタップ
+players --> question : 入力完了
+question --> answer : 入力完了
+answer --> answer : Yes or Noボタンタップ（全員入力完了まで）
+answer --> result : 全員入力完了
+result --> home : ホームボタンタップ
+
+@enduml
