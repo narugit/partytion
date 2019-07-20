@@ -14,10 +14,10 @@ state howTo as "HowTo画面"
 state players as "プレイヤー数入力画面"
     players : プレイヤー数入力フォーム
     players : 次へボタン
+    players : How Toボタン
 
 state question as "質問入力画面"
     question : ジャンル選択
-    question : 質問入力フォーム
     question : スタートボタン
 
 state answer as "回答画面"
@@ -29,9 +29,11 @@ state result as "結果発表画面"
     result : 同じ人数でプレイボタン
 
 [*] --> load : アプリ起動
-load --> howTo : ロード完了
+load --> howTo : ロード完了（初回のみ）
 howTo --> howTo : 次へ or 前へボタンタップ
+load --> players : ロード完了（2回目以降）
 howTo --> players : プレイボタンタップ
+players --> howTo : How Toボタンタップ
 players --> question : フォーム入力後、次へボタンタップ
 question --> answer : 各フォーム入力後、スタートボタンタップ
 answer --> answer : Yes or Noボタンタップ（全員回答完了まで）
