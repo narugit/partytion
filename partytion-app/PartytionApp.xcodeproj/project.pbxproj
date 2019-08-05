@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		27264E9D22F8434100839EBA /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27264E9C22F8434100839EBA /* SplashViewController.swift */; };
 		27264EA122F844EF00839EBA /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27264EA022F844EF00839EBA /* SplashScreen.storyboard */; };
+		27264EA422F850DF00839EBA /* BeerBubbles.json in Resources */ = {isa = PBXBuildFile; fileRef = 27264EA322F850DF00839EBA /* BeerBubbles.json */; };
+		27264EAC22F8533800839EBA /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27264EA722F8521B00839EBA /* Lottie.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		27264EAD22F854AA00839EBA /* Lottie.framework in Resources */ = {isa = PBXBuildFile; fileRef = 27264EA722F8521B00839EBA /* Lottie.framework */; };
+		27264EAF22F855D700839EBA /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27264EA722F8521B00839EBA /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2778398122E5E108009F5C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778398022E5E108009F5C61 /* AppDelegate.swift */; };
 		2778398322E5E108009F5C61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778398222E5E108009F5C61 /* ViewController.swift */; };
 		2778398622E5E108009F5C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2778398422E5E108009F5C61 /* Main.storyboard */; };
@@ -35,9 +39,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		27264EB022F855D700839EBA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				27264EAF22F855D700839EBA /* Lottie.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		27264E9C22F8434100839EBA /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		27264EA022F844EF00839EBA /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
+		27264EA222F84EE400839EBA /* Partytion-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Partytion-Bridging-Header.h"; sourceTree = "<group>"; };
+		27264EA322F850DF00839EBA /* BeerBubbles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BeerBubbles.json; sourceTree = "<group>"; };
+		27264EA722F8521B00839EBA /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		2778397D22E5E108009F5C61 /* PartytionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartytionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2778398022E5E108009F5C61 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2778398222E5E108009F5C61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27264EAC22F8533800839EBA /* Lottie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,13 +127,31 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		27264EA522F850E600839EBA /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				27264EA322F850DF00839EBA /* BeerBubbles.json */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		27264EA622F8521A00839EBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27264EA722F8521B00839EBA /* Lottie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2778397422E5E108009F5C61 = {
 			isa = PBXGroup;
 			children = (
+				27264EA222F84EE400839EBA /* Partytion-Bridging-Header.h */,
 				2778397F22E5E108009F5C61 /* PartytionApp */,
 				2778399422E5E109009F5C61 /* PartytionAppTests */,
 				2778399F22E5E109009F5C61 /* PartytionAppUITests */,
 				2778397E22E5E108009F5C61 /* Products */,
+				27264EA622F8521A00839EBA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +168,7 @@
 		2778397F22E5E108009F5C61 /* PartytionApp */ = {
 			isa = PBXGroup;
 			children = (
+				27264EA522F850E600839EBA /* assets */,
 				2778398022E5E108009F5C61 /* AppDelegate.swift */,
 				27264E9922F83FE100839EBA /* Presentation */,
 				2778398722E5E109009F5C61 /* Assets.xcassets */,
@@ -165,6 +206,7 @@
 				2778397922E5E108009F5C61 /* Sources */,
 				2778397A22E5E108009F5C61 /* Frameworks */,
 				2778397B22E5E108009F5C61 /* Resources */,
+				27264EB022F855D700839EBA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,8 +301,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27264EAD22F854AA00839EBA /* Lottie.framework in Resources */,
 				2778398B22E5E109009F5C61 /* LaunchScreen.storyboard in Resources */,
 				2778398822E5E109009F5C61 /* Assets.xcassets in Resources */,
+				27264EA422F850DF00839EBA /* BeerBubbles.json in Resources */,
 				27264EA122F844EF00839EBA /* SplashScreen.storyboard in Resources */,
 				2778398622E5E108009F5C61 /* Main.storyboard in Resources */,
 			);
@@ -379,6 +423,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -440,6 +485,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -465,7 +511,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/PartytionApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -474,6 +525,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = naruhiyo.PartytionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT)/Partytion-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -484,7 +536,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/PartytionApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -493,6 +550,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = naruhiyo.PartytionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT)/Partytion-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
