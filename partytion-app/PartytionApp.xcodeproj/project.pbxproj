@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27264E9822F83F9F00839EBA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27264E9722F83F9F00839EBA /* Default-568h@2x.png */; };
 		2778398122E5E108009F5C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778398022E5E108009F5C61 /* AppDelegate.swift */; };
 		2778398322E5E108009F5C61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778398222E5E108009F5C61 /* ViewController.swift */; };
 		2778398622E5E108009F5C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2778398422E5E108009F5C61 /* Main.storyboard */; };
@@ -34,17 +35,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2778397D22E5E108009F5C61 /* partytion-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "partytion-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27264E9722F83F9F00839EBA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		2778397D22E5E108009F5C61 /* PartytionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartytionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2778398022E5E108009F5C61 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2778398222E5E108009F5C61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2778398522E5E108009F5C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2778398722E5E109009F5C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2778398A22E5E109009F5C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2778398C22E5E109009F5C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2778399122E5E109009F5C61 /* partytion-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "partytion-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2778399122E5E109009F5C61 /* PartytionAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PartytionAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2778399522E5E109009F5C61 /* partytion_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = partytion_appTests.swift; sourceTree = "<group>"; };
 		2778399722E5E109009F5C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2778399C22E5E109009F5C61 /* partytion-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "partytion-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2778399C22E5E109009F5C61 /* PartytionAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PartytionAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		277839A022E5E109009F5C61 /* partytion_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = partytion_appUITests.swift; sourceTree = "<group>"; };
 		277839A222E5E109009F5C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,9 +79,10 @@
 		2778397422E5E108009F5C61 = {
 			isa = PBXGroup;
 			children = (
-				2778397F22E5E108009F5C61 /* partytion-app */,
-				2778399422E5E109009F5C61 /* partytion-appTests */,
-				2778399F22E5E109009F5C61 /* partytion-appUITests */,
+				27264E9722F83F9F00839EBA /* Default-568h@2x.png */,
+				2778397F22E5E108009F5C61 /* PartytionApp */,
+				2778399422E5E109009F5C61 /* PartytionAppTests */,
+				2778399F22E5E109009F5C61 /* PartytionAppUITests */,
 				2778397E22E5E108009F5C61 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,14 +90,14 @@
 		2778397E22E5E108009F5C61 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2778397D22E5E108009F5C61 /* partytion-app.app */,
-				2778399122E5E109009F5C61 /* partytion-appTests.xctest */,
-				2778399C22E5E109009F5C61 /* partytion-appUITests.xctest */,
+				2778397D22E5E108009F5C61 /* PartytionApp.app */,
+				2778399122E5E109009F5C61 /* PartytionAppTests.xctest */,
+				2778399C22E5E109009F5C61 /* PartytionAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2778397F22E5E108009F5C61 /* partytion-app */ = {
+		2778397F22E5E108009F5C61 /* PartytionApp */ = {
 			isa = PBXGroup;
 			children = (
 				2778398022E5E108009F5C61 /* AppDelegate.swift */,
@@ -104,33 +107,33 @@
 				2778398922E5E109009F5C61 /* LaunchScreen.storyboard */,
 				2778398C22E5E109009F5C61 /* Info.plist */,
 			);
-			path = "partytion-app";
+			path = PartytionApp;
 			sourceTree = "<group>";
 		};
-		2778399422E5E109009F5C61 /* partytion-appTests */ = {
+		2778399422E5E109009F5C61 /* PartytionAppTests */ = {
 			isa = PBXGroup;
 			children = (
 				2778399522E5E109009F5C61 /* partytion_appTests.swift */,
 				2778399722E5E109009F5C61 /* Info.plist */,
 			);
-			path = "partytion-appTests";
+			path = PartytionAppTests;
 			sourceTree = "<group>";
 		};
-		2778399F22E5E109009F5C61 /* partytion-appUITests */ = {
+		2778399F22E5E109009F5C61 /* PartytionAppUITests */ = {
 			isa = PBXGroup;
 			children = (
 				277839A022E5E109009F5C61 /* partytion_appUITests.swift */,
 				277839A222E5E109009F5C61 /* Info.plist */,
 			);
-			path = "partytion-appUITests";
+			path = PartytionAppUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2778397C22E5E108009F5C61 /* partytion-app */ = {
+		2778397C22E5E108009F5C61 /* PartytionApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 277839A522E5E109009F5C61 /* Build configuration list for PBXNativeTarget "partytion-app" */;
+			buildConfigurationList = 277839A522E5E109009F5C61 /* Build configuration list for PBXNativeTarget "PartytionApp" */;
 			buildPhases = (
 				2778397922E5E108009F5C61 /* Sources */,
 				2778397A22E5E108009F5C61 /* Frameworks */,
@@ -140,14 +143,14 @@
 			);
 			dependencies = (
 			);
-			name = "partytion-app";
+			name = PartytionApp;
 			productName = "partytion-app";
-			productReference = 2778397D22E5E108009F5C61 /* partytion-app.app */;
+			productReference = 2778397D22E5E108009F5C61 /* PartytionApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2778399022E5E109009F5C61 /* partytion-appTests */ = {
+		2778399022E5E109009F5C61 /* PartytionAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 277839A822E5E109009F5C61 /* Build configuration list for PBXNativeTarget "partytion-appTests" */;
+			buildConfigurationList = 277839A822E5E109009F5C61 /* Build configuration list for PBXNativeTarget "PartytionAppTests" */;
 			buildPhases = (
 				2778398D22E5E109009F5C61 /* Sources */,
 				2778398E22E5E109009F5C61 /* Frameworks */,
@@ -158,14 +161,14 @@
 			dependencies = (
 				2778399322E5E109009F5C61 /* PBXTargetDependency */,
 			);
-			name = "partytion-appTests";
+			name = PartytionAppTests;
 			productName = "partytion-appTests";
-			productReference = 2778399122E5E109009F5C61 /* partytion-appTests.xctest */;
+			productReference = 2778399122E5E109009F5C61 /* PartytionAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2778399B22E5E109009F5C61 /* partytion-appUITests */ = {
+		2778399B22E5E109009F5C61 /* PartytionAppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 277839AB22E5E109009F5C61 /* Build configuration list for PBXNativeTarget "partytion-appUITests" */;
+			buildConfigurationList = 277839AB22E5E109009F5C61 /* Build configuration list for PBXNativeTarget "PartytionAppUITests" */;
 			buildPhases = (
 				2778399822E5E109009F5C61 /* Sources */,
 				2778399922E5E109009F5C61 /* Frameworks */,
@@ -176,9 +179,9 @@
 			dependencies = (
 				2778399E22E5E109009F5C61 /* PBXTargetDependency */,
 			);
-			name = "partytion-appUITests";
+			name = PartytionAppUITests;
 			productName = "partytion-appUITests";
-			productReference = 2778399C22E5E109009F5C61 /* partytion-appUITests.xctest */;
+			productReference = 2778399C22E5E109009F5C61 /* PartytionAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -204,7 +207,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2778397822E5E108009F5C61 /* Build configuration list for PBXProject "partytion-app" */;
+			buildConfigurationList = 2778397822E5E108009F5C61 /* Build configuration list for PBXProject "PartytionApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -217,9 +220,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2778397C22E5E108009F5C61 /* partytion-app */,
-				2778399022E5E109009F5C61 /* partytion-appTests */,
-				2778399B22E5E109009F5C61 /* partytion-appUITests */,
+				2778397C22E5E108009F5C61 /* PartytionApp */,
+				2778399022E5E109009F5C61 /* PartytionAppTests */,
+				2778399B22E5E109009F5C61 /* PartytionAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2778398B22E5E109009F5C61 /* LaunchScreen.storyboard in Resources */,
+				27264E9822F83F9F00839EBA /* Default-568h@2x.png in Resources */,
 				2778398822E5E109009F5C61 /* Assets.xcassets in Resources */,
 				2778398622E5E108009F5C61 /* Main.storyboard in Resources */,
 			);
@@ -282,12 +286,12 @@
 /* Begin PBXTargetDependency section */
 		2778399322E5E109009F5C61 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2778397C22E5E108009F5C61 /* partytion-app */;
+			target = 2778397C22E5E108009F5C61 /* PartytionApp */;
 			targetProxy = 2778399222E5E109009F5C61 /* PBXContainerItemProxy */;
 		};
 		2778399E22E5E109009F5C61 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2778397C22E5E108009F5C61 /* partytion-app */;
+			target = 2778397C22E5E108009F5C61 /* PartytionApp */;
 			targetProxy = 2778399D22E5E109009F5C61 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -432,14 +436,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "partytion-app/Info.plist";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/PartytionApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "naruhiyo.partytion-app";
+				PRODUCT_BUNDLE_IDENTIFIER = naruhiyo.PartytionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -449,14 +455,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "partytion-app/Info.plist";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/PartytionApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "naruhiyo.partytion-app";
+				PRODUCT_BUNDLE_IDENTIFIER = naruhiyo.PartytionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -478,7 +486,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/partytion-app.app/partytion-app";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PartytionApp.app/PartytionApp";
 			};
 			name = Debug;
 		};
@@ -498,7 +506,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/partytion-app.app/partytion-app";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PartytionApp.app/PartytionApp";
 			};
 			name = Release;
 		};
@@ -543,7 +551,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2778397822E5E108009F5C61 /* Build configuration list for PBXProject "partytion-app" */ = {
+		2778397822E5E108009F5C61 /* Build configuration list for PBXProject "PartytionApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				277839A322E5E109009F5C61 /* Debug */,
@@ -552,7 +560,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		277839A522E5E109009F5C61 /* Build configuration list for PBXNativeTarget "partytion-app" */ = {
+		277839A522E5E109009F5C61 /* Build configuration list for PBXNativeTarget "PartytionApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				277839A622E5E109009F5C61 /* Debug */,
@@ -561,7 +569,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		277839A822E5E109009F5C61 /* Build configuration list for PBXNativeTarget "partytion-appTests" */ = {
+		277839A822E5E109009F5C61 /* Build configuration list for PBXNativeTarget "PartytionAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				277839A922E5E109009F5C61 /* Debug */,
@@ -570,7 +578,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		277839AB22E5E109009F5C61 /* Build configuration list for PBXNativeTarget "partytion-appUITests" */ = {
+		277839AB22E5E109009F5C61 /* Build configuration list for PBXNativeTarget "PartytionAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				277839AC22E5E109009F5C61 /* Debug */,
