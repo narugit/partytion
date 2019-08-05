@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27264E9822F83F9F00839EBA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27264E9722F83F9F00839EBA /* Default-568h@2x.png */; };
+		27264E9D22F8434100839EBA /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27264E9C22F8434100839EBA /* SplashViewController.swift */; };
+		27264EA122F844EF00839EBA /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27264EA022F844EF00839EBA /* SplashScreen.storyboard */; };
 		2778398122E5E108009F5C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778398022E5E108009F5C61 /* AppDelegate.swift */; };
 		2778398322E5E108009F5C61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778398222E5E108009F5C61 /* ViewController.swift */; };
 		2778398622E5E108009F5C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2778398422E5E108009F5C61 /* Main.storyboard */; };
@@ -35,7 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		27264E9722F83F9F00839EBA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		27264E9C22F8434100839EBA /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		27264EA022F844EF00839EBA /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 		2778397D22E5E108009F5C61 /* PartytionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartytionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2778398022E5E108009F5C61 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2778398222E5E108009F5C61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,17 +81,33 @@
 		27264E9922F83FE100839EBA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				2778398022E5E108009F5C61 /* AppDelegate.swift */,
-				2778398222E5E108009F5C61 /* ViewController.swift */,
-				2778398422E5E108009F5C61 /* Main.storyboard */,
+				27264E9B22F840FB00839EBA /* Presenter */,
+				27264E9A22F840E700839EBA /* View */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		27264E9A22F840E700839EBA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				27264E9C22F8434100839EBA /* SplashViewController.swift */,
+				2778398222E5E108009F5C61 /* ViewController.swift */,
+				2778398422E5E108009F5C61 /* Main.storyboard */,
+				27264EA022F844EF00839EBA /* SplashScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		27264E9B22F840FB00839EBA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		2778397422E5E108009F5C61 = {
 			isa = PBXGroup;
 			children = (
-				27264E9722F83F9F00839EBA /* Default-568h@2x.png */,
 				2778397F22E5E108009F5C61 /* PartytionApp */,
 				2778399422E5E109009F5C61 /* PartytionAppTests */,
 				2778399F22E5E109009F5C61 /* PartytionAppUITests */,
@@ -110,6 +128,7 @@
 		2778397F22E5E108009F5C61 /* PartytionApp */ = {
 			isa = PBXGroup;
 			children = (
+				2778398022E5E108009F5C61 /* AppDelegate.swift */,
 				27264E9922F83FE100839EBA /* Presentation */,
 				2778398722E5E109009F5C61 /* Assets.xcassets */,
 				2778398922E5E109009F5C61 /* LaunchScreen.storyboard */,
@@ -241,8 +260,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2778398B22E5E109009F5C61 /* LaunchScreen.storyboard in Resources */,
-				27264E9822F83F9F00839EBA /* Default-568h@2x.png in Resources */,
 				2778398822E5E109009F5C61 /* Assets.xcassets in Resources */,
+				27264EA122F844EF00839EBA /* SplashScreen.storyboard in Resources */,
 				2778398622E5E108009F5C61 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27264E9D22F8434100839EBA /* SplashViewController.swift in Sources */,
 				2778398322E5E108009F5C61 /* ViewController.swift in Sources */,
 				2778398122E5E108009F5C61 /* AppDelegate.swift in Sources */,
 			);
