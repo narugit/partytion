@@ -27,17 +27,17 @@ class SplashViewController: UIViewController {
         //     - 3.5秒を設定
         Timer.scheduledTimer(timeInterval: 3.5,
                              target: self,
-                             selector: #selector(self.moveMainScreen),
+                             selector: #selector(self.moveHowToScreen),
                              userInfo: nil,
                              repeats: false)
 
     }
     
-    // メイン画面への移行
-    @objc private func moveMainScreen() {
-        let mainStoryboard :UIStoryboard = UIStoryboard(name: "MainScreen", bundle: nil)
-        let mainScreen :UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "MainViewController")
-        present(mainScreen, animated: true, completion: nil)
+    // How To画面への移行
+    @objc private func moveHowToScreen() {
+        let howToStoryboard :UIStoryboard = UIStoryboard(name: "HowToScreen", bundle: nil)
+        let howToScreen :UIViewController = howToStoryboard.instantiateViewController(withIdentifier: "HowToViewController")
+        present(howToScreen, animated: true, completion: nil)
     }
     
     private func showAnimation() {
