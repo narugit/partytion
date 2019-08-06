@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="juP-BT-HCf">
-                                <rect key="frame" x="20" y="337.5" width="374" height="221"/>
+                                <rect key="frame" x="20" y="297.5" width="374" height="301.5"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yZc-zk-NB4">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="191"/>
@@ -39,11 +39,25 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xa3-5g-ebb">
                                         <rect key="frame" x="0.0" y="191" width="374" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Sample Button"/>
                                         <connections>
                                             <action selector="sampleButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NHZ-Qk-OFn"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fqn-V0-HZN">
+                                        <rect key="frame" x="0.0" y="221" width="374" height="30"/>
+                                        <state key="normal" title="To QuestionScreen (For Debugging)"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdS-tz-1Z7">
+                                        <rect key="frame" x="0.0" y="251" width="374" height="30"/>
+                                        <state key="normal" title="To AnswerScreen (For Debugging)"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fqs-xg-LsX">
+                                        <rect key="frame" x="0.0" y="281" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="sample placeholder" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="efE-5W-hmY">
@@ -53,13 +67,6 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fqs-xg-LsX">
-                                <rect key="frame" x="186" y="566" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -71,6 +78,8 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                     <connections>
                         <outlet property="buttonTest" destination="xa3-5g-ebb" id="XTO-aR-0TV"/>
                         <outlet property="labeltest" destination="Fqs-xg-LsX" id="cK5-mA-IQ3"/>
+                        <outlet property="toAnswerButton" destination="WdS-tz-1Z7" id="3JC-ZO-f3N"/>
+                        <outlet property="toQuestionButton" destination="Fqn-V0-HZN" id="43g-6h-FFO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

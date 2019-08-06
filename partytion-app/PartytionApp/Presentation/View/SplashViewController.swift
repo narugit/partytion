@@ -35,9 +35,9 @@ class SplashViewController: UIViewController {
     
     // メイン画面への移行
     @objc private func moveMainScreen() {
-        let mainStoryboard :UIStoryboard = UIStoryboard(name: "MainScreen", bundle: nil)
-        let mainScreen :UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "MainViewController")
-        present(mainScreen, animated: true, completion: nil)
+        let mainScreen :UIStoryboard = UIStoryboard(name: "MainScreen", bundle: nil)
+        let mainViewController :UIViewController = mainScreen.instantiateViewController(withIdentifier: "MainViewController")
+        present(mainViewController, animated: true, completion: nil)
     }
     
     private func showAnimation() {
