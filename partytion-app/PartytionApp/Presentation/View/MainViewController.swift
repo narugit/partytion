@@ -45,6 +45,9 @@ class MainViewController: UIViewController {
     
     
     @objc func toAnswerScreen(_ sender: UIButton) {
+        let answerScreen :UIStoryboard = UIStoryboard(name: "AnswerScreen", bundle: nil)
+        let answerViewController :UIViewController = answerScreen.instantiateViewController(withIdentifier: "AnswerViewController")
+        present(answerViewController, animated: true, completion: nil)
         print("ボタンの情報: \(sender)")
     }
 }
