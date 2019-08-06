@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     @IBOutlet var labeltest :UILabel!
     @IBOutlet var buttonTest :UIButton!
     var count = 0
