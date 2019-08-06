@@ -9,36 +9,47 @@
 import UIKit
 import Lottie
 
-
 class SplashViewController: UIViewController {
-    var logoImageView: UIImageView!
-    
+    @IBOutlet var animationPanel :UIView!
+    var timer : Timer?
+
+    // プログラムの読み込みが完了
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.view.backgroundColor = UIColor.blue
-        
         showAnimation()
-        //imageView作成
-//        self.logoImageView = UIImageView(frame: CGRectMake(0, 0, 204, 77))
-//        //画面centerに
-//        self.logoImageView.center = self.view.center
-//        //logo設定
-//        self.logoImageView.image = UIImage(named: "logo")
-//        //viewに追加
-//        self.view.addSubview(self.logoImageView)
+    }
+
+    // 画面生成が全て完了している
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
+        // タイマーで画面遷移
+        //     - 3.5秒を設定
+        Timer.scheduledTimer(timeInterval: 3.5,
+                             target: self,
+                             selector: #selector(self.moveMainScreen),
+                             userInfo: nil,
+                             repeats: false)
+
     }
     
-    func showAnimation() {
+    // メイン画面への移行
+    @objc private func moveMainScreen() {
+        let mainStoryboard :UIStoryboard = UIStoryboard(name: "MainScreen", bundle: nil)
+        let mainScreen :UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "MainViewController")
+        present(mainScreen, animated: true, completion: nil)
+    }
+    
+    private func showAnimation() {
         let animationView = AnimationView(name: "BeerBubbles")
-        animationView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
-        animationView.center = self.view.center
+        animationView.frame = CGRect(x: 0, y: 0, width: animationPanel.bounds.width, height: animationPanel.bounds.height)
+        animationView.center = animationPanel.center
         animationView.contentMode = .scaleAspectFit
         animationView.animationSpeed = 1
-        
-        view.addSubview(animationView)
-        
+        animationView.loopMode = LottieLoopMode.playOnce
+
+        animationPanel.addSubview(animationView)
+
         animationView.play()
     }
 
