@@ -11,11 +11,19 @@ import UIKit
 class MainViewController: UIViewController {
     @IBOutlet var labeltest :UILabel!
     @IBOutlet var buttonTest :UIButton!
+    @IBOutlet var toQuestionButton :UIButton!
+    @IBOutlet var toAnswerButton :UIButton!
     var count = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // ボタンを押した時に実行するメソッドを指定
+        toQuestionButton.addTarget(self, action: #selector(toQuestionScreen(_:)), for: UIControl.Event.touchUpInside)
+
+        toAnswerButton.addTarget(self, action: #selector(toAnswerScreen(_:)), for: UIControl.Event.touchUpInside)
+
     }
 
     @IBAction func sampleButtonTapped(_ sender : Any) {
@@ -26,6 +34,18 @@ class MainViewController: UIViewController {
         else{
             labeltest?.text = "tapped ! hogehoge"
         }
+    }
+    
+    @objc func toQuestionScreen(_ sender: UIButton) {
+        let questionScreen :UIStoryboard = UIStoryboard(name: "QuestionScreen", bundle: nil)
+        let questionViewController :UIViewController = questionScreen.instantiateViewController(withIdentifier: "QuestionViewController")
+        present(questionViewController, animated: true, completion: nil)
+        print("ボタンの情報: \(sender)")
+    }
+    
+    
+    @objc func toAnswerScreen(_ sender: UIButton) {
+        print("ボタンの情報: \(sender)")
     }
 }
 
