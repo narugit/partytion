@@ -22,6 +22,8 @@
 		277839A122E5E109009F5C61 /* partytion_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277839A022E5E109009F5C61 /* partytion_appUITests.swift */; };
 		27CEAAEB22F99CE9004C864B /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CEAAEA22F99CE9004C864B /* QuestionViewController.swift */; };
 		27CEAAED22F99D05004C864B /* QuestionScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CEAAEC22F99D05004C864B /* QuestionScreen.storyboard */; };
+		27CEAAEF22F9A324004C864B /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CEAAEE22F9A324004C864B /* AnswerViewController.swift */; };
+		27CEAAF122F9A338004C864B /* AnswerScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CEAAF022F9A338004C864B /* AnswerScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		277839A222E5E109009F5C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27CEAAEA22F99CE9004C864B /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		27CEAAEC22F99D05004C864B /* QuestionScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuestionScreen.storyboard; sourceTree = "<group>"; };
+		27CEAAEE22F9A324004C864B /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		27CEAAF022F9A338004C864B /* AnswerScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnswerScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 				27264EA022F844EF00839EBA /* SplashScreen.storyboard */,
 				27CEAAEA22F99CE9004C864B /* QuestionViewController.swift */,
 				27CEAAEC22F99D05004C864B /* QuestionScreen.storyboard */,
+				27CEAAEE22F9A324004C864B /* AnswerViewController.swift */,
+				27CEAAF022F9A338004C864B /* AnswerScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -313,6 +319,7 @@
 				27264EA422F850DF00839EBA /* BeerBubbles.json in Resources */,
 				27264EA122F844EF00839EBA /* SplashScreen.storyboard in Resources */,
 				27CEAAED22F99D05004C864B /* QuestionScreen.storyboard in Resources */,
+				27CEAAF122F9A338004C864B /* AnswerScreen.storyboard in Resources */,
 				2778398622E5E108009F5C61 /* MainScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +347,7 @@
 			files = (
 				27264E9D22F8434100839EBA /* SplashViewController.swift in Sources */,
 				2778398322E5E108009F5C61 /* MainViewController.swift in Sources */,
+				27CEAAEF22F9A324004C864B /* AnswerViewController.swift in Sources */,
 				27CEAAEB22F99CE9004C864B /* QuestionViewController.swift in Sources */,
 				2778398122E5E108009F5C61 /* AppDelegate.swift in Sources */,
 			);
