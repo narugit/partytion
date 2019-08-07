@@ -24,6 +24,10 @@
 		27CEAAED22F99D05004C864B /* QuestionScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CEAAEC22F99D05004C864B /* QuestionScreen.storyboard */; };
 		27CEAAEF22F9A324004C864B /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CEAAEE22F9A324004C864B /* AnswerViewController.swift */; };
 		27CEAAF122F9A338004C864B /* AnswerScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CEAAF022F9A338004C864B /* AnswerScreen.storyboard */; };
+		43D5114522FA7D8B00C3D89C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5114422FA7D8B00C3D89C /* ResultViewController.swift */; };
+		43D5114722FA7DC600C3D89C /* ResultScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D5114622FA7DC600C3D89C /* ResultScreen.storyboard */; };
+		43D5114922FA7FF200C3D89C /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D5114822FA7FF200C3D89C /* Charts.framework */; };
+		43D5114A22FA7FF200C3D89C /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43D5114822FA7FF200C3D89C /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				27264EAF22F855D700839EBA /* Lottie.framework in Embed Frameworks */,
+				43D5114A22FA7FF200C3D89C /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +85,9 @@
 		27CEAAEC22F99D05004C864B /* QuestionScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuestionScreen.storyboard; sourceTree = "<group>"; };
 		27CEAAEE22F9A324004C864B /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		27CEAAF022F9A338004C864B /* AnswerScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnswerScreen.storyboard; sourceTree = "<group>"; };
+		43D5114422FA7D8B00C3D89C /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		43D5114622FA7DC600C3D89C /* ResultScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultScreen.storyboard; sourceTree = "<group>"; };
+		43D5114822FA7FF200C3D89C /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27264EAC22F8533800839EBA /* Lottie.framework in Frameworks */,
+				43D5114922FA7FF200C3D89C /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +137,8 @@
 				27CEAAEC22F99D05004C864B /* QuestionScreen.storyboard */,
 				27CEAAEE22F9A324004C864B /* AnswerViewController.swift */,
 				27CEAAF022F9A338004C864B /* AnswerScreen.storyboard */,
+				43D5114422FA7D8B00C3D89C /* ResultViewController.swift */,
+				43D5114622FA7DC600C3D89C /* ResultScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -158,6 +169,7 @@
 		2778397422E5E108009F5C61 = {
 			isa = PBXGroup;
 			children = (
+				43D5114822FA7FF200C3D89C /* Charts.framework */,
 				27264EA222F84EE400839EBA /* Partytion-Bridging-Header.h */,
 				2778397F22E5E108009F5C61 /* PartytionApp */,
 				2778399422E5E109009F5C61 /* PartytionAppTests */,
@@ -219,6 +231,7 @@
 				2778397A22E5E108009F5C61 /* Frameworks */,
 				2778397B22E5E108009F5C61 /* Resources */,
 				27264EB022F855D700839EBA /* Embed Frameworks */,
+				43D5114B22FA819E00C3D89C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -314,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27264EAD22F854AA00839EBA /* Lottie.framework in Resources */,
+				43D5114722FA7DC600C3D89C /* ResultScreen.storyboard in Resources */,
 				2778398B22E5E109009F5C61 /* LaunchScreen.storyboard in Resources */,
 				2778398822E5E109009F5C61 /* Assets.xcassets in Resources */,
 				27264EA422F850DF00839EBA /* BeerBubbles.json in Resources */,
@@ -340,6 +354,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		43D5114B22FA819E00C3D89C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Charts.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2778397922E5E108009F5C61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -350,6 +385,7 @@
 				27CEAAEF22F9A324004C864B /* AnswerViewController.swift in Sources */,
 				27CEAAEB22F99CE9004C864B /* QuestionViewController.swift in Sources */,
 				2778398122E5E108009F5C61 /* AppDelegate.swift in Sources */,
+				43D5114522FA7D8B00C3D89C /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

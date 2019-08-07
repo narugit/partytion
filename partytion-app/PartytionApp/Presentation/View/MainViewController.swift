@@ -13,6 +13,7 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonTest :UIButton!
     @IBOutlet var toQuestionButton :UIButton!
     @IBOutlet var toAnswerButton :UIButton!
+    @IBOutlet var toResultButton: UIButton!
     var count = 0
 
     override func viewDidLoad() {
@@ -49,6 +50,12 @@ class MainViewController: UIViewController {
         let answerViewController :UIViewController = answerScreen.instantiateViewController(withIdentifier: "AnswerViewController")
         present(answerViewController, animated: true, completion: nil)
         print("ボタンの情報: \(sender)")
+    }
+    
+    @IBAction func toResultScreen(_ sender: Any) {
+        let resultScreen :UIStoryboard = UIStoryboard(name: "ResultScreen", bundle: nil)
+        let resultViewController :UIViewController = resultScreen.instantiateViewController(withIdentifier: "ResultViewController")
+        present(resultViewController, animated: true, completion: nil)
     }
 }
 
