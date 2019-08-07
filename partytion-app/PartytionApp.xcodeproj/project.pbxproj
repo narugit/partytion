@@ -20,6 +20,10 @@
 		2778398B22E5E109009F5C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2778398922E5E109009F5C61 /* LaunchScreen.storyboard */; };
 		2778399622E5E109009F5C61 /* partytion_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778399522E5E109009F5C61 /* partytion_appTests.swift */; };
 		277839A122E5E109009F5C61 /* partytion_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277839A022E5E109009F5C61 /* partytion_appUITests.swift */; };
+		4376139D22F9A2340011B4E8 /* HowToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4376139C22F9A2340011B4E8 /* HowToViewController.swift */; };
+		4376139F22F9A33D0011B4E8 /* HowToScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4376139E22F9A33D0011B4E8 /* HowToScreen.storyboard */; };
+		437613A122F9B2B80011B4E8 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437613A022F9B2B80011B4E8 /* PlayerViewController.swift */; };
+		437613A322F9B3100011B4E8 /* PlayerScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 437613A222F9B3100011B4E8 /* PlayerScreen.storyboard */; };
 		27CEAAEB22F99CE9004C864B /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CEAAEA22F99CE9004C864B /* QuestionViewController.swift */; };
 		27CEAAED22F99D05004C864B /* QuestionScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CEAAEC22F99D05004C864B /* QuestionScreen.storyboard */; };
 		27CEAAEF22F9A324004C864B /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CEAAEE22F9A324004C864B /* AnswerViewController.swift */; };
@@ -81,6 +85,10 @@
 		2778399C22E5E109009F5C61 /* PartytionAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PartytionAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		277839A022E5E109009F5C61 /* partytion_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = partytion_appUITests.swift; sourceTree = "<group>"; };
 		277839A222E5E109009F5C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4376139C22F9A2340011B4E8 /* HowToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToViewController.swift; sourceTree = "<group>"; };
+		4376139E22F9A33D0011B4E8 /* HowToScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HowToScreen.storyboard; sourceTree = "<group>"; };
+		437613A022F9B2B80011B4E8 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		437613A222F9B3100011B4E8 /* PlayerScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayerScreen.storyboard; sourceTree = "<group>"; };
 		27CEAAEA22F99CE9004C864B /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		27CEAAEC22F99D05004C864B /* QuestionScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuestionScreen.storyboard; sourceTree = "<group>"; };
 		27CEAAEE22F9A324004C864B /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +141,10 @@
 				2778398222E5E108009F5C61 /* MainViewController.swift */,
 				2778398422E5E108009F5C61 /* MainScreen.storyboard */,
 				27264EA022F844EF00839EBA /* SplashScreen.storyboard */,
+				4376139C22F9A2340011B4E8 /* HowToViewController.swift */,
+				4376139E22F9A33D0011B4E8 /* HowToScreen.storyboard */,
+				437613A022F9B2B80011B4E8 /* PlayerViewController.swift */,
+				437613A222F9B3100011B4E8 /* PlayerScreen.storyboard */,
 				27CEAAEA22F99CE9004C864B /* QuestionViewController.swift */,
 				27CEAAEC22F99D05004C864B /* QuestionScreen.storyboard */,
 				27CEAAEE22F9A324004C864B /* AnswerViewController.swift */,
@@ -330,8 +342,10 @@
 				43D5114722FA7DC600C3D89C /* ResultScreen.storyboard in Resources */,
 				2778398B22E5E109009F5C61 /* LaunchScreen.storyboard in Resources */,
 				2778398822E5E109009F5C61 /* Assets.xcassets in Resources */,
+				437613A322F9B3100011B4E8 /* PlayerScreen.storyboard in Resources */,
 				27264EA422F850DF00839EBA /* BeerBubbles.json in Resources */,
 				27264EA122F844EF00839EBA /* SplashScreen.storyboard in Resources */,
+				4376139F22F9A33D0011B4E8 /* HowToScreen.storyboard in Resources */,
 				27CEAAED22F99D05004C864B /* QuestionScreen.storyboard in Resources */,
 				27CEAAF122F9A338004C864B /* AnswerScreen.storyboard in Resources */,
 				2778398622E5E108009F5C61 /* MainScreen.storyboard in Resources */,
@@ -380,11 +394,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4376139D22F9A2340011B4E8 /* HowToViewController.swift in Sources */,
 				27264E9D22F8434100839EBA /* SplashViewController.swift in Sources */,
+				437613A522F9BFEA0011B4E8 /* QuestionViewController.swift in Sources */,
 				2778398322E5E108009F5C61 /* MainViewController.swift in Sources */,
 				27CEAAEF22F9A324004C864B /* AnswerViewController.swift in Sources */,
 				27CEAAEB22F99CE9004C864B /* QuestionViewController.swift in Sources */,
 				2778398122E5E108009F5C61 /* AppDelegate.swift in Sources */,
+				437613A122F9B2B80011B4E8 /* PlayerViewController.swift in Sources */,
 				43D5114522FA7D8B00C3D89C /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
