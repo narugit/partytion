@@ -2,7 +2,6 @@
 //  QuestionViewController.swift
 //  PartytionApp
 //
-//  Created by naru on 2019/08/06.
 //  Copyright © 2019 naruhiyo. All rights reserved.
 //
 
@@ -15,7 +14,6 @@ class QuestionViewController: UIViewController {
     // プログラムの読み込みが完了
     override func viewDidLoad() {
         super.viewDidLoad()
-        testText.text = self.playerNumber
+//        testText.text = self.playerNumber
     }
-    
 }
