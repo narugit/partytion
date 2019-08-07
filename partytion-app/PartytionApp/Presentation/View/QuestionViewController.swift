@@ -19,7 +19,7 @@ class QuestionViewController: UIViewController {
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-        self.moveToAnswerScreen()
+        moveToAnswerScreen()
     }
 
     // 質問作成画面への移行

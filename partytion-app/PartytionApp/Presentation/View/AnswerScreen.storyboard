@@ -41,6 +41,9 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="yesButtonTapped:" destination="iaT-Wt-l2e" eventType="touchUpInside" id="C1j-4S-qOu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sW-G5-fAH">
                                 <rect key="frame" x="57" y="491" width="300" height="100"/>
@@ -51,11 +54,18 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="noButtonTapped:" destination="iaT-Wt-l2e" eventType="touchUpInside" id="e2w-xj-v7g"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lAj-7t-2UB"/>
                     </view>
+                    <connections>
+                        <outlet property="noButton" destination="1sW-G5-fAH" id="Auy-lh-P0e"/>
+                        <outlet property="yesButton" destination="MSQ-LK-vkm" id="3WB-oa-6YV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m0p-85-he1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
