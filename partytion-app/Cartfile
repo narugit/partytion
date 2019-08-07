@@ -1,1 +1,2 @@
 github "airbnb/lottie-ios" "master"
+github "danielgindi/Charts" ~> 3.3.0
