@@ -8,26 +8,29 @@
 import UIKit
 
 class QuestionViewController: UIViewController {
-    @IBOutlet var testText: UILabel!
-    @IBOutlet var nextButton: UIButton!
-    var playerNumber: String!
+    @IBOutlet private var questionTheme: UILabel!
+    @IBOutlet private var answerNumbers: UILabel!
+    @IBOutlet private var questionText: UITextField!
+    @IBOutlet private var nextButton: UIButton!
+    
+    public var playerNumber: String = "0"
+    private var presenter: QuestionPresenter!
     
     // プログラムの読み込みが完了
     override func viewDidLoad() {
         super.viewDidLoad()
-//        testText.text = self.playerNumber
+        
+        self.questionText.keyboardType = UIKeyboardType.phonePad
+
+        self.presenter = QuestionPresenter(playerNumber: Int(playerNumber)!)
+        self.answerNumbers.text = "\(presenter.answerPair.0) vs \(presenter.answerPair.1)になるような質問を 考えましょう！"
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-        moveToAnswerScreen()
+        // 質問作成画面への移行
+        self.present(presenter.viewController!,
+                     animated: true,
+                     completion: nil
+        )
     }
-
-    // 質問作成画面への移行
-    private func moveToAnswerScreen() {
-        let answerStoryboard :UIStoryboard = UIStoryboard(name: "AnswerScreen", bundle: nil)
-        let answerViewController :UIViewController = answerStoryboard.instantiateViewController(withIdentifier: "AnswerViewController")
-        
-        present(answerViewController, animated: true, completion: nil)
-    }
-    
 }

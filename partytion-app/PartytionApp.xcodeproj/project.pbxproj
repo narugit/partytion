@@ -13,6 +13,7 @@
 		27264EAC22F8533800839EBA /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27264EA722F8521B00839EBA /* Lottie.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		27264EAD22F854AA00839EBA /* Lottie.framework in Resources */ = {isa = PBXBuildFile; fileRef = 27264EA722F8521B00839EBA /* Lottie.framework */; };
 		27264EAF22F855D700839EBA /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27264EA722F8521B00839EBA /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2737BB57230AD562007E4C2E /* QuestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2737BB56230AD562007E4C2E /* QuestionPresenter.swift */; };
 		2778398122E5E108009F5C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778398022E5E108009F5C61 /* AppDelegate.swift */; };
 		2778398822E5E109009F5C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2778398722E5E109009F5C61 /* Assets.xcassets */; };
 		2778398B22E5E109009F5C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2778398922E5E109009F5C61 /* LaunchScreen.storyboard */; };
@@ -70,6 +71,7 @@
 		27264EA222F84EE400839EBA /* Partytion-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Partytion-Bridging-Header.h"; sourceTree = "<group>"; };
 		27264EA322F850DF00839EBA /* BeerBubbles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BeerBubbles.json; sourceTree = "<group>"; };
 		27264EA722F8521B00839EBA /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
+		2737BB56230AD562007E4C2E /* QuestionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenter.swift; sourceTree = "<group>"; };
 		2778397D22E5E108009F5C61 /* PartytionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartytionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2778398022E5E108009F5C61 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2778398722E5E109009F5C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		27264E9B22F840FB00839EBA /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				2737BB56230AD562007E4C2E /* QuestionPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 			files = (
 				4376139D22F9A2340011B4E8 /* HowToViewController.swift in Sources */,
 				27264E9D22F8434100839EBA /* SplashViewController.swift in Sources */,
+				2737BB57230AD562007E4C2E /* QuestionPresenter.swift in Sources */,
 				27CEAAEF22F9A324004C864B /* AnswerViewController.swift in Sources */,
 				27CEAAEB22F99CE9004C864B /* QuestionViewController.swift in Sources */,
 				2778398122E5E108009F5C61 /* AppDelegate.swift in Sources */,
