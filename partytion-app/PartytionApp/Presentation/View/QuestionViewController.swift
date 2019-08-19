@@ -9,7 +9,7 @@ import UIKit
 
 class QuestionViewController: UIViewController {
     @IBOutlet private var questionTheme: UILabel!
-    @IBOutlet private var answerNumbers: UILabel!
+    @IBOutlet private var answerNumbers: UITextView!
     @IBOutlet private var questionText: UITextField!
     @IBOutlet private var nextButton: UIButton!
     
@@ -23,6 +23,7 @@ class QuestionViewController: UIViewController {
         self.questionText.keyboardType = UIKeyboardType.phonePad
 
         self.presenter = QuestionPresenter(playerNumber: Int(playerNumber)!)
+        self.questionTheme.text = presenter.theme
         self.answerNumbers.text = "\(presenter.answerPair.0) vs \(presenter.answerPair.1)になるような質問を 考えましょう！"
     }
     
