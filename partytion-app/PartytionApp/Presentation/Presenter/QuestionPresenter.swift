@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class QuestionPresenter: BasePresenter {
     var nextView: String { return "Answer" }
@@ -19,13 +20,16 @@ class QuestionPresenter: BasePresenter {
     private var storyboard: UIStoryboard? = nil
     public private(set) var viewController: UIViewController? = nil
 
+    // For Entity IO
+    private var managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
     init(playerNumber: Int) {
         self.playerNumber = playerNumber
         
         self.answerPair.0 = Int.random(in: 1 ... playerNumber)
         self.answerPair.1 = playerNumber - self.answerPair.0
         
-        self.theme = questionThemes[ Int.random(in: 1 ... questionThemes.count) ]
+        self.theme = questionThemes[ Int.random(in: 0 ... (questionThemes.count-1)) ]
         
         self.setNextViewController()
     }
@@ -33,5 +37,33 @@ class QuestionPresenter: BasePresenter {
     func setNextViewController() -> Void {
         self.storyboard = UIStoryboard(name: "\(nextView)Screen", bundle: nil)
         self.viewController = self.storyboard!.instantiateViewController(withIdentifier: "\(nextView)ViewController")
+    }
+    
+    func registerText(text: String?) {
+        let now = Date()
+        
+        // Get an entity
+        let questions = Questions(context: managedContext)
+        
+        // set attribute
+        questions.players = Int64(playerNumber)
+        questions.theme = theme
+        questions.question = text
+        questions.created_at = now
+        
+        // Save data using by saveContext()
+        if managedContext.hasChanges {
+            do {
+                try managedContext.save()
+                print("data saved")
+
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
+        // sqlite の生成場所が見たい時は以下のコメントアウトを戻す
+//        let path = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true)
+//        print("\(path)")
     }
 }

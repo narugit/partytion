@@ -21,6 +21,7 @@ class QuestionViewController: UIViewController {
         super.viewDidLoad()
         
         self.questionText.keyboardType = UIKeyboardType.phonePad
+        self.questionText.delegate = self as? UITextFieldDelegate
 
         self.presenter = QuestionPresenter(playerNumber: Int(playerNumber)!)
         self.questionTheme.text = presenter.theme
@@ -28,6 +29,17 @@ class QuestionViewController: UIViewController {
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
+        presenter.registerText(text: questionText.text)
+        moveNextScreen()
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        // キーボードを閉じる
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    private func moveNextScreen() {
         // 質問作成画面への移行
         self.present(presenter.viewController!,
                      animated: true,
