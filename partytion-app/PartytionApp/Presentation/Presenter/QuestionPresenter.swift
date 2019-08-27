@@ -46,10 +46,25 @@ class QuestionPresenter: BasePresenter {
         let questions = Questions(context: managedContext)
         
         // set attribute
-        questions.players = Int64(playerNumber)
-        questions.theme = theme
-        questions.question = text
-        questions.created_at = now
+        let request = NSFetchRequest<NSFetchRequestResult>()
+        request.entity = NSEntityDescription.entity(forEntityName: "Questions", in: managedContext)
+        request.includesSubentities = false
+        
+        do {
+            let id = Int64(try managedContext.fetch(request).count)
+            questions.id = id
+            questions.players = Int64(playerNumber)
+            questions.theme = theme
+            questions.question = text
+            questions.created_at = now
+
+
+            // set id to ViewController
+            (viewController as! AnswerViewController).question_id = id
+        } catch let error as NSError {
+            print("Error: \(error.localizedDescription)")
+        }
+        
         
         // Save data using by saveContext()
         if managedContext.hasChanges {

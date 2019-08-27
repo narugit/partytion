@@ -12,6 +12,8 @@ class AnswerViewController: UIViewController {
     @IBOutlet var yesButton: UIButton!
     @IBOutlet weak var noButton: UIButton!
 
+    public var question_id: Int64 = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
