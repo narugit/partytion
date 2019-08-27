@@ -70,8 +70,7 @@ class QuestionPresenter: BasePresenter {
         if managedContext.hasChanges {
             do {
                 try managedContext.save()
-                print("data saved")
-
+                print("~~~ data saved ~~~")
             } catch {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
@@ -79,7 +78,7 @@ class QuestionPresenter: BasePresenter {
         }
         
         // sqlite の生成場所が見たい時は以下のコメントアウトを戻す
-        let path = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true)
-        print("\(path)")
+//        let path = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true)
+//        print("\(path)")
     }
 }

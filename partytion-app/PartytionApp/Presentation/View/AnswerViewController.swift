@@ -15,28 +15,40 @@ class AnswerViewController: UIViewController {
 
     public var question_id: Int = 0
     private var presenter: AnswerPresenter!
+    private var counter: Int = 0
+    private var players: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
       
         self.presenter = AnswerPresenter(question_id: question_id)
-        let question: Questions? = presenter.getQuestion()
+        presenter.getQuestion()
         
-        self.questionText.text = question?.value(forKey: "question") as? String
+        self.questionText.text = presenter.question?.value(forKey: "question") as? String
+        self.players = (presenter.question?.value(forKey: "players") as? Int)!
     }
     
     @IBAction func yesButtonTapped(_ sender: UIButton) {
-        presenter.stuckAnswer(answerText: "Yes")
+        countAnswerNumber(text: "yes")
     }
 
     @IBAction func noButtonTapped(_ sender: UIButton) {
-        presenter.stuckAnswer(answerText: "No")
+        countAnswerNumber(text: "no")
     }
-    
+
+    private func countAnswerNumber(text: String) {
+        presenter.stuckAnswer(answerText: text)
+        counter += 1
+
+        if (counter >= players) {
+            moveNextScreen()
+        }
+    }
+
     // 結果表示画面への移行
     private func moveNextScreen() {
-        // 質問作成画面への移行
+        // 結果画面への移行
         self.present(presenter.viewController!,
                      animated: true,
                      completion: nil

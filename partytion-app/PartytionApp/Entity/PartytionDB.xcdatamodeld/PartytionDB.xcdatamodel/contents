@@ -13,12 +13,13 @@
     </entity>
     <entity name="Users" representedClassName="Users" syncable="YES" codeGenerationType="class">
         <attribute name="answer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="question_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="belongs_to" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Questions" inverseName="has_many" inverseEntity="Questions" syncable="YES"/>
     </entity>
     <elements>
         <element name="Questions" positionX="173.796875" positionY="173.26171875" width="128" height="135"/>
-        <element name="Users" positionX="-36" positionY="9" width="128" height="90"/>
+        <element name="Users" positionX="-36" positionY="9" width="128" height="105"/>
         <element name="Themes" positionX="72" positionY="135" width="128" height="60"/>
     </elements>
 </model>

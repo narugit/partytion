@@ -14,7 +14,9 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var pieChartView: PieChartView!
     @IBOutlet weak var yesLabel: UILabel!
     @IBOutlet weak var noLabel: UILabel!
-    
+
+    public var question_id: Int = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupPieChartView()
