@@ -11,26 +11,35 @@ import UIKit
 class AnswerViewController: UIViewController {
     @IBOutlet var yesButton: UIButton!
     @IBOutlet weak var noButton: UIButton!
+    @IBOutlet private var questionText: UITextView!
 
-    public var question_id: Int64 = 0
+    public var question_id: Int = 0
+    private var presenter: AnswerPresenter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+      
+        self.presenter = AnswerPresenter(question_id: question_id)
+        let question: Questions? = presenter.getQuestion()
+        
+        self.questionText.text = question?.value(forKey: "question") as? String
     }
     
     @IBAction func yesButtonTapped(_ sender: UIButton) {
-        self.moveToAnswerScreen()
+        presenter.stuckAnswer(answerText: "Yes")
     }
 
     @IBAction func noButtonTapped(_ sender: UIButton) {
-        self.moveToAnswerScreen()
+        presenter.stuckAnswer(answerText: "No")
     }
     
     // 結果表示画面への移行
-    private func moveToAnswerScreen() {
-        let resultStoryboard :UIStoryboard = UIStoryboard(name: "ResultScreen", bundle: nil)
-        let resultViewController :UIViewController = resultStoryboard.instantiateViewController(withIdentifier: "ResultViewController")
-        
-        present(resultViewController, animated: true, completion: nil)
+    private func moveNextScreen() {
+        // 質問作成画面への移行
+        self.present(presenter.viewController!,
+                     animated: true,
+                     completion: nil
+        )
     }
 }

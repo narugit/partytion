@@ -46,13 +46,13 @@ class QuestionPresenter: BasePresenter {
         let questions = Questions(context: managedContext)
         
         // set attribute
-        let request = NSFetchRequest<NSFetchRequestResult>()
-        request.entity = NSEntityDescription.entity(forEntityName: "Questions", in: managedContext)
-        request.includesSubentities = false
-        
         do {
-            let id = Int64(try managedContext.fetch(request).count)
-            questions.id = id
+            let request = NSFetchRequest<NSFetchRequestResult>()
+            request.entity = NSEntityDescription.entity(forEntityName: "Questions", in: managedContext)
+            request.includesSubentities = false
+
+            let question_id = Int64(try managedContext.fetch(request).count)
+            questions.question_id = question_id
             questions.players = Int64(playerNumber)
             questions.theme = theme
             questions.question = text
@@ -60,7 +60,7 @@ class QuestionPresenter: BasePresenter {
 
 
             // set id to ViewController
-            (viewController as! AnswerViewController).question_id = id
+            (viewController as! AnswerViewController).question_id = Int(question_id)
         } catch let error as NSError {
             print("Error: \(error.localizedDescription)")
         }
@@ -77,8 +77,9 @@ class QuestionPresenter: BasePresenter {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+        
         // sqlite の生成場所が見たい時は以下のコメントアウトを戻す
-//        let path = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true)
-//        print("\(path)")
+        let path = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true)
+        print("\(path)")
     }
 }
