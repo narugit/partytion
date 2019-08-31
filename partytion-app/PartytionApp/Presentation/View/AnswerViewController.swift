@@ -11,30 +11,48 @@ import UIKit
 class AnswerViewController: UIViewController {
     @IBOutlet var yesButton: UIButton!
     @IBOutlet weak var noButton: UIButton!
+    @IBOutlet private var questionText: UITextView!
+
+    public var question_id: Int = 0
+    private var presenter: AnswerPresenter!
+    private var counter: Int = 0
+    private var players: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+      
+        self.presenter = AnswerPresenter(question_id: question_id)
+        
+        let question: Questions? = presenter.getQuestion()
+        
+        self.questionText.text = question!.value(forKey: "question") as? String
+        self.players = (question!.value(forKey: "players") as? Int)!
     }
     
     @IBAction func yesButtonTapped(_ sender: UIButton) {
-        self.moveToAnswerScreen()
+        countAnswerNumber(text: "yes")
     }
 
     @IBAction func noButtonTapped(_ sender: UIButton) {
-        self.moveToAnswerScreen()
+        countAnswerNumber(text: "no")
     }
-    
-    // 結果表示画面への移行
-    private func moveToAnswerScreen() {
-        let resultStoryboard :UIStoryboard = UIStoryboard(name: "ResultScreen", bundle: nil)
-        let resultViewController :UIViewController = resultStoryboard.instantiateViewController(withIdentifier: "ResultViewController")
-        
-        if let secondVC = resultViewController as? ResultViewController {
-            // Yes-No回答の集計値をここで代入して、結果表示画面に渡す
-            secondVC.yes = 20
-            secondVC.no = 5
+
+    private func countAnswerNumber(text: String) {
+        presenter.stuckAnswer(answerText: text)
+        counter += 1
+
+        if (counter >= players) {
+            moveNextScreen()
         }
-        
-        present(resultViewController, animated: true, completion: nil)
+    }
+
+    // 結果表示画面への移行
+    private func moveNextScreen() {
+        // 結果画面への移行
+        self.present(presenter.viewController!,
+                     animated: true,
+                     completion: nil
+        )
     }
 }

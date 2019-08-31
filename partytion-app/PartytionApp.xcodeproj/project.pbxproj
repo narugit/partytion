@@ -13,6 +13,11 @@
 		27264EAC22F8533800839EBA /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27264EA722F8521B00839EBA /* Lottie.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		27264EAD22F854AA00839EBA /* Lottie.framework in Resources */ = {isa = PBXBuildFile; fileRef = 27264EA722F8521B00839EBA /* Lottie.framework */; };
 		27264EAF22F855D700839EBA /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27264EA722F8521B00839EBA /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2736892B230ECBE4000EC4B5 /* PartytionDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27368929230ECBE4000EC4B5 /* PartytionDB.xcdatamodeld */; };
+		2736892F230ED516000EC4B5 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2736892E230ED516000EC4B5 /* DateFormatter.swift */; };
+		2737BB57230AD562007E4C2E /* QuestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2737BB56230AD562007E4C2E /* QuestionPresenter.swift */; };
+		2737BB59230AE23B007E4C2E /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2737BB58230AE23B007E4C2E /* BasePresenter.swift */; };
+		2743B34823155E0200960F52 /* AnswerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743B34723155E0200960F52 /* AnswerPresenter.swift */; };
 		2778398122E5E108009F5C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778398022E5E108009F5C61 /* AppDelegate.swift */; };
 		2778398822E5E109009F5C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2778398722E5E109009F5C61 /* Assets.xcassets */; };
 		2778398B22E5E109009F5C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2778398922E5E109009F5C61 /* LaunchScreen.storyboard */; };
@@ -22,6 +27,7 @@
 		27CEAAED22F99D05004C864B /* QuestionScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CEAAEC22F99D05004C864B /* QuestionScreen.storyboard */; };
 		27CEAAEF22F9A324004C864B /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CEAAEE22F9A324004C864B /* AnswerViewController.swift */; };
 		27CEAAF122F9A338004C864B /* AnswerScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CEAAF022F9A338004C864B /* AnswerScreen.storyboard */; };
+		27ECB878231A30B5003AC9E1 /* ResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECB877231A30B5003AC9E1 /* ResultPresenter.swift */; };
 		4376139D22F9A2340011B4E8 /* HowToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4376139C22F9A2340011B4E8 /* HowToViewController.swift */; };
 		4376139F22F9A33D0011B4E8 /* HowToScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4376139E22F9A33D0011B4E8 /* HowToScreen.storyboard */; };
 		437613A122F9B2B80011B4E8 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437613A022F9B2B80011B4E8 /* PlayerViewController.swift */; };
@@ -70,6 +76,12 @@
 		27264EA222F84EE400839EBA /* Partytion-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Partytion-Bridging-Header.h"; sourceTree = "<group>"; };
 		27264EA322F850DF00839EBA /* BeerBubbles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BeerBubbles.json; sourceTree = "<group>"; };
 		27264EA722F8521B00839EBA /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
+		2736891E230EC842000EC4B5 /* PartytionApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PartytionApp.entitlements; sourceTree = "<group>"; };
+		2736892A230ECBE4000EC4B5 /* PartytionDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PartytionDB.xcdatamodel; sourceTree = "<group>"; };
+		2736892E230ED516000EC4B5 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		2737BB56230AD562007E4C2E /* QuestionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenter.swift; sourceTree = "<group>"; };
+		2737BB58230AE23B007E4C2E /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		2743B34723155E0200960F52 /* AnswerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerPresenter.swift; sourceTree = "<group>"; };
 		2778397D22E5E108009F5C61 /* PartytionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartytionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2778398022E5E108009F5C61 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2778398722E5E109009F5C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,6 +97,7 @@
 		27CEAAEC22F99D05004C864B /* QuestionScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuestionScreen.storyboard; sourceTree = "<group>"; };
 		27CEAAEE22F9A324004C864B /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		27CEAAF022F9A338004C864B /* AnswerScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnswerScreen.storyboard; sourceTree = "<group>"; };
+		27ECB877231A30B5003AC9E1 /* ResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPresenter.swift; sourceTree = "<group>"; };
 		4376139C22F9A2340011B4E8 /* HowToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToViewController.swift; sourceTree = "<group>"; };
 		4376139E22F9A33D0011B4E8 /* HowToScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HowToScreen.storyboard; sourceTree = "<group>"; };
 		437613A022F9B2B80011B4E8 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +165,10 @@
 		27264E9B22F840FB00839EBA /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				2737BB56230AD562007E4C2E /* QuestionPresenter.swift */,
+				2737BB58230AE23B007E4C2E /* BasePresenter.swift */,
+				2743B34723155E0200960F52 /* AnswerPresenter.swift */,
+				27ECB877231A30B5003AC9E1 /* ResultPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -170,6 +187,22 @@
 				27264EA722F8521B00839EBA /* Lottie.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2736891F230EC9D8000EC4B5 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				27368929230ECBE4000EC4B5 /* PartytionDB.xcdatamodeld */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		2736892D230ED4F9000EC4B5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2736892E230ED516000EC4B5 /* DateFormatter.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		2778397422E5E108009F5C61 = {
@@ -198,6 +231,9 @@
 		2778397F22E5E108009F5C61 /* PartytionApp */ = {
 			isa = PBXGroup;
 			children = (
+				2736892D230ED4F9000EC4B5 /* Utils */,
+				2736891F230EC9D8000EC4B5 /* Entity */,
+				2736891E230EC842000EC4B5 /* PartytionApp.entitlements */,
 				27264EA522F850E600839EBA /* assets */,
 				2778398022E5E108009F5C61 /* AppDelegate.swift */,
 				27264E9922F83FE100839EBA /* Presentation */,
@@ -296,6 +332,11 @@
 				TargetAttributes = {
 					2778397C22E5E108009F5C61 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 0;
+							};
+						};
 					};
 					2778399022E5E109009F5C61 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -387,9 +428,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27ECB878231A30B5003AC9E1 /* ResultPresenter.swift in Sources */,
 				4376139D22F9A2340011B4E8 /* HowToViewController.swift in Sources */,
+				2737BB59230AE23B007E4C2E /* BasePresenter.swift in Sources */,
 				27264E9D22F8434100839EBA /* SplashViewController.swift in Sources */,
+				2737BB57230AD562007E4C2E /* QuestionPresenter.swift in Sources */,
+				2743B34823155E0200960F52 /* AnswerPresenter.swift in Sources */,
 				27CEAAEF22F9A324004C864B /* AnswerViewController.swift in Sources */,
+				2736892F230ED516000EC4B5 /* DateFormatter.swift in Sources */,
+				2736892B230ECBE4000EC4B5 /* PartytionDB.xcdatamodeld in Sources */,
 				27CEAAEB22F99CE9004C864B /* QuestionViewController.swift in Sources */,
 				2778398122E5E108009F5C61 /* AppDelegate.swift in Sources */,
 				437613A122F9B2B80011B4E8 /* PlayerViewController.swift in Sources */,
@@ -726,6 +773,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		27368929230ECBE4000EC4B5 /* PartytionDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2736892A230ECBE4000EC4B5 /* PartytionDB.xcdatamodel */,
+			);
+			currentVersion = 2736892A230ECBE4000EC4B5 /* PartytionDB.xcdatamodel */;
+			path = PartytionDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2778397522E5E108009F5C61 /* Project object */;
 }
