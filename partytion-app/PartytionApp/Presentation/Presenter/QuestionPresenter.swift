@@ -15,7 +15,7 @@ class QuestionPresenter: BasePresenter {
     private let questionThemes = [ "ゲーム", "飲み会", "ニュース", "あるあるネタ" ]
     public private(set) var theme: String = ""
     private var playerNumber: Int = 0
-    public private(set) var answerPair = (0, 0)
+    public private(set) var answerPair: (Int, Int) = (0, 0)
 
     private var storyboard: UIStoryboard? = nil
     public private(set) var viewController: UIViewController? = nil

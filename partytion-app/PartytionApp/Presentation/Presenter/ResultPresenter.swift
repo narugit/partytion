@@ -1,13 +1,21 @@
+//
+//  ResultPresenter.swift
+//  PartytionApp
+//
+//  Created by tatsuya_oyanagi on 2019/08/31.
+//  Copyright © 2019 naruhiyo. All rights reserved.
+//
+
 import UIKit
 import CoreData
 
-class AnswerPresenter: BasePresenter {
-    var nextView: String { return "Result" }
-
-    public private(set) var question_id: Int = 0
+class ResultPresenter: BasePresenter {
+    var nextView: String { return "HowTo" }
     
+    public private(set) var question_id: Int = 0
     private var storyboard: UIStoryboard? = nil
     public private(set) var viewController: UIViewController? = nil
+    public private(set) var count: Int = 0
 
     // For Entity IO
     private var managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -15,19 +23,18 @@ class AnswerPresenter: BasePresenter {
     init(question_id: Int) {
         self.question_id = question_id
         self.setNextViewController()
+
+        self.getQuestion()
     }
     
     func setNextViewController() -> Void {
         self.storyboard = UIStoryboard(name: "\(nextView)Screen", bundle: nil)
         self.viewController = self.storyboard!.instantiateViewController(withIdentifier: "\(nextView)ViewController")
-
-        // set id to ViewController
-        (viewController as! ResultViewController).question_id = question_id
     }
-    
+
     func getQuestion() -> Questions? {
         var question: Questions? = nil
-        
+
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Questions")
         request.fetchLimit = 1
         request.predicate = NSPredicate(format: "question_id = %@", String(question_id))
@@ -43,31 +50,27 @@ class AnswerPresenter: BasePresenter {
         }
         return question
     }
+    
+    func getResult() -> (Double, Double) {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
+        request.predicate = NSPredicate(format: "question_id = %@", String(question_id))
+        var resultPair: (Double, Double) = (0, 0)
 
-    func stuckAnswer(answerText: String?) {
-        // Get an entity
-        let users = Users(context: managedContext)
-
-        // set attribute
         do {
-            users.question_id = Int64(question_id)
-            users.answer = answerText
-            users.username = "User"
+            let users = try managedContext.fetch(request)
+            
+            self.count = users.count
+            users.forEach {
+                if ($0 as! Users).answer == "yes" {
+                    resultPair.0 += 1.0
+                } else {
+                    resultPair.1 += 1.0
+                }
+            }
             
         } catch let error as NSError {
             print("Error: \(error.localizedDescription)")
         }
-        
-        
-        // Save data using by saveContext()
-        if managedContext.hasChanges {
-            do {
-                try managedContext.save()
-                print("~~~ data saved ~~~")
-            } catch {
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-            }
-        }
+        return resultPair
     }
 }

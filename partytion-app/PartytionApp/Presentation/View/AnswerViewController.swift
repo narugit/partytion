@@ -23,10 +23,11 @@ class AnswerViewController: UIViewController {
 
       
         self.presenter = AnswerPresenter(question_id: question_id)
-        presenter.getQuestion()
         
-        self.questionText.text = presenter.question?.value(forKey: "question") as? String
-        self.players = (presenter.question?.value(forKey: "players") as? Int)!
+        let question: Questions? = presenter.getQuestion()
+        
+        self.questionText.text = question!.value(forKey: "question") as? String
+        self.players = (question!.value(forKey: "players") as? Int)!
     }
     
     @IBAction func yesButtonTapped(_ sender: UIButton) {
