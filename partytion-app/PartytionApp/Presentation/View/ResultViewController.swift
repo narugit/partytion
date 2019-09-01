@@ -62,7 +62,7 @@ class ResultViewController: UIViewController {
         pieChartView.chartDescription?.enabled = false
         pieChartView.minOffset = 0
         
-        yesLabel.text = "Yes: " + String("\(Int(resultPair.0))人")
-        noLabel.text = "No: " + String("\(Int(resultPair.1))人")
+        yesLabel.text = "Yesと回答した人: " + String("\(Int(resultPair.0))人")
+        noLabel.text = "Noと回答した人: " + String("\(Int(resultPair.1))人")
     }
 }
