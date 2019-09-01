@@ -16,7 +16,7 @@ class SplashViewController: UIViewController {
     // プログラムの読み込みが完了
     override func viewDidLoad() {
         super.viewDidLoad()
-        showAnimation()
+        self.showAnimation()
     }
 
     // 画面生成が全て完了している
@@ -42,11 +42,9 @@ class SplashViewController: UIViewController {
     
     private func showAnimation() {
         let animationView = AnimationView(name: "BeerBubbles")
-        animationView.frame = CGRect(x: 0, y: 0, width: animationPanel.bounds.width, height: animationPanel.bounds.height)
-        animationView.center = animationPanel.center
-        animationView.contentMode = .scaleAspectFit
-        animationView.animationSpeed = 1
-        animationView.loopMode = LottieLoopMode.playOnce
+        
+        animationView.animationSpeed = 0.9
+        animationView.loopMode = LottieLoopMode.loop
 
         animationPanel.addSubview(animationView)
 
