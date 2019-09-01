@@ -11,26 +11,27 @@ import UIKit
 class PlayerViewController: UIViewController {
     @IBOutlet var inputPlayerNumber: UITextField!
     @IBOutlet var nextButton: UIButton!
-        
+    
+    private var presenter: PlayerPresenter!
+
     // プログラムの読み込みが完了
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.presenter = PlayerPresenter()
         self.inputPlayerNumber.keyboardType = UIKeyboardType.numberPad
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
+        presenter.setPlayerNumber(playerNumber: inputPlayerNumber.text)
         self.moveQuestionScreen()
     }
     // 質問作成画面への移行
     private func moveQuestionScreen() {
-        let questionStoryboard :UIStoryboard = UIStoryboard(name: "QuestionScreen", bundle: nil)
-        let questionScreen :UIViewController = questionStoryboard.instantiateViewController(withIdentifier: "QuestionViewController")
-        
-        if let secondVC = questionScreen as? QuestionViewController {
-            secondVC.playerNumber = inputPlayerNumber.text!
-        }
-        
-        present(questionScreen, animated: true, completion: nil)
-    }
-    
+        present(
+            presenter.viewController!,
+            animated: true,
+            completion: nil
+        )
+    }    
 }
