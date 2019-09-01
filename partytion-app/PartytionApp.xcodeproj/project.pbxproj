@@ -25,6 +25,7 @@
 		277839A122E5E109009F5C61 /* partytion_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277839A022E5E109009F5C61 /* partytion_appUITests.swift */; };
 		279FC9B2231B7CDD00DE300D /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FC9B1231B7CDD00DE300D /* SplashPresenter.swift */; };
 		279FC9B6231B863F00DE300D /* PlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FC9B5231B863F00DE300D /* PlayerPresenter.swift */; };
+		279FC9B8231B898F00DE300D /* HowToPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FC9B7231B898F00DE300D /* HowToPresenter.swift */; };
 		27CEAAEB22F99CE9004C864B /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CEAAEA22F99CE9004C864B /* QuestionViewController.swift */; };
 		27CEAAED22F99D05004C864B /* QuestionScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CEAAEC22F99D05004C864B /* QuestionScreen.storyboard */; };
 		27CEAAEF22F9A324004C864B /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CEAAEE22F9A324004C864B /* AnswerViewController.swift */; };
@@ -97,6 +98,7 @@
 		277839A222E5E109009F5C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		279FC9B1231B7CDD00DE300D /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		279FC9B5231B863F00DE300D /* PlayerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPresenter.swift; sourceTree = "<group>"; };
+		279FC9B7231B898F00DE300D /* HowToPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPresenter.swift; sourceTree = "<group>"; };
 		27CEAAEA22F99CE9004C864B /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		27CEAAEC22F99D05004C864B /* QuestionScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuestionScreen.storyboard; sourceTree = "<group>"; };
 		27CEAAEE22F9A324004C864B /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				27ECB877231A30B5003AC9E1 /* ResultPresenter.swift */,
 				279FC9B1231B7CDD00DE300D /* SplashPresenter.swift */,
 				279FC9B5231B863F00DE300D /* PlayerPresenter.swift */,
+				279FC9B7231B898F00DE300D /* HowToPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				27264E9D22F8434100839EBA /* SplashViewController.swift in Sources */,
 				2737BB57230AD562007E4C2E /* QuestionPresenter.swift in Sources */,
 				2743B34823155E0200960F52 /* AnswerPresenter.swift in Sources */,
+				279FC9B8231B898F00DE300D /* HowToPresenter.swift in Sources */,
 				27CEAAEF22F9A324004C864B /* AnswerViewController.swift in Sources */,
 				2736892F230ED516000EC4B5 /* DateFormatter.swift in Sources */,
 				2736892B230ECBE4000EC4B5 /* PartytionDB.xcdatamodeld in Sources */,

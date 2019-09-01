@@ -33,5 +33,5 @@ class PlayerViewController: UIViewController {
             animated: true,
             completion: nil
         )
-    }    
+    }
 }
