@@ -25,7 +25,6 @@ class ResultViewController: UIViewController {
         
         self.presenter = ResultPresenter(question_id: question_id)
         let question: Questions? = presenter.getQuestion()
-        print(question)
         questionText.text = question!.question
         
         self.setupPieChartView()
