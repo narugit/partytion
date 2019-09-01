@@ -7,7 +7,7 @@
 
 import UIKit
 
-class QuestionViewController: UIViewController {
+class QuestionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet private var questionTheme: UILabel!
     @IBOutlet private var answerNumbers: UITextView!
     @IBOutlet private var questionText: UITextField!
@@ -20,8 +20,9 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.questionText.keyboardType = UIKeyboardType.phonePad
-        self.questionText.delegate = self as? UITextFieldDelegate
+        self.questionText.keyboardType = UIKeyboardType.default
+        self.questionText.returnKeyType = UIReturnKeyType.done
+        self.questionText.delegate = self
 
         self.presenter = QuestionPresenter(playerNumber: Int(playerNumber)!)
         self.questionTheme.text = presenter.theme
@@ -33,12 +34,16 @@ class QuestionViewController: UIViewController {
         moveNextScreen()
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // キーボードを閉じる
         textField.resignFirstResponder()
         return true
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        questionText.resignFirstResponder()
+    }
+
     private func moveNextScreen() {
         // 質問作成画面への移行
         self.present(presenter.viewController!,

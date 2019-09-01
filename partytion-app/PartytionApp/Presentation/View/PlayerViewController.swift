@@ -11,11 +11,22 @@ import UIKit
 class PlayerViewController: UIViewController {
     @IBOutlet var inputPlayerNumber: UITextField!
     @IBOutlet var nextButton: UIButton!
-        
+
     // プログラムの読み込みが完了
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.inputPlayerNumber.keyboardType = UIKeyboardType.numberPad
+        let toolbar: UIToolbar = UIToolbar()
+        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                                    target: nil,
+                                    action: nil)
+        let done = UIBarButtonItem(title: "done",
+                                   style: .done,
+                                   target: self,
+                                   action: #selector(self.doneButtonAction))
+        toolbar.items = [space, done]
+        toolbar.sizeToFit()
+        self.inputPlayerNumber.inputAccessoryView = toolbar
+        self.inputPlayerNumber.keyboardType = .numberPad
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
@@ -33,4 +44,12 @@ class PlayerViewController: UIViewController {
         present(questionScreen, animated: true, completion: nil)
     }
     
+    @objc func doneButtonAction()
+    {
+        self.inputPlayerNumber.resignFirstResponder()
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.inputPlayerNumber.resignFirstResponder()
+    }
 }
