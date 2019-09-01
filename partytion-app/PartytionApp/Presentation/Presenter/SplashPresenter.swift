@@ -12,20 +12,13 @@ import Lottie
 class SplashPresenter: BasePresenter {
     var nextView: String { return "HowTo" }
     
-    private let timerInterval: Double = 3.5
     private let animationTag: String = "BeerBubbles"
     
     private var storyboard: UIStoryboard? = nil
     public private(set) var viewController: UIViewController? = nil
     
-    func setMoveViewTimer () -> Void {
-        // タイマーで画面遷移
-        //     - 3.5秒を設定
-        Timer.scheduledTimer(timeInterval: timerInterval,
-                             target: self,
-                             selector: #selector(self.setNextViewController),
-                             userInfo: nil,
-                             repeats: false)
+    init() {
+        self.setNextViewController()
     }
     
     func showAnimation(panel: UIView) {
@@ -46,7 +39,7 @@ class SplashPresenter: BasePresenter {
         animationView.play()
     }
     
-    @objc func setNextViewController() -> Void {
+    func setNextViewController() -> Void {
         self.storyboard = UIStoryboard(name: "\(nextView)Screen", bundle: nil)
         self.viewController = self.storyboard!.instantiateViewController(withIdentifier: "\(nextView)ViewController")
     }
