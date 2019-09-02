@@ -16,3 +16,5 @@ $ pos install
 $ carthage update
 $ pos update
 ```
+
+After setting up, please open PartytionApp.xcoworkspace in xcode.
