@@ -32,30 +32,40 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mso-rL-r8w">
-                                <rect key="frame" x="123" y="433" width="34" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0J5-vh-Mgg" userLabel="Next Button" customClass="SSBouncyButton">
+                                <rect key="frame" x="256" y="409" width="68" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
+                                <color key="backgroundColor" red="0.91386010360000003" green="0.64860062129999996" blue="0.1609713086" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldItalicMT" family="Arial" pointSize="17"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.99749300740000002" green="0.98466928480000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
-                                    <action selector="backButtonTapped:" destination="0w8-DB-zeN" eventType="touchUpInside" id="SWL-Ms-ORP"/>
+                                    <action selector="nextButtonTapped:" destination="0w8-DB-zeN" eventType="touchUpInside" id="TAq-JO-aTl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOo-WW-V4s">
-                                <rect key="frame" x="252" y="433" width="32" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQn-co-NkZ" userLabel="Back Button" customClass="SSBouncyButton">
+                                <rect key="frame" x="102" y="409" width="68" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next"/>
+                                <color key="backgroundColor" red="0.91386010360000003" green="0.64860062129999996" blue="0.1609713086" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldItalicMT" family="Arial" pointSize="17"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.99749300740000002" green="0.98466928480000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
-                                    <action selector="nextButtonTapped:" destination="0w8-DB-zeN" eventType="touchUpInside" id="deM-Lz-XAy"/>
+                                    <action selector="backButtonTapped:" destination="0w8-DB-zeN" eventType="touchUpInside" id="ISW-Xn-98C"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.81470673520000003" blue="0.22343490890000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="9gN-WF-KKI"/>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="Mso-rL-r8w" id="2GG-cU-89U"/>
+                        <outlet property="backButton" destination="sQn-co-NkZ" id="u0M-Wb-aqv"/>
                         <outlet property="contentLabel" destination="DbD-2c-um1" id="rDt-Ay-G52"/>
-                        <outlet property="nextButton" destination="kOo-WW-V4s" id="0nZ-Fv-sor"/>
+                        <outlet property="nextButton" destination="0J5-vh-Mgg" id="NCq-eP-Cg6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGt-dn-xHH" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -8,19 +8,46 @@
 
 import UIKit
 import GMStepper
+import BubbleTransition
+import SSBouncyButton
 
 class PlayerViewController: UIViewController {
     @IBOutlet weak var inputPlayerNumber: GMStepper!
-    @IBOutlet var nextButton: UIButton!
-
+    @IBOutlet weak var nextButton: SSBouncyButton!
+    
     // プログラムの読み込みが完了
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    let transition = BubbleTransition()
+    
+    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination
+        controller.transitioningDelegate = self as! UIViewControllerTransitioningDelegate
+        controller.modalPresentationStyle = .custom
+    }
+    
+    // MARK: UIViewControllerTransitioningDelegate
+    
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .present
+        transition.startingPoint = nextButton.center
+        transition.bubbleColor = nextButton.backgroundColor!
+        return transition
+    }
+    
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        transition.startingPoint = nextButton.center
+        transition.bubbleColor = nextButton.backgroundColor!
+        return transition
+    }
+    
     @IBAction func nextButtonTapped(_ sender: Any) {
         self.moveQuestionScreen()
     }
+    
     // 質問作成画面への移行
     private func moveQuestionScreen() {
         let questionStoryboard :UIStoryboard = UIStoryboard(name: "QuestionScreen", bundle: nil)

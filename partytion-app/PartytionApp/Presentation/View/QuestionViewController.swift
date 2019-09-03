@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import SSBouncyButton
 
 class QuestionViewController: UIViewController {
     @IBOutlet private var questionTheme: UILabel!
     @IBOutlet private var answerNumbers: UITextView!
     @IBOutlet private var questionText: UITextField!
-    @IBOutlet private var nextButton: UIButton!
+    @IBOutlet weak var nextButton: SSBouncyButton!
     
     public var playerNumber: Int = 0
     private var presenter: QuestionPresenter!
@@ -28,11 +29,11 @@ class QuestionViewController: UIViewController {
         self.answerNumbers.text = "\(presenter.answerPair.0) vs \(presenter.answerPair.1)になるような質問を 考えましょう！"
     }
     
-    @IBAction func nextButtonTapped(_ sender: UIButton) {
+    @IBAction func nextButtonTapped(_ sender: Any) {
         presenter.registerText(text: questionText.text)
         moveNextScreen()
     }
-    
+        
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         // キーボードを閉じる
         textField.resignFirstResponder()
