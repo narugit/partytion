@@ -29,8 +29,8 @@
 		27CEAAEF22F9A324004C864B /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CEAAEE22F9A324004C864B /* AnswerViewController.swift */; };
 		27CEAAF122F9A338004C864B /* AnswerScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CEAAF022F9A338004C864B /* AnswerScreen.storyboard */; };
 		27ECB878231A30B5003AC9E1 /* ResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECB877231A30B5003AC9E1 /* ResultPresenter.swift */; };
-		43077DE4231FC16F005F197A /* Loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 43077DE3231FC16F005F197A /* Loading.json */; };
 		43323334231B5291004252E4 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43323333231B5291004252E4 /* SplashPresenter.swift */; };
+		436ACF7B23437FB000F0DC46 /* Oshidashi-M-Gothic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 436ACF7A23437FB000F0DC46 /* Oshidashi-M-Gothic.otf */; };
 		4376139D22F9A2340011B4E8 /* HowToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4376139C22F9A2340011B4E8 /* HowToViewController.swift */; };
 		4376139F22F9A33D0011B4E8 /* HowToScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4376139E22F9A33D0011B4E8 /* HowToScreen.storyboard */; };
 		437613A122F9B2B80011B4E8 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437613A022F9B2B80011B4E8 /* PlayerViewController.swift */; };
@@ -108,8 +108,8 @@
 		30C2F3056C94BB5463594BCF /* Pods-PartytionAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartytionAppTests.debug.xcconfig"; path = "Target Support Files/Pods-PartytionAppTests/Pods-PartytionAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		38A7B04F94E69DC71695CE08 /* Pods-PartytionAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartytionAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-PartytionAppUITests/Pods-PartytionAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		39912F1908118FA314359A1F /* Pods-PartytionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartytionApp.debug.xcconfig"; path = "Target Support Files/Pods-PartytionApp/Pods-PartytionApp.debug.xcconfig"; sourceTree = "<group>"; };
-		43077DE3231FC16F005F197A /* Loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Loading.json; sourceTree = "<group>"; };
 		43323333231B5291004252E4 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		436ACF7A23437FB000F0DC46 /* Oshidashi-M-Gothic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oshidashi-M-Gothic.otf"; sourceTree = "<group>"; };
 		4376139C22F9A2340011B4E8 /* HowToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToViewController.swift; sourceTree = "<group>"; };
 		4376139E22F9A33D0011B4E8 /* HowToScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HowToScreen.storyboard; sourceTree = "<group>"; };
 		437613A022F9B2B80011B4E8 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
@@ -196,7 +196,7 @@
 		27264EA522F850E600839EBA /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				43077DE3231FC16F005F197A /* Loading.json */,
+				436ACF7A23437FB000F0DC46 /* Oshidashi-M-Gothic.otf */,
 				27264EA322F850DF00839EBA /* BeerBubbles.json */,
 			);
 			path = assets;
@@ -417,9 +417,9 @@
 			files = (
 				27264EAD22F854AA00839EBA /* Lottie.framework in Resources */,
 				43D5114722FA7DC600C3D89C /* ResultScreen.storyboard in Resources */,
-				43077DE4231FC16F005F197A /* Loading.json in Resources */,
 				2778398B22E5E109009F5C61 /* LaunchScreen.storyboard in Resources */,
 				2778398822E5E109009F5C61 /* Assets.xcassets in Resources */,
+				436ACF7B23437FB000F0DC46 /* Oshidashi-M-Gothic.otf in Resources */,
 				437613A322F9B3100011B4E8 /* PlayerScreen.storyboard in Resources */,
 				27264EA422F850DF00839EBA /* BeerBubbles.json in Resources */,
 				27264EA122F844EF00839EBA /* SplashScreen.storyboard in Resources */,
