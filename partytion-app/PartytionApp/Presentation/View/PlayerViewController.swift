@@ -8,7 +8,6 @@
 
 import UIKit
 import GMStepper
-import BubbleTransition
 import SSBouncyButton
 
 class PlayerViewController: UIViewController {
@@ -18,30 +17,6 @@ class PlayerViewController: UIViewController {
     // プログラムの読み込みが完了
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    let transition = BubbleTransition()
-    
-    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let controller = segue.destination
-        controller.transitioningDelegate = self as! UIViewControllerTransitioningDelegate
-        controller.modalPresentationStyle = .custom
-    }
-    
-    // MARK: UIViewControllerTransitioningDelegate
-    
-    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.transitionMode = .present
-        transition.startingPoint = nextButton.center
-        transition.bubbleColor = nextButton.backgroundColor!
-        return transition
-    }
-    
-    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.transitionMode = .dismiss
-        transition.startingPoint = nextButton.center
-        transition.bubbleColor = nextButton.backgroundColor!
-        return transition
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {

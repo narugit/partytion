@@ -12,7 +12,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet private var questionTheme: UILabel!
     @IBOutlet private var answerNumbers: UITextView!
     @IBOutlet private var questionText: UITextField!
-    @IBOutlet weak var nextButton: SSBouncyButton!
+    @IBOutlet private var nextButton: SSBouncyButton!
     
     public var playerNumber: Int = 0
     private var presenter: QuestionPresenter!

@@ -8,6 +8,7 @@
 
 import UIKit
 import Charts
+import Lottie
 
 class ResultViewController: UIViewController {
     
@@ -15,13 +16,17 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var questionText: UITextView!
     @IBOutlet weak var yesLabel: UILabel!
     @IBOutlet weak var noLabel: UILabel!
-
+    @IBOutlet weak var animationPanel: AnimationView!
+    
+    var timer : Timer?
+    
     public var question_id: Int = 0
     private var presenter: ResultPresenter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.showAnimation()
         
         self.presenter = ResultPresenter(question_id: question_id)
         let question: Questions? = presenter.getQuestion()
@@ -29,6 +34,10 @@ class ResultViewController: UIViewController {
         questionText.text = question!.question
         
         self.setupPieChartView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
     private func setupPieChartView() {
@@ -64,5 +73,16 @@ class ResultViewController: UIViewController {
         
         yesLabel.text = "Yes: " + String("\(Int(resultPair.0))人")
         noLabel.text = "No: " + String("\(Int(resultPair.1))人")
+    }
+    
+    private func showAnimation() {
+        let animationView = AnimationView(name: "BeerBubbles")
+        
+        animationView.animationSpeed = 0.9
+        animationView.loopMode = LottieLoopMode.loop
+        
+        animationPanel.addSubview(animationView)
+        
+        animationView.play()
     }
 }

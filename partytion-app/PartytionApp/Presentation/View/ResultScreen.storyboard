@@ -18,6 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="top" semanticContentAttribute="playback" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLP-eJ-usd" userLabel="Animation Panel" customClass="AnimationView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="SplashAnimationView">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="結果発表" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpl-IT-ake">
                                 <rect key="frame" x="135" y="71" width="144" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -60,10 +68,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.81470673520000003" blue="0.22343490890000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="1" green="0.68190638699999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="Uyi-y5-TXg"/>
                     </view>
                     <connections>
+                        <outlet property="animationPanel" destination="OLP-eJ-usd" id="KR0-bJ-S54"/>
                         <outlet property="noLabel" destination="uUt-tR-KQ8" id="pCc-Ya-lcm"/>
                         <outlet property="pieChartView" destination="ICH-Cg-5HQ" id="LrD-se-bEn"/>
                         <outlet property="questionText" destination="1AG-GU-Ejm" id="gDC-kV-NSH"/>
