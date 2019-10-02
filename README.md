@@ -10,11 +10,11 @@
 
 # build
 $ carthage bootstrap --platform iOS # Platform include Mac, iOS, watchOS, tvOS.
-$ pos install
+$ pod install
 
 # package update.
 $ carthage update
-$ pos update
+$ pod update
 ```
 
-After setting up, please open PartytionApp.xcoworkspace in xcode.
+After setting up, please open PartytionApp.xcworkspace in xcode.

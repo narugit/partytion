@@ -73,7 +73,7 @@ class ResultViewController: UIViewController {
         
         let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: nil)
         var colors: [UIColor] = []
-        colors.append(UIColor(244, 174, 61))
+        colors.append(UIColor(245, 197, 100))
         colors.append(UIColor(233, 128, 48))
         pieChartDataSet.colors = colors
         pieChartDataSet.valueFont = UIFont(name: "Oshidashi-M-Gothic-Regular", size: 18)!
@@ -86,6 +86,9 @@ class ResultViewController: UIViewController {
         
         pieChartView.data = pieChartData
         pieChartView.legend.enabled = false
+        pieChartView.rotationEnabled = false
+        pieChartView.holeRadiusPercent = 0.4
+        pieChartView.transparentCircleRadiusPercent = 0
     }
     
     private func showAnimation() {

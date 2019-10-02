@@ -30,6 +30,7 @@
 		27CEAAF122F9A338004C864B /* AnswerScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CEAAF022F9A338004C864B /* AnswerScreen.storyboard */; };
 		27ECB878231A30B5003AC9E1 /* ResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECB877231A30B5003AC9E1 /* ResultPresenter.swift */; };
 		43323334231B5291004252E4 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43323333231B5291004252E4 /* SplashPresenter.swift */; };
+		435E07CA2344C8DE0038D810 /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435E07C92344C8DE0038D810 /* PlaceHolderTextView.swift */; };
 		436ACF7B23437FB000F0DC46 /* Oshidashi-M-Gothic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 436ACF7A23437FB000F0DC46 /* Oshidashi-M-Gothic.otf */; };
 		4376139D22F9A2340011B4E8 /* HowToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4376139C22F9A2340011B4E8 /* HowToViewController.swift */; };
 		4376139F22F9A33D0011B4E8 /* HowToScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4376139E22F9A33D0011B4E8 /* HowToScreen.storyboard */; };
@@ -109,6 +110,7 @@
 		38A7B04F94E69DC71695CE08 /* Pods-PartytionAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartytionAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-PartytionAppUITests/Pods-PartytionAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		39912F1908118FA314359A1F /* Pods-PartytionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartytionApp.debug.xcconfig"; path = "Target Support Files/Pods-PartytionApp/Pods-PartytionApp.debug.xcconfig"; sourceTree = "<group>"; };
 		43323333231B5291004252E4 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		435E07C92344C8DE0038D810 /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
 		436ACF7A23437FB000F0DC46 /* Oshidashi-M-Gothic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oshidashi-M-Gothic.otf"; sourceTree = "<group>"; };
 		4376139C22F9A2340011B4E8 /* HowToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToViewController.swift; sourceTree = "<group>"; };
 		4376139E22F9A33D0011B4E8 /* HowToScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HowToScreen.storyboard; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		27264E9922F83FE100839EBA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				435E07C82344C8DE0038D810 /* Component */,
 				27264E9B22F840FB00839EBA /* Presenter */,
 				27264E9A22F840E700839EBA /* View */,
 			);
@@ -285,6 +288,14 @@
 				277839A222E5E109009F5C61 /* Info.plist */,
 			);
 			path = PartytionAppUITests;
+			sourceTree = "<group>";
+		};
+		435E07C82344C8DE0038D810 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				435E07C92344C8DE0038D810 /* PlaceHolderTextView.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		5A1554849A4039538D97A35B /* Pods */ = {
@@ -558,6 +569,7 @@
 				43323334231B5291004252E4 /* SplashPresenter.swift in Sources */,
 				4376139D22F9A2340011B4E8 /* HowToViewController.swift in Sources */,
 				2737BB59230AE23B007E4C2E /* BasePresenter.swift in Sources */,
+				435E07CA2344C8DE0038D810 /* PlaceHolderTextView.swift in Sources */,
 				27264E9D22F8434100839EBA /* SplashViewController.swift in Sources */,
 				2737BB57230AD562007E4C2E /* QuestionPresenter.swift in Sources */,
 				2743B34823155E0200960F52 /* AnswerPresenter.swift in Sources */,

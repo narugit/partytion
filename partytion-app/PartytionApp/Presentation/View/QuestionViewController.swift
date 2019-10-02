@@ -11,9 +11,8 @@ import SSBouncyButton
 class QuestionViewController: UIViewController {
     @IBOutlet private var questionTheme: UILabel!
     @IBOutlet private var answerNumbers: UITextView!
-    @IBOutlet private var questionText: UITextField!
     @IBOutlet private var nextButton: SSBouncyButton!
-    
+    @IBOutlet weak var questionText: PlaceHolderTextView!
     public var playerNumber: Int = 0
     private var presenter: QuestionPresenter!
     
@@ -22,7 +21,8 @@ class QuestionViewController: UIViewController {
         super.viewDidLoad()
         
         self.questionText.keyboardType = UIKeyboardType.phonePad
-        self.questionText.delegate = self as? UITextFieldDelegate
+        self.questionText.delegate = self as? UITextViewDelegate
+        self.questionText.placeholder = "質問文"
 
         self.presenter = QuestionPresenter(playerNumber: playerNumber)
         self.questionTheme.text = presenter.theme
