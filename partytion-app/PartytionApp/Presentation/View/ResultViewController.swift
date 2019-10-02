@@ -8,6 +8,23 @@
 
 import UIKit
 import Charts
+import Lottie
+
+extension UIColor {
+    convenience init(_ red: Int, _ green: Int, _ blue: Int, _ alpha: Int = 255) {
+        let rgba = [red, green, blue, alpha].map { i -> CGFloat in
+            switch i {
+            case let i where i < 0:
+                return 0
+            case let i where i > 255:
+                return 1
+            default:
+                return CGFloat(i) / 255
+            }
+        }
+        self.init(red: rgba[0], green: rgba[1], blue: rgba[2], alpha: rgba[3])
+    }
+}
 
 class ResultViewController: UIViewController {
     
@@ -15,13 +32,17 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var questionText: UITextView!
     @IBOutlet weak var yesLabel: UILabel!
     @IBOutlet weak var noLabel: UILabel!
-
+    @IBOutlet weak var animationPanel: AnimationView!
+    
+    var timer : Timer?
+    
     public var question_id: Int = 0
     private var presenter: ResultPresenter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.showAnimation()
         
         self.presenter = ResultPresenter(question_id: question_id)
         let question: Questions? = presenter.getQuestion()
@@ -30,38 +51,53 @@ class ResultViewController: UIViewController {
         self.setupPieChartView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
     private func setupPieChartView() {
-        self.pieChartView.usePercentValuesEnabled = true
         let resultPair: (Double, Double) = presenter.getResult()
 
-        // reformat for percentage
-        let yesVal = resultPair.0 / Double(presenter.count) * 100
-        let noVal = resultPair.1 / Double(presenter.count) * 100
-
-        let values: [Double] = [yesVal, noVal]
-        let yesNo : [Double] = [1, 2]
-
-        var entries: [ChartDataEntry] = Array()
-
-        for (i, value) in values.enumerated(){
-            entries.append(ChartDataEntry(x: yesNo[i], y: value, icon: UIImage(named: "icon", in: Bundle(for: self.classForCoder), compatibleWith: nil)))
+        let values: [Double] = [resultPair.0, resultPair.1]
+        let yesNo : [String] = ["Yes", "No"]
+        
+        customizeChart(dataPoints: yesNo, values: values)
+    }
+    
+    func customizeChart(dataPoints: [String], values: [Double]) {
+        var dataEntries: [ChartDataEntry] = []
+        for i in 0..<dataPoints.count {
+            let dataEntry = PieChartDataEntry(value: values[i], label: dataPoints[i], data: dataPoints[i] as AnyObject)
+            dataEntries.append(dataEntry)
         }
         
-        let dataSet = PieChartDataSet(entries: entries, label: "")
-        dataSet.colors = ChartColorTemplates.vordiplom()
+        let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: nil)
+        var colors: [UIColor] = []
+        colors.append(UIColor(244, 174, 61))
+        colors.append(UIColor(233, 128, 48))
+        pieChartDataSet.colors = colors
+        pieChartDataSet.valueFont = UIFont(name: "Oshidashi-M-Gothic-Regular", size: 18)!
         
-        let chartData = PieChartData(dataSet: dataSet)
+        let pieChartData = PieChartData(dataSet: pieChartDataSet)
+        let format = NumberFormatter()
+        format.numberStyle = .none
+        let formatter = DefaultValueFormatter(formatter: format)
+        pieChartData.setValueFormatter(formatter)
         
-        dataSet.drawValuesEnabled = false
-        
-        pieChartView.data = chartData
-        pieChartView.holeRadiusPercent = 0.7
-        pieChartView.transparentCircleRadiusPercent = 0
+        pieChartView.data = pieChartData
         pieChartView.legend.enabled = false
-        pieChartView.chartDescription?.enabled = false
-        pieChartView.minOffset = 0
+    }
+    
+    private func showAnimation() {
+        let animationView = AnimationView(name: "BeerBubbles")
+        
+        animationView.animationSpeed = 0.9
+        animationView.loopMode = LottieLoopMode.loop
+        
+        animationPanel.addSubview(animationView)
         
         yesLabel.text = "Yesと回答した人: " + String("\(Int(resultPair.0))人")
         noLabel.text = "Noと回答した人: " + String("\(Int(resultPair.1))人")
+        animationView.play()
     }
 }

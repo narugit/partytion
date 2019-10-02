@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import GMStepper
+import SSBouncyButton
 
 class PlayerViewController: UIViewController {
-    @IBOutlet var inputPlayerNumber: UITextField!
-    @IBOutlet var nextButton: UIButton!
-    
+    @IBOutlet weak var inputPlayerNumber: GMStepper!
+    @IBOutlet weak var nextButton: SSBouncyButton!
+
     private var presenter: PlayerPresenter!
 
     // プログラムの読み込みが完了
@@ -19,13 +21,17 @@ class PlayerViewController: UIViewController {
         super.viewDidLoad()
 
         self.presenter = PlayerPresenter()
-        self.inputPlayerNumber.keyboardType = UIKeyboardType.numberPad
+    
+    // プログラムの読み込みが完了
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
         presenter.setPlayerNumber(playerNumber: inputPlayerNumber.text)
         self.moveQuestionScreen()
     }
+    
     // 質問作成画面への移行
     private func moveQuestionScreen() {
         present(

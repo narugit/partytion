@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Lottie
 
 class SplashViewController: UIViewController {
     @IBOutlet var animationPanel :UIView!
@@ -15,6 +14,8 @@ class SplashViewController: UIViewController {
     private var presenter: SplashPresenter!
     private let timerInterval: Double = 3.5
 
+    private var presenter: SplashPresenter!
+    
     // プログラムの読み込みが完了
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,20 +28,25 @@ class SplashViewController: UIViewController {
         super.viewDidAppear(animated)
         // タイマーで画面遷移
         //     - 3.5秒を設定
-        Timer.scheduledTimer(
-            timeInterval: timerInterval,
-            target: self,
-            selector: #selector(self.moveNextScreen),
-            userInfo: nil,
-            repeats: false
-        )
+        Timer.scheduledTimer(timeInterval: 3.5,
+                             target: self,
+                             selector: #selector(self.moveNextScreen),
+                             userInfo: nil,
+                             repeats: false)
+
     }
     
     @objc private func moveNextScreen() {
-        // 質問作成画面への移行
-        self.present(presenter.viewController!,
-                     animated: true,
-                     completion: nil
-        )
+        
+        // 初回起動のみHow To画面への移行
+        if(!UserDefaults.standard.bool(forKey: "isInitialLaunch")){
+            UserDefaults.standard.set(true, forKey: "isInitialLaunch")
+        }else{
+            // 2回目以降はプレイヤー数入力画面への移行
+            self.presenter.nextView = "Player"
+        }
+        
+        self.presenter.setNextViewController()
+        self.present(self.presenter.viewController!, animated: true, completion: nil)
     }
 }

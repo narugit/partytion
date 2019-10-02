@@ -1,19 +1,13 @@
 //
-//  SplashPresenter.swift
-//  PartytionApp
-//
-//  Created by tatsuya_oyanagi on 2019/09/01.
 //  Copyright © 2019 naruhiyo. All rights reserved.
 //
 
 import UIKit
 import Lottie
+import CoreData
 
 class SplashPresenter: BasePresenter {
-    var nextView: String { return "HowTo" }
-    
-    private let animationTag: String = "BeerBubbles"
-    
+    public var nextView: String = "HowTo"
     private var storyboard: UIStoryboard? = nil
     public private(set) var viewController: UIViewController? = nil
     
@@ -23,19 +17,11 @@ class SplashPresenter: BasePresenter {
     
     func showAnimation(panel: UIView) {
         let animationView = AnimationView(name: self.animationTag)
-        animationView.frame = CGRect(
-            x: 0,
-            y: 0,
-            width: panel.bounds.width,
-            height: panel.bounds.height
-        )
-        animationView.center = panel.center
-        animationView.contentMode = .scaleAspectFit
-        animationView.animationSpeed = 1
-        animationView.loopMode = LottieLoopMode.playOnce
-        
-        panel.addSubview(animationView)
-        
+        animationView.animationSpeed = 0.9
+        animationView.loopMode = LottieLoopMode.loop
+
+        animationPanel.addSubview(animationView)
+
         animationView.play()
     }
     

@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import SSBouncyButton
 
 class HowToViewController: UIViewController {
-    @IBOutlet var nextButton: UIButton!
-    @IBOutlet var backButton: UIButton!
     @IBOutlet var contentLabel: UILabel!
+    @IBOutlet weak var nextButton: SSBouncyButton!
+    @IBOutlet weak var backButton: SSBouncyButton!
     
     var pages: [String]! = ["Explanation 1", "Explanation 2", "Explanation 3", "Explanation 4"]
     var page: Int! = 0

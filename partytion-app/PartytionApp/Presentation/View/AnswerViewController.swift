@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import SSBouncyButton
 
 class AnswerViewController: UIViewController {
-    @IBOutlet var yesButton: UIButton!
-    @IBOutlet weak var noButton: UIButton!
+    @IBOutlet var yesButton: SSBouncyButton!
+    @IBOutlet weak var noButton: SSBouncyButton!
     @IBOutlet private var questionText: UITextView!
 
     public var question_id: Int = 0
