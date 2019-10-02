@@ -13,14 +13,12 @@ class SplashViewController: UIViewController {
 
     private var presenter: SplashPresenter!
     private let timerInterval: Double = 3.5
-
-    private var presenter: SplashPresenter!
     
     // プログラムの読み込みが完了
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = SplashPresenter()
-        presenter.showAnimation(panel: animationPanel)
+        self.presenter = SplashPresenter()
+        self.presenter.showAnimation(panel: animationPanel)
     }
 
     // 画面生成が全て完了している
@@ -37,15 +35,6 @@ class SplashViewController: UIViewController {
     }
     
     @objc private func moveNextScreen() {
-        
-        // 初回起動のみHow To画面への移行
-        if(!UserDefaults.standard.bool(forKey: "isInitialLaunch")){
-            UserDefaults.standard.set(true, forKey: "isInitialLaunch")
-        }else{
-            // 2回目以降はプレイヤー数入力画面への移行
-            self.presenter.nextView = "Player"
-        }
-        
         self.presenter.setNextViewController()
         self.present(self.presenter.viewController!, animated: true, completion: nil)
     }

@@ -18,10 +18,10 @@ class PlayerPresenter: BasePresenter {
         self.setNextViewController()
     }
     
-    func setPlayerNumber (playerNumber: String?) {
+    func setPlayerNumber (playerNumber: Double?) {
         
         if let secondVC = viewController as? QuestionViewController {
-            secondVC.playerNumber = playerNumber!
+            secondVC.playerNumber = Int(playerNumber!)
         }
     }
     

@@ -11,7 +11,8 @@ import CoreData
 
 class ResultPresenter: BasePresenter {
     var nextView: String { return "HowTo" }
-    
+    private let animationTag: String = "BeerBubbles"
+
     public private(set) var question_id: Int = 0
     private var storyboard: UIStoryboard? = nil
     public private(set) var viewController: UIViewController? = nil
@@ -72,5 +73,15 @@ class ResultPresenter: BasePresenter {
             print("Error: \(error.localizedDescription)")
         }
         return resultPair
+    }
+    
+    func showAnimation(panel: UIView) {
+        let animationView = AnimationView(name: self.animationTag)
+        animationView.animationSpeed = 0.9
+        animationView.loopMode = LottieLoopMode.loop
+
+        panel.addSubview(animationView)
+
+        animationView.play()
     }
 }

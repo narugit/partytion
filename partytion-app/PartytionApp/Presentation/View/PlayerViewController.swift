@@ -21,14 +21,10 @@ class PlayerViewController: UIViewController {
         super.viewDidLoad()
 
         self.presenter = PlayerPresenter()
-    
-    // プログラムの読み込みが完了
-    override func viewDidLoad() {
-        super.viewDidLoad()
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
-        presenter.setPlayerNumber(playerNumber: inputPlayerNumber.text)
+        presenter.setPlayerNumber(playerNumber: inputPlayerNumber?.value)
         self.moveQuestionScreen()
     }
     

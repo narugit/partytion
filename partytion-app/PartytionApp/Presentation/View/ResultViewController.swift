@@ -42,9 +42,10 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.showAnimation()
         
         self.presenter = ResultPresenter(question_id: question_id)
+        self.presenter.showAnimation(panel: animationPanel)
+
         let question: Questions? = presenter.getQuestion()
         questionText.text = question!.question
         
@@ -61,6 +62,8 @@ class ResultViewController: UIViewController {
         let values: [Double] = [resultPair.0, resultPair.1]
         let yesNo : [String] = ["Yes", "No"]
         
+        yesLabel.text = "Yesと回答した人: " + String("\(Int(resultPair.0))人")
+        noLabel.text = "Noと回答した人: " + String("\(Int(resultPair.1))人")
         customizeChart(dataPoints: yesNo, values: values)
     }
     
@@ -86,18 +89,5 @@ class ResultViewController: UIViewController {
         
         pieChartView.data = pieChartData
         pieChartView.legend.enabled = false
-    }
-    
-    private func showAnimation() {
-        let animationView = AnimationView(name: "BeerBubbles")
-        
-        animationView.animationSpeed = 0.9
-        animationView.loopMode = LottieLoopMode.loop
-        
-        animationPanel.addSubview(animationView)
-        
-        yesLabel.text = "Yesと回答した人: " + String("\(Int(resultPair.0))人")
-        noLabel.text = "Noと回答した人: " + String("\(Int(resultPair.1))人")
-        animationView.play()
     }
 }

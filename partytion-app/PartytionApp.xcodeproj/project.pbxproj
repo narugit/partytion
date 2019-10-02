@@ -194,13 +194,9 @@
 				2737BB58230AE23B007E4C2E /* BasePresenter.swift */,
 				2743B34723155E0200960F52 /* AnswerPresenter.swift */,
 				27ECB877231A30B5003AC9E1 /* ResultPresenter.swift */,
-<<<<<<< HEAD
 				279FC9B1231B7CDD00DE300D /* SplashPresenter.swift */,
 				279FC9B5231B863F00DE300D /* PlayerPresenter.swift */,
 				279FC9B7231B898F00DE300D /* HowToPresenter.swift */,
-=======
-				43323333231B5291004252E4 /* SplashPresenter.swift */,
->>>>>>> feature/minor-adjust-design
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -567,12 +563,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				27ECB878231A30B5003AC9E1 /* ResultPresenter.swift in Sources */,
-<<<<<<< HEAD
 				279FC9B6231B863F00DE300D /* PlayerPresenter.swift in Sources */,
 				279FC9B2231B7CDD00DE300D /* SplashPresenter.swift in Sources */,
-=======
-				43323334231B5291004252E4 /* SplashPresenter.swift in Sources */,
->>>>>>> feature/minor-adjust-design
 				4376139D22F9A2340011B4E8 /* HowToViewController.swift in Sources */,
 				2737BB59230AE23B007E4C2E /* BasePresenter.swift in Sources */,
 				27264E9D22F8434100839EBA /* SplashViewController.swift in Sources */,
