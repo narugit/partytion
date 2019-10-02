@@ -24,8 +24,6 @@ class ResultPresenter: BasePresenter {
     init(question_id: Int) {
         self.question_id = question_id
         self.setNextViewController()
-
-        self.getQuestion()
     }
     
     func setNextViewController() -> Void {
