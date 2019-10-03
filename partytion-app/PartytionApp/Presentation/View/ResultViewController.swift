@@ -31,8 +31,6 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var pieChartView: PieChartView!
     @IBOutlet weak var questionText: UITextView!
-    @IBOutlet weak var yesLabel: UILabel!
-    @IBOutlet weak var noLabel: UILabel!
     @IBOutlet weak var animationPanel: AnimationView!
     @IBOutlet weak var replyButton: SSBouncyButton!
     
@@ -64,8 +62,6 @@ class ResultViewController: UIViewController {
         let values: [Double] = [resultPair.0, resultPair.1]
         let yesNo : [String] = ["Yes", "No"]
         
-        yesLabel.text = "Yesと回答した人: " + String("\(Int(resultPair.0))人")
-        noLabel.text = "Noと回答した人: " + String("\(Int(resultPair.1))人")
         customizeChart(dataPoints: yesNo, values: values)
     }
     

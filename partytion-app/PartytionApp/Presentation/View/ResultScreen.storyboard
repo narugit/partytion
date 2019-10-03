@@ -39,17 +39,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWu-24-Eyj" customClass="SSBouncyButton">
-                                        <rect key="frame" x="269" y="617" width="120" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Oshidashi-M-Gothic-Regular" family="Oshidashi-M-Gothic" pointSize="20"/>
-                                        <state key="normal" title="もう一度遊ぶ">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="replyButtonTapped:" destination="Au2-6O-ED5" eventType="touchUpInside" id="JOz-Nj-6jj"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <accessibility key="accessibilityConfiguration" identifier="SplashAnimationView">
                                     <accessibilityTraits key="traits" none="YES"/>
@@ -68,6 +57,17 @@
                                 <fontDescription key="fontDescription" name="Oshidashi-M-Gothic-Regular" family="Oshidashi-M-Gothic" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWu-24-Eyj" customClass="SSBouncyButton">
+                                <rect key="frame" x="274" y="289" width="120" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Oshidashi-M-Gothic-Regular" family="Oshidashi-M-Gothic" pointSize="20"/>
+                                <state key="normal" title="もう一度遊ぶ">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="replyButtonTapped:" destination="Au2-6O-ED5" eventType="touchUpInside" id="JOz-Nj-6jj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.68190638699999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="Uyi-y5-TXg"/>
