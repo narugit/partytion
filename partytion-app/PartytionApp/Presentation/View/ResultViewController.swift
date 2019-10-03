@@ -9,6 +9,7 @@
 import UIKit
 import Charts
 import Lottie
+import SSBouncyButton
 
 extension UIColor {
     convenience init(_ red: Int, _ green: Int, _ blue: Int, _ alpha: Int = 255) {
@@ -33,6 +34,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var yesLabel: UILabel!
     @IBOutlet weak var noLabel: UILabel!
     @IBOutlet weak var animationPanel: AnimationView!
+    @IBOutlet weak var replyButton: SSBouncyButton!
     
     var timer : Timer?
     
@@ -89,5 +91,14 @@ class ResultViewController: UIViewController {
         
         pieChartView.data = pieChartData
         pieChartView.legend.enabled = false
+    }
+    
+    
+    @IBAction func replyButtonTapped(_ sender: Any) {
+        present(
+            presenter.viewController!,
+            animated: true,
+            completion: nil
+        )
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class ResultPresenter: BasePresenter {
-    var nextView: String { return "HowTo" }
+    var nextView: String { return "Player" }
     private let animationTag: String = "BeerBubbles"
 
     public private(set) var question_id: Int = 0
