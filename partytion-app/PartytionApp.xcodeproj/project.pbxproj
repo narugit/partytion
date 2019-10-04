@@ -15,7 +15,6 @@
 		27264EAD22F854AA00839EBA /* Lottie.framework in Resources */ = {isa = PBXBuildFile; fileRef = 27264EA722F8521B00839EBA /* Lottie.framework */; };
 		27264EAF22F855D700839EBA /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27264EA722F8521B00839EBA /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2736892B230ECBE4000EC4B5 /* PartytionDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27368929230ECBE4000EC4B5 /* PartytionDB.xcdatamodeld */; };
-		2736892F230ED516000EC4B5 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2736892E230ED516000EC4B5 /* DateFormatter.swift */; };
 		2737BB57230AD562007E4C2E /* QuestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2737BB56230AD562007E4C2E /* QuestionPresenter.swift */; };
 		2737BB59230AE23B007E4C2E /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2737BB58230AE23B007E4C2E /* BasePresenter.swift */; };
 		2743B34823155E0200960F52 /* AnswerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743B34723155E0200960F52 /* AnswerPresenter.swift */; };
@@ -89,7 +88,6 @@
 		27264EA722F8521B00839EBA /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		2736891E230EC842000EC4B5 /* PartytionApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PartytionApp.entitlements; sourceTree = "<group>"; };
 		2736892A230ECBE4000EC4B5 /* PartytionDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PartytionDB.xcdatamodel; sourceTree = "<group>"; };
-		2736892E230ED516000EC4B5 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		2737BB56230AD562007E4C2E /* QuestionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenter.swift; sourceTree = "<group>"; };
 		2737BB58230AE23B007E4C2E /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		2743B34723155E0200960F52 /* AnswerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerPresenter.swift; sourceTree = "<group>"; };
@@ -232,14 +230,6 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		2736892D230ED4F9000EC4B5 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				2736892E230ED516000EC4B5 /* DateFormatter.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		2778397422E5E108009F5C61 = {
 			isa = PBXGroup;
 			children = (
@@ -267,7 +257,6 @@
 		2778397F22E5E108009F5C61 /* PartytionApp */ = {
 			isa = PBXGroup;
 			children = (
-				2736892D230ED4F9000EC4B5 /* Utils */,
 				2736891F230EC9D8000EC4B5 /* Entity */,
 				2736891E230EC842000EC4B5 /* PartytionApp.entitlements */,
 				27264EA522F850E600839EBA /* assets */,
@@ -586,7 +575,6 @@
 				2743B34823155E0200960F52 /* AnswerPresenter.swift in Sources */,
 				279FC9B8231B898F00DE300D /* HowToPresenter.swift in Sources */,
 				27CEAAEF22F9A324004C864B /* AnswerViewController.swift in Sources */,
-				2736892F230ED516000EC4B5 /* DateFormatter.swift in Sources */,
 				2736892B230ECBE4000EC4B5 /* PartytionDB.xcdatamodeld in Sources */,
 				27CEAAEB22F99CE9004C864B /* QuestionViewController.swift in Sources */,
 				2778398122E5E108009F5C61 /* AppDelegate.swift in Sources */,
