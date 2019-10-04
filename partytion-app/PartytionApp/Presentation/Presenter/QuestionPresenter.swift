@@ -13,6 +13,7 @@ class QuestionPresenter: BasePresenter {
     var nextView: String { return "Answer" }
 
     private let questionThemes = [ "ゲーム", "飲み会", "ニュース", "あるあるネタ" ]
+    //     private var questionThemes = [String]()
     public private(set) var theme: String = ""
     private var playerNumber: Int = 0
     public private(set) var answerPair: (Int, Int) = (0, 0)

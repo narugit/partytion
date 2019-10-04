@@ -10,7 +10,6 @@
 		03691879A41138B75228581D /* Pods_PartytionAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC524F970F6258EFA7CDED58 /* Pods_PartytionAppTests.framework */; };
 		27264E9D22F8434100839EBA /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27264E9C22F8434100839EBA /* SplashViewController.swift */; };
 		27264EA122F844EF00839EBA /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27264EA022F844EF00839EBA /* SplashScreen.storyboard */; };
-		27264EA422F850DF00839EBA /* BeerBubbles.json in Resources */ = {isa = PBXBuildFile; fileRef = 27264EA322F850DF00839EBA /* BeerBubbles.json */; };
 		27264EAC22F8533800839EBA /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27264EA722F8521B00839EBA /* Lottie.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		27264EAD22F854AA00839EBA /* Lottie.framework in Resources */ = {isa = PBXBuildFile; fileRef = 27264EA722F8521B00839EBA /* Lottie.framework */; };
 		27264EAF22F855D700839EBA /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27264EA722F8521B00839EBA /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -19,6 +18,11 @@
 		2737BB59230AE23B007E4C2E /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2737BB58230AE23B007E4C2E /* BasePresenter.swift */; };
 		2743B34823155E0200960F52 /* AnswerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743B34723155E0200960F52 /* AnswerPresenter.swift */; };
 		2744B01A2347802B00AD8520 /* CustomUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2744B0192347802B00AD8520 /* CustomUIColor.swift */; };
+		2744B01C234793EB00AD8520 /* QuestionThemeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2744B01B234793EB00AD8520 /* QuestionThemeEntity.swift */; };
+		2744B0202347949200AD8520 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2744B01F2347949200AD8520 /* JsonParser.swift */; };
+		2744B02A23479E6400AD8520 /* Oshidashi-M-Gothic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2744B02723479E6400AD8520 /* Oshidashi-M-Gothic.otf */; };
+		2744B02B23479E6400AD8520 /* BeerBubbles.json in Resources */ = {isa = PBXBuildFile; fileRef = 2744B02823479E6400AD8520 /* BeerBubbles.json */; };
+		2744B02C23479E6400AD8520 /* SeedData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2744B02923479E6400AD8520 /* SeedData.json */; };
 		2778398122E5E108009F5C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778398022E5E108009F5C61 /* AppDelegate.swift */; };
 		2778398822E5E109009F5C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2778398722E5E109009F5C61 /* Assets.xcassets */; };
 		2778398B22E5E109009F5C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2778398922E5E109009F5C61 /* LaunchScreen.storyboard */; };
@@ -33,7 +37,6 @@
 		27CEAAF122F9A338004C864B /* AnswerScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CEAAF022F9A338004C864B /* AnswerScreen.storyboard */; };
 		27ECB878231A30B5003AC9E1 /* ResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECB877231A30B5003AC9E1 /* ResultPresenter.swift */; };
 		435E07CA2344C8DE0038D810 /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435E07C92344C8DE0038D810 /* PlaceHolderTextView.swift */; };
-		436ACF7B23437FB000F0DC46 /* Oshidashi-M-Gothic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 436ACF7A23437FB000F0DC46 /* Oshidashi-M-Gothic.otf */; };
 		4376139D22F9A2340011B4E8 /* HowToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4376139C22F9A2340011B4E8 /* HowToViewController.swift */; };
 		4376139F22F9A33D0011B4E8 /* HowToScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4376139E22F9A33D0011B4E8 /* HowToScreen.storyboard */; };
 		437613A122F9B2B80011B4E8 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437613A022F9B2B80011B4E8 /* PlayerViewController.swift */; };
@@ -84,7 +87,6 @@
 		27264E9C22F8434100839EBA /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		27264EA022F844EF00839EBA /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 		27264EA222F84EE400839EBA /* Partytion-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Partytion-Bridging-Header.h"; sourceTree = "<group>"; };
-		27264EA322F850DF00839EBA /* BeerBubbles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BeerBubbles.json; sourceTree = "<group>"; };
 		27264EA722F8521B00839EBA /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		2736891E230EC842000EC4B5 /* PartytionApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PartytionApp.entitlements; sourceTree = "<group>"; };
 		2736892A230ECBE4000EC4B5 /* PartytionDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PartytionDB.xcdatamodel; sourceTree = "<group>"; };
@@ -92,6 +94,11 @@
 		2737BB58230AE23B007E4C2E /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		2743B34723155E0200960F52 /* AnswerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerPresenter.swift; sourceTree = "<group>"; };
 		2744B0192347802B00AD8520 /* CustomUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIColor.swift; sourceTree = "<group>"; };
+		2744B01B234793EB00AD8520 /* QuestionThemeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionThemeEntity.swift; sourceTree = "<group>"; };
+		2744B01F2347949200AD8520 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
+		2744B02723479E6400AD8520 /* Oshidashi-M-Gothic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oshidashi-M-Gothic.otf"; sourceTree = "<group>"; };
+		2744B02823479E6400AD8520 /* BeerBubbles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BeerBubbles.json; sourceTree = "<group>"; };
+		2744B02923479E6400AD8520 /* SeedData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SeedData.json; sourceTree = "<group>"; };
 		2778397D22E5E108009F5C61 /* PartytionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartytionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2778398022E5E108009F5C61 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2778398722E5E109009F5C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,7 +122,6 @@
 		38A7B04F94E69DC71695CE08 /* Pods-PartytionAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartytionAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-PartytionAppUITests/Pods-PartytionAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		39912F1908118FA314359A1F /* Pods-PartytionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartytionApp.debug.xcconfig"; path = "Target Support Files/Pods-PartytionApp/Pods-PartytionApp.debug.xcconfig"; sourceTree = "<group>"; };
 		435E07C92344C8DE0038D810 /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
-		436ACF7A23437FB000F0DC46 /* Oshidashi-M-Gothic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oshidashi-M-Gothic.otf"; sourceTree = "<group>"; };
 		4376139C22F9A2340011B4E8 /* HowToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToViewController.swift; sourceTree = "<group>"; };
 		4376139E22F9A33D0011B4E8 /* HowToScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HowToScreen.storyboard; sourceTree = "<group>"; };
 		437613A022F9B2B80011B4E8 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
@@ -162,7 +168,7 @@
 		27264E9922F83FE100839EBA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				435E07C82344C8DE0038D810 /* Component */,
+				435E07C82344C8DE0038D810 /* Components */,
 				27264E9B22F840FB00839EBA /* Presenter */,
 				27264E9A22F840E700839EBA /* View */,
 			);
@@ -202,15 +208,6 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		27264EA522F850E600839EBA /* assets */ = {
-			isa = PBXGroup;
-			children = (
-				436ACF7A23437FB000F0DC46 /* Oshidashi-M-Gothic.otf */,
-				27264EA322F850DF00839EBA /* BeerBubbles.json */,
-			);
-			path = assets;
-			sourceTree = "<group>";
-		};
 		27264EA622F8521A00839EBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,9 +222,29 @@
 		2736891F230EC9D8000EC4B5 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				2744B0212347949700AD8520 /* Components */,
 				27368929230ECBE4000EC4B5 /* PartytionDB.xcdatamodeld */,
+				2744B01B234793EB00AD8520 /* QuestionThemeEntity.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		2744B0212347949700AD8520 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2744B01F2347949200AD8520 /* JsonParser.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2744B02623479E3000AD8520 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				2744B02823479E6400AD8520 /* BeerBubbles.json */,
+				2744B02723479E6400AD8520 /* Oshidashi-M-Gothic.otf */,
+				2744B02923479E6400AD8520 /* SeedData.json */,
+			);
+			path = assets;
 			sourceTree = "<group>";
 		};
 		2778397422E5E108009F5C61 = {
@@ -257,9 +274,9 @@
 		2778397F22E5E108009F5C61 /* PartytionApp */ = {
 			isa = PBXGroup;
 			children = (
+				2744B02623479E3000AD8520 /* assets */,
 				2736891F230EC9D8000EC4B5 /* Entity */,
 				2736891E230EC842000EC4B5 /* PartytionApp.entitlements */,
-				27264EA522F850E600839EBA /* assets */,
 				2778398022E5E108009F5C61 /* AppDelegate.swift */,
 				27264E9922F83FE100839EBA /* Presentation */,
 				2778398722E5E109009F5C61 /* Assets.xcassets */,
@@ -287,13 +304,13 @@
 			path = PartytionAppUITests;
 			sourceTree = "<group>";
 		};
-		435E07C82344C8DE0038D810 /* Component */ = {
+		435E07C82344C8DE0038D810 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				435E07C92344C8DE0038D810 /* PlaceHolderTextView.swift */,
 				2744B0192347802B00AD8520 /* CustomUIColor.swift */,
 			);
-			path = Component;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		5A1554849A4039538D97A35B /* Pods */ = {
@@ -426,14 +443,15 @@
 			files = (
 				27264EAD22F854AA00839EBA /* Lottie.framework in Resources */,
 				43D5114722FA7DC600C3D89C /* ResultScreen.storyboard in Resources */,
+				2744B02B23479E6400AD8520 /* BeerBubbles.json in Resources */,
 				2778398B22E5E109009F5C61 /* LaunchScreen.storyboard in Resources */,
 				2778398822E5E109009F5C61 /* Assets.xcassets in Resources */,
-				436ACF7B23437FB000F0DC46 /* Oshidashi-M-Gothic.otf in Resources */,
 				437613A322F9B3100011B4E8 /* PlayerScreen.storyboard in Resources */,
-				27264EA422F850DF00839EBA /* BeerBubbles.json in Resources */,
 				27264EA122F844EF00839EBA /* SplashScreen.storyboard in Resources */,
 				4376139F22F9A33D0011B4E8 /* HowToScreen.storyboard in Resources */,
+				2744B02C23479E6400AD8520 /* SeedData.json in Resources */,
 				27CEAAED22F99D05004C864B /* QuestionScreen.storyboard in Resources */,
+				2744B02A23479E6400AD8520 /* Oshidashi-M-Gothic.otf in Resources */,
 				27CEAAF122F9A338004C864B /* AnswerScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,7 +587,9 @@
 				4376139D22F9A2340011B4E8 /* HowToViewController.swift in Sources */,
 				2744B01A2347802B00AD8520 /* CustomUIColor.swift in Sources */,
 				2737BB59230AE23B007E4C2E /* BasePresenter.swift in Sources */,
+				2744B01C234793EB00AD8520 /* QuestionThemeEntity.swift in Sources */,
 				435E07CA2344C8DE0038D810 /* PlaceHolderTextView.swift in Sources */,
+				2744B0202347949200AD8520 /* JsonParser.swift in Sources */,
 				27264E9D22F8434100839EBA /* SplashViewController.swift in Sources */,
 				2737BB57230AD562007E4C2E /* QuestionPresenter.swift in Sources */,
 				2743B34823155E0200960F52 /* AnswerPresenter.swift in Sources */,
