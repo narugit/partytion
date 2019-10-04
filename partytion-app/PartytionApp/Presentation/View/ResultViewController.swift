@@ -36,10 +36,11 @@ class ResultViewController: UIViewController {
         self.setupPieChartView()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewDidDisappear(_ animated: Bool) {
+        self.presenter.deleteAllData()
+        super.viewDidDisappear(animated)
     }
-    
+
     private func setupPieChartView() {
         let resultPair: (Double, Double) = presenter.getResult()
 
@@ -78,7 +79,8 @@ class ResultViewController: UIViewController {
     
     
     @IBAction func replyButtonTapped(_ sender: Any) {
-        present(
+        self.presenter.deleteAllData()
+        self.present(
             presenter.viewController!,
             animated: true,
             completion: nil

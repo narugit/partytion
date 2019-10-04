@@ -82,4 +82,21 @@ class ResultPresenter: BasePresenter {
 
         animationView.play()
     }
+    
+    func deleteAllData() {
+        let entities = ["Users", "Questions"]
+        
+        for entity in entities {
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+            let deleteRequest = NSBatchDeleteRequest(fetchRequest: request)
+            do {
+                try self.managedContext.execute(deleteRequest)
+                try self.managedContext.save()
+                print("~~~ All data deleted ~~~")
+            } catch let error as NSError {
+                print("Error: \(error.localizedDescription)")
+            }
+        }
+        self.getQuestion()
+    }
 }

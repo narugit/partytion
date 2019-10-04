@@ -18,8 +18,8 @@ class PlayerViewController: UIViewController {
 
     // プログラムの読み込みが完了
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
         self.presenter = PlayerPresenter()
     }
     

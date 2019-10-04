@@ -44,10 +44,11 @@ class AnswerViewController: UIViewController {
     private func countAnswerNumber(text: String) {
         self.presenter.stuckAnswer(answerText: text)
         self.counter += 1
-        self.answererCount.text = "\(self.counter+1) / \(self.players)"
 
         if (counter >= players) {
             moveNextScreen()
+        } else {
+            self.answererCount.text = "\(self.counter+1) / \(self.players)"
         }
     }
 
