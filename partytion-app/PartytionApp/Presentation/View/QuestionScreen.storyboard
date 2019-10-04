@@ -31,14 +31,13 @@
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="top" placeholder="Question Text" adjustsFontForContentSizeCategory="YES" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="4dD-nM-co6">
-                                <rect key="frame" x="31" y="350" width="357" height="295"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="op4-qn-cf1" userLabel="Question Text" customClass="PlaceHolderTextView" customModule="PartytionApp" customModuleProvider="target">
+                                <rect key="frame" x="31" y="317" width="352" height="204"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.99749300740000002" green="0.98466928480000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Oshidashi-M-Gothic-Regular" family="Oshidashi-M-Gothic" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                            </textField>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Oshidashi-M-Gothic-Regular" family="Oshidashi-M-Gothic" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="になるような質問を 考えましょう！" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZt-3p-otE">
                                 <rect key="frame" x="31" y="225" width="352" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -74,7 +73,7 @@
                     <connections>
                         <outlet property="answerNumbers" destination="oZt-3p-otE" id="Iez-LL-rTs"/>
                         <outlet property="nextButton" destination="qda-tg-J7E" id="SXo-9D-cWc"/>
-                        <outlet property="questionText" destination="4dD-nM-co6" id="qy2-iZ-Pd8"/>
+                        <outlet property="questionText" destination="op4-qn-cf1" id="Zw0-SG-iYj"/>
                         <outlet property="questionTheme" destination="dvO-e9-MWh" id="JIp-E2-HTr"/>
                     </connections>
                 </viewController>
