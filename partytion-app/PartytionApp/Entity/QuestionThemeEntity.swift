@@ -6,8 +6,6 @@
 //  Copyright © 2019 naruhiyo. All rights reserved.
 //
 
-import Foundation
-
 struct QuestionThemeEntity: Codable {
-    let names: [String]
+    var themes: [String]
 }

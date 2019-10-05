@@ -97,6 +97,5 @@ class ResultPresenter: BasePresenter {
                 print("Error: \(error.localizedDescription)")
             }
         }
-        self.getQuestion()
     }
 }
