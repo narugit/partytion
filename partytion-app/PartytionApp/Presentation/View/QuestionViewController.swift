@@ -8,7 +8,7 @@
 import UIKit
 import SSBouncyButton
 
-class QuestionViewController: UIViewController {
+class QuestionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet private var questionTheme: UILabel!
     @IBOutlet private var answerNumbers: UITextView!
     @IBOutlet private var nextButton: SSBouncyButton!
@@ -33,13 +33,16 @@ class QuestionViewController: UIViewController {
         presenter.registerText(text: questionText.text)
         moveNextScreen()
     }
-        
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // キーボードを閉じる
         textField.resignFirstResponder()
         return true
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        questionText.resignFirstResponder()
+    }
+
     private func moveNextScreen() {
         // 質問作成画面への移行
         self.present(presenter.viewController!,

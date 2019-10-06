@@ -29,7 +29,7 @@ class QuestionPresenter: BasePresenter {
         self.playerNumber = playerNumber
         
         let jsonParser = QuestionThemeJSONParser()
-        let seedData: QuestionThemeEntity = jsonParser.getJSONData(resourceName: resourceName) as! QuestionThemeEntity
+        let seedData = jsonParser.getJSONData(resourceName: resourceName) as! QuestionThemeEntity
         self.questionThemes = seedData.themes
         self.answerPair.0 = Int.random(in: 1 ... playerNumber)
         self.answerPair.1 = playerNumber - self.answerPair.0
