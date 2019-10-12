@@ -8,7 +8,7 @@
 import UIKit
 
 protocol JSONParser {
-    func getJSONData (resourceName: String) -> Codable
+    func getJSONData () -> Codable
 }
 
 extension JSONParser {

@@ -8,8 +8,10 @@
 import UIKit
 
 struct QuestionThemeJSONParser: JSONParser {
+    private let resourceName = "SeedData"
+
     // JSON を取得
-    func getJSONData (resourceName: String) -> Codable {
+    func getJSONData () -> Codable {
         let path = self.load(resourceName: resourceName)
         let data = FileIO().getFileData(path)
         do {

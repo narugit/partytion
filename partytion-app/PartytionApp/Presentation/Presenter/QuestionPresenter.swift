@@ -12,7 +12,6 @@ import CoreData
 class QuestionPresenter: BasePresenter {
     var nextView: String { return "Answer" }
 
-    private let resourceName = "SeedData"
     private var questionThemes = [String]()
 
     public private(set) var theme: String = ""
@@ -29,7 +28,7 @@ class QuestionPresenter: BasePresenter {
         self.playerNumber = playerNumber
         
         let jsonParser = QuestionThemeJSONParser()
-        let seedData = jsonParser.getJSONData(resourceName: resourceName) as! QuestionThemeEntity
+        let seedData = jsonParser.getJSONData() as! QuestionThemeEntity
         self.questionThemes = seedData.themes
         self.answerPair.0 = Int.random(in: 1 ... playerNumber)
         self.answerPair.1 = playerNumber - self.answerPair.0
