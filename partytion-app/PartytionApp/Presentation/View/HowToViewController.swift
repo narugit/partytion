@@ -7,21 +7,22 @@
 //
 
 import UIKit
+import SSBouncyButton
 
 class HowToViewController: UIViewController {
-    @IBOutlet var nextButton: UIButton!
-    @IBOutlet var backButton: UIButton!
     @IBOutlet var contentLabel: UILabel!
+    @IBOutlet weak var nextButton: SSBouncyButton!
+    @IBOutlet weak var backButton: SSBouncyButton!
     
-    var content: [String]! = ["Explanation 1", "Explanation 2", "Explanation 3", "Explanation 4"]
+    var pages: [String]! = ["Explanation 1", "Explanation 2", "Explanation 3", "Explanation 4"]
     var page: Int! = 0
-    var pageNum: Int!
-    
+    private var presenter: HowToPresenter!
     // プログラムの読み込みが完了
     override func viewDidLoad() {
         super.viewDidLoad()
-        backButton.isHidden = true
-        self.pageNum = self.content.count
+        
+        self.presenter = HowToPresenter()
+        self.backButton.isHidden = true
     }
     
     // nextボタンをタップ
@@ -32,13 +33,13 @@ class HowToViewController: UIViewController {
             backButton.isHidden = false
         }
         
-        if(self.page > self.pageNum - 1){
-            self.page = self.pageNum - 1
+        if(self.page > self.pages.count - 1){
+            self.page = self.pages.count - 1
             // ページ遷移する
             self.movePlayerScreen()
         }
         
-        contentLabel.text = self.content[self.page]
+        contentLabel.text = self.pages[self.page]
     }
     
     // backボタンをタップ
@@ -51,13 +52,15 @@ class HowToViewController: UIViewController {
             backButton.isHidden = true
         }
         
-        contentLabel.text = self.content[self.page]
+        contentLabel.text = self.pages[self.page]
     }
     
     // プレイヤー画面への移行
     private func movePlayerScreen() {
-        let playerStoryboard :UIStoryboard = UIStoryboard(name: "PlayerScreen", bundle: nil)
-        let playerScreen :UIViewController = playerStoryboard.instantiateViewController(withIdentifier: "PlayerViewController")
-        present(playerScreen, animated: true, completion: nil)
+        present(
+            presenter.viewController!,
+            animated: true,
+            completion: nil
+        )
     }
 }

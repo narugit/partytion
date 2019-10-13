@@ -7,49 +7,33 @@
 //
 
 import UIKit
+import GMStepper
+import SSBouncyButton
 
 class PlayerViewController: UIViewController {
-    @IBOutlet var inputPlayerNumber: UITextField!
-    @IBOutlet var nextButton: UIButton!
+    @IBOutlet weak var inputPlayerNumber: GMStepper!
+    @IBOutlet weak var nextButton: SSBouncyButton!
+
+    private var presenter: PlayerPresenter!
 
     // プログラムの読み込みが完了
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        let toolbar: UIToolbar = UIToolbar()
-        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
-                                    target: nil,
-                                    action: nil)
-        let done = UIBarButtonItem(title: "done",
-                                   style: .done,
-                                   target: self,
-                                   action: #selector(self.doneButtonAction))
-        toolbar.items = [space, done]
-        toolbar.sizeToFit()
-        self.inputPlayerNumber.inputAccessoryView = toolbar
-        self.inputPlayerNumber.keyboardType = .numberPad
+        self.presenter = PlayerPresenter()
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
+        presenter.setPlayerNumber(playerNumber: inputPlayerNumber?.value)
         self.moveQuestionScreen()
     }
+    
     // 質問作成画面への移行
     private func moveQuestionScreen() {
-        let questionStoryboard :UIStoryboard = UIStoryboard(name: "QuestionScreen", bundle: nil)
-        let questionScreen :UIViewController = questionStoryboard.instantiateViewController(withIdentifier: "QuestionViewController")
-        
-        if let secondVC = questionScreen as? QuestionViewController {
-            secondVC.playerNumber = inputPlayerNumber.text!
-        }
-        
-        present(questionScreen, animated: true, completion: nil)
-    }
-    
-    @objc func doneButtonAction()
-    {
-        self.inputPlayerNumber.resignFirstResponder()
-    }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.inputPlayerNumber.resignFirstResponder()
+        present(
+            presenter.viewController!,
+            animated: true,
+            completion: nil
+        )
     }
 }

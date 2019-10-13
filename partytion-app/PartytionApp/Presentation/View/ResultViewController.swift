@@ -8,14 +8,18 @@
 
 import UIKit
 import Charts
+import Lottie
+import SSBouncyButton
 
 class ResultViewController: UIViewController {
     
     @IBOutlet weak var pieChartView: PieChartView!
     @IBOutlet weak var questionText: UITextView!
-    @IBOutlet weak var yesLabel: UILabel!
-    @IBOutlet weak var noLabel: UILabel!
-
+    @IBOutlet weak var animationPanel: AnimationView!
+    @IBOutlet weak var replyButton: SSBouncyButton!
+    
+    var timer : Timer?
+    
     public var question_id: Int = 0
     private var presenter: ResultPresenter!
 
@@ -24,45 +28,62 @@ class ResultViewController: UIViewController {
 
         
         self.presenter = ResultPresenter(question_id: question_id)
+        self.presenter.showAnimation(panel: animationPanel)
+
         let question: Questions? = presenter.getQuestion()
-        print(question)
         questionText.text = question!.question
         
         self.setupPieChartView()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        self.presenter.deleteAllData()
+        super.viewDidDisappear(animated)
+    }
+
     private func setupPieChartView() {
-        self.pieChartView.usePercentValuesEnabled = true
         let resultPair: (Double, Double) = presenter.getResult()
 
-        // reformat for percentage
-        let yesVal = resultPair.0 / Double(presenter.count) * 100
-        let noVal = resultPair.1 / Double(presenter.count) * 100
-
-        let values: [Double] = [yesVal, noVal]
-        let yesNo : [Double] = [1, 2]
-
-        var entries: [ChartDataEntry] = Array()
-
-        for (i, value) in values.enumerated(){
-            entries.append(ChartDataEntry(x: yesNo[i], y: value, icon: UIImage(named: "icon", in: Bundle(for: self.classForCoder), compatibleWith: nil)))
+        let values: [Double] = [resultPair.0, resultPair.1]
+        let yesNo : [String] = ["Yes", "No"]
+        
+        customizeChart(dataPoints: yesNo, values: values)
+    }
+    
+    func customizeChart(dataPoints: [String], values: [Double]) {
+        var dataEntries: [ChartDataEntry] = []
+        for i in 0..<dataPoints.count {
+            let dataEntry = PieChartDataEntry(value: values[i], label: dataPoints[i], data: dataPoints[i] as AnyObject)
+            dataEntries.append(dataEntry)
         }
         
-        let dataSet = PieChartDataSet(entries: entries, label: "")
-        dataSet.colors = ChartColorTemplates.vordiplom()
+        let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: nil)
+        var colors: [UIColor] = []
+        colors.append(UIColor(245, 197, 100))
+        colors.append(UIColor(233, 128, 48))
+        pieChartDataSet.colors = colors
+        pieChartDataSet.valueFont = UIFont(name: "Oshidashi-M-Gothic-Regular", size: 18)!
         
-        let chartData = PieChartData(dataSet: dataSet)
+        let pieChartData = PieChartData(dataSet: pieChartDataSet)
+        let format = NumberFormatter()
+        format.numberStyle = .none
+        let formatter = DefaultValueFormatter(formatter: format)
+        pieChartData.setValueFormatter(formatter)
         
-        dataSet.drawValuesEnabled = false
-        
-        pieChartView.data = chartData
-        pieChartView.holeRadiusPercent = 0.7
-        pieChartView.transparentCircleRadiusPercent = 0
+        pieChartView.data = pieChartData
         pieChartView.legend.enabled = false
-        pieChartView.chartDescription?.enabled = false
-        pieChartView.minOffset = 0
-        
-        yesLabel.text = "Yes: " + String("\(Int(resultPair.0))人")
-        noLabel.text = "No: " + String("\(Int(resultPair.1))人")
+        pieChartView.rotationEnabled = false
+        pieChartView.holeRadiusPercent = 0.4
+        pieChartView.transparentCircleRadiusPercent = 0
+    }
+    
+    
+    @IBAction func replyButtonTapped(_ sender: Any) {
+        self.presenter.deleteAllData()
+        self.present(
+            presenter.viewController!,
+            animated: true,
+            completion: nil
+        )
     }
 }

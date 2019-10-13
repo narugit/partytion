@@ -54,8 +54,6 @@ class AnswerPresenter: BasePresenter {
             users.answer = answerText
             users.username = "User"
             
-        } catch let error as NSError {
-            print("Error: \(error.localizedDescription)")
         }
         
         

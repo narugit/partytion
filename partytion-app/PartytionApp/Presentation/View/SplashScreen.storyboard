@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Pc-4q-0W8">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Pc-4q-0W8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,38 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partytion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnP-69-koc">
-                                <rect key="frame" x="143.5" y="91" width="127" height="39"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lt2-b4-Z3H">
-                                <rect key="frame" x="0.0" y="169" width="414" height="605"/>
-                                <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="0.29601883561643838" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="top" semanticContentAttribute="playback" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt2-b4-Z3H" customClass="AnimationView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="SplashAnimationView">
                                     <accessibilityTraits key="traits" none="YES"/>
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lauching App..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5E-oU-nYL">
-                                <rect key="frame" x="112.5" y="782" width="189" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="lt2-b4-Z3H" firstAttribute="leading" secondItem="ill-eh-6U5" secondAttribute="leading" id="P5a-sp-jRN"/>
-                            <constraint firstItem="lt2-b4-Z3H" firstAttribute="top" secondItem="ill-eh-6U5" secondAttribute="top" constant="169" id="QvM-zI-fKx"/>
-                            <constraint firstItem="I5E-oU-nYL" firstAttribute="top" secondItem="lt2-b4-Z3H" secondAttribute="bottom" constant="8" symbolic="YES" id="Rk4-g8-WWh"/>
-                            <constraint firstAttribute="trailing" secondItem="lt2-b4-Z3H" secondAttribute="trailing" id="ZZm-fs-V7e"/>
-                            <constraint firstItem="lt2-b4-Z3H" firstAttribute="centerX" secondItem="rnP-69-koc" secondAttribute="centerX" id="dih-sm-fvi"/>
-                            <constraint firstAttribute="bottom" secondItem="lt2-b4-Z3H" secondAttribute="bottom" constant="122" id="q26-hj-Xau"/>
-                            <constraint firstItem="lt2-b4-Z3H" firstAttribute="top" secondItem="rnP-69-koc" secondAttribute="bottom" constant="39" id="vJl-su-CXo"/>
-                            <constraint firstItem="lt2-b4-Z3H" firstAttribute="centerX" secondItem="I5E-oU-nYL" secondAttribute="centerX" id="wMV-4B-ST0"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yyj-Va-tyb"/>
                     </view>
                     <connections>

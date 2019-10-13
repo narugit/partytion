@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import SSBouncyButton
 
 class AnswerViewController: UIViewController {
-    @IBOutlet var yesButton: UIButton!
-    @IBOutlet weak var noButton: UIButton!
+    @IBOutlet private var yesButton: SSBouncyButton!
+    @IBOutlet private var noButton: SSBouncyButton!
     @IBOutlet private var questionText: UITextView!
-
+    @IBOutlet private var answererCount: UITextView!
+    
     public var question_id: Int = 0
     private var presenter: AnswerPresenter!
     private var counter: Int = 0
@@ -28,22 +30,25 @@ class AnswerViewController: UIViewController {
         
         self.questionText.text = question!.value(forKey: "question") as? String
         self.players = (question!.value(forKey: "players") as? Int)!
+        self.answererCount.text = "\(self.counter+1) / \(self.players)"
     }
     
     @IBAction func yesButtonTapped(_ sender: UIButton) {
-        countAnswerNumber(text: "yes")
+        self.countAnswerNumber(text: "yes")
     }
 
     @IBAction func noButtonTapped(_ sender: UIButton) {
-        countAnswerNumber(text: "no")
+        self.countAnswerNumber(text: "no")
     }
 
     private func countAnswerNumber(text: String) {
-        presenter.stuckAnswer(answerText: text)
-        counter += 1
+        self.presenter.stuckAnswer(answerText: text)
+        self.counter += 1
 
         if (counter >= players) {
             moveNextScreen()
+        } else {
+            self.answererCount.text = "\(self.counter+1) / \(self.players)"
         }
     }
 
