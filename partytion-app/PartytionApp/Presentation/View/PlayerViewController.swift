@@ -15,12 +15,13 @@ class PlayerViewController: UIViewController {
     @IBOutlet weak var nextButton: SSBouncyButton!
 
     private var presenter: PlayerPresenter!
-
+    private var window = UIApplication.shared.keyWindow
+    
     // プログラムの読み込みが完了
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         self.presenter = PlayerPresenter()
+//        self.window!.rootViewController = self.storyboard!.instantiateViewController(withIdentifier: "PlayerViewController")
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
@@ -30,6 +31,7 @@ class PlayerViewController: UIViewController {
     
     // 質問作成画面への移行
     private func moveQuestionScreen() {
+        print("hoge")
         present(
             presenter.viewController!,
             animated: true,

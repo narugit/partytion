@@ -13,8 +13,9 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet private var answerNumbers: UITextView!
     @IBOutlet private var nextButton: SSBouncyButton!
     @IBOutlet weak var questionText: PlaceHolderTextView!
-    public var playerNumber: Int = 0
+    public var playerNumber: Int = 1
     private var presenter: QuestionPresenter!
+    private var window = UIApplication.shared.keyWindow
     
     // プログラムの読み込みが完了
     override func viewDidLoad() {
@@ -25,6 +26,7 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
         self.questionText.placeholder = "質問文"
 
         self.presenter = QuestionPresenter(playerNumber: playerNumber)
+        
         self.questionTheme.text = presenter.theme
         self.answerNumbers.text = "\(presenter.answerPair.0) vs \(presenter.answerPair.1)になるような質問を 考えましょう！"
     }
@@ -44,6 +46,7 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
     }
 
     private func moveNextScreen() {
+        self.window!.rootViewController = self.presenter.viewController!
         // 質問作成画面への移行
         self.present(presenter.viewController!,
                      animated: true,

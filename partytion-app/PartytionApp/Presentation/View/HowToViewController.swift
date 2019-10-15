@@ -17,10 +17,12 @@ class HowToViewController: UIViewController {
     var pages: [String]! = ["Explanation 1", "Explanation 2", "Explanation 3", "Explanation 4"]
     var page: Int! = 0
     private var presenter: HowToPresenter!
+    private var prevPresenter: SplashPresenter!
+    private var window = UIApplication.shared.keyWindow
+    
     // プログラムの読み込みが完了
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.presenter = HowToPresenter()
         self.backButton.isHidden = true
     }
@@ -57,6 +59,7 @@ class HowToViewController: UIViewController {
     
     // プレイヤー画面への移行
     private func movePlayerScreen() {
+        self.window!.rootViewController = self.presenter.viewController!
         present(
             presenter.viewController!,
             animated: true,

@@ -22,10 +22,10 @@ class ResultViewController: UIViewController {
     
     public var question_id: Int = 0
     private var presenter: ResultPresenter!
+    private var window = UIApplication.shared.keyWindow
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         self.presenter = ResultPresenter(question_id: question_id)
         self.presenter.showAnimation(panel: animationPanel)
@@ -79,6 +79,7 @@ class ResultViewController: UIViewController {
     
     
     @IBAction func replyButtonTapped(_ sender: Any) {
+        self.window!.rootViewController = self.presenter.viewController!
         self.presenter.deleteAllData()
         self.present(
             presenter.viewController!,

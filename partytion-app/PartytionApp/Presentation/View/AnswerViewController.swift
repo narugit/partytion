@@ -19,11 +19,11 @@ class AnswerViewController: UIViewController {
     private var presenter: AnswerPresenter!
     private var counter: Int = 0
     private var players: Int = 0
+    private var window = UIApplication.shared.keyWindow
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-      
+        
         self.presenter = AnswerPresenter(question_id: question_id)
         
         let question: Questions? = presenter.getQuestion()
@@ -54,6 +54,7 @@ class AnswerViewController: UIViewController {
 
     // 結果表示画面への移行
     private func moveNextScreen() {
+        self.window!.rootViewController = self.presenter.viewController!
         // 結果画面への移行
         self.present(presenter.viewController!,
                      animated: true,
