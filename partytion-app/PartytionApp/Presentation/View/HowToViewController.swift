@@ -17,14 +17,13 @@ class HowToViewController: UIViewController {
     var pages: [String]! = ["Explanation 1", "Explanation 2", "Explanation 3", "Explanation 4"]
     var page: Int! = 0
     private var presenter: HowToPresenter!
-    private var prevPresenter: SplashPresenter!
     private let wireframe: RootViewWireframe = RootViewWireframe()
     
     // プログラムの読み込みが完了
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = HowToPresenter()
-        //self.backButton.isHidden = true
+        self.backButton.isHidden = true
     }
     
     // nextボタンをタップ

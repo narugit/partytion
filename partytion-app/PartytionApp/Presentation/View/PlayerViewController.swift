@@ -21,7 +21,6 @@ class PlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = PlayerPresenter()
-//        self.window!.rootViewController = self.storyboard!.instantiateViewController(withIdentifier: "PlayerViewController")
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
