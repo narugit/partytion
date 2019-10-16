@@ -10,11 +10,17 @@ import UIKit
 import SSBouncyButton
 
 class HowToViewController: UIViewController {
-    @IBOutlet var contentLabel: UILabel!
+    @IBOutlet var contentLabel: UILabel! = UILabel(frame: .zero)
     @IBOutlet weak var nextButton: SSBouncyButton!
     @IBOutlet weak var backButton: SSBouncyButton!
     
-    var pages: [String]! = ["Explanation 1", "Explanation 2", "Explanation 3", "Explanation 4"]
+    var pages: [String]! = [
+        "1. プレイヤー数を入力します。",
+        "2.プレイヤー数がランダムに2分されます。\n2分された比率になるような質問文を考えてみてください！",
+        "3. スマホを一人づつ回していって、\n回答してください。",
+        "4. 結果発表！\n提示された比率になっていましたか？"
+    ]
+
     var page: Int! = 0
     private var presenter: HowToPresenter!
     private let wireframe: RootViewWireframe = RootViewWireframe()
