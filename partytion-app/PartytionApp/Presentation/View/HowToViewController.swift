@@ -18,13 +18,13 @@ class HowToViewController: UIViewController {
     var page: Int! = 0
     private var presenter: HowToPresenter!
     private var prevPresenter: SplashPresenter!
-    private var window = UIApplication.shared.keyWindow
+    private let wireframe: RootViewWireframe = RootViewWireframe()
     
     // プログラムの読み込みが完了
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = HowToPresenter()
-        self.backButton.isHidden = true
+        //self.backButton.isHidden = true
     }
     
     // nextボタンをタップ
@@ -59,11 +59,6 @@ class HowToViewController: UIViewController {
     
     // プレイヤー画面への移行
     private func movePlayerScreen() {
-        self.window!.rootViewController = self.presenter.viewController!
-        present(
-            presenter.viewController!,
-            animated: true,
-            completion: nil
-        )
+        self.wireframe.transition(to: self.presenter.viewController!)
     }
 }

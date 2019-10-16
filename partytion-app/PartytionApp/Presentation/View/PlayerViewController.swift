@@ -15,7 +15,7 @@ class PlayerViewController: UIViewController {
     @IBOutlet weak var nextButton: SSBouncyButton!
 
     private var presenter: PlayerPresenter!
-    private var window = UIApplication.shared.keyWindow
+    private let wireframe: RootViewWireframe = RootViewWireframe()
     
     // プログラムの読み込みが完了
     override func viewDidLoad() {
@@ -31,11 +31,6 @@ class PlayerViewController: UIViewController {
     
     // 質問作成画面への移行
     private func moveQuestionScreen() {
-        print("hoge")
-        present(
-            presenter.viewController!,
-            animated: true,
-            completion: nil
-        )
+        self.wireframe.transition(to: self.presenter.viewController!)
     }
 }

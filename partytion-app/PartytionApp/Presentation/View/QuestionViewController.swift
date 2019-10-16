@@ -15,7 +15,7 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var questionText: PlaceHolderTextView!
     public var playerNumber: Int = 1
     private var presenter: QuestionPresenter!
-    private var window = UIApplication.shared.keyWindow
+    private let wireframe: RootViewWireframe = RootViewWireframe()
     
     // プログラムの読み込みが完了
     override func viewDidLoad() {
@@ -46,11 +46,6 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
     }
 
     private func moveNextScreen() {
-        self.window!.rootViewController = self.presenter.viewController!
-        // 質問作成画面への移行
-        self.present(presenter.viewController!,
-                     animated: true,
-                     completion: nil
-        )
+        self.wireframe.transition(to: self.presenter.viewController!)
     }
 }
