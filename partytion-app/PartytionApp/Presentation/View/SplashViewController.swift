@@ -13,6 +13,7 @@ class SplashViewController: UIViewController {
 
     private var presenter: SplashPresenter!
     private let timerInterval: Double = 3.5
+    private let wireframe: RootViewWireframe = RootViewWireframe()
     
     // プログラムの読み込みが完了
     override func viewDidLoad() {
@@ -36,6 +37,6 @@ class SplashViewController: UIViewController {
     
     @objc private func moveNextScreen() {
         self.presenter.setNextViewController()
-        self.present(self.presenter.viewController!, animated: true, completion: nil)
+        self.wireframe.transition(to: self.presenter.viewController!)
     }
 }

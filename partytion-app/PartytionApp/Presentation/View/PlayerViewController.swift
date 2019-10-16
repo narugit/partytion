@@ -15,10 +15,10 @@ class PlayerViewController: UIViewController {
     @IBOutlet weak var nextButton: SSBouncyButton!
 
     private var presenter: PlayerPresenter!
-
+    private let wireframe: RootViewWireframe = RootViewWireframe()
+    
     // プログラムの読み込みが完了
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         self.presenter = PlayerPresenter()
     }
@@ -30,10 +30,6 @@ class PlayerViewController: UIViewController {
     
     // 質問作成画面への移行
     private func moveQuestionScreen() {
-        present(
-            presenter.viewController!,
-            animated: true,
-            completion: nil
-        )
+        self.wireframe.transition(to: self.presenter.viewController!)
     }
 }
