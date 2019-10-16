@@ -21,7 +21,7 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.questionText.keyboardType = UIKeyboardType.phonePad
+        self.questionText.keyboardType = UIKeyboardType.namePhonePad
         self.questionText.delegate = self as? UITextViewDelegate
         self.questionText.placeholder = "質問文"
 
