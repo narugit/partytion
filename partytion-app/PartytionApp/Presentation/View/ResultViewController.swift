@@ -15,6 +15,7 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var pieChartView: PieChartView!
     @IBOutlet weak var questionText: UITextView!
+    @IBOutlet weak var partitionText: UITextView!
     @IBOutlet weak var animationPanel: AnimationView!
     @IBOutlet weak var replyButton: SSBouncyButton!
     
@@ -32,7 +33,7 @@ class ResultViewController: UIViewController {
 
         let question: Questions? = presenter.getQuestion()
         questionText.text = question!.question
-        
+        partitionText.text = "\(question!.partition_text!)になりましたか？"
         self.setupPieChartView()
     }
     
