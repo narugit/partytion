@@ -61,7 +61,7 @@ class QuestionPresenter: BasePresenter {
             questions.theme = theme
             questions.question = text
             questions.created_at = now
-
+            questions.partition_text = "\(String(self.answerPair.0)) vs \(String(self.answerPair.1))"
 
             // set id to ViewController
             (viewController as! AnswerViewController).question_id = Int(question_id)

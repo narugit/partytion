@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Au2-6O-ED5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Au2-6O-ED5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,12 +54,12 @@
                                 </accessibility>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ICH-Cg-5HQ" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="20" y="333" width="374" height="221"/>
+                                <rect key="frame" x="20" y="410" width="374" height="221"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="質問" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AG-GU-Ejm">
-                                <rect key="frame" x="20" y="173" width="374" height="108"/>
+                                <rect key="frame" x="20" y="173" width="374" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" hint="Question Text" label="質問文">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -69,9 +69,10 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWu-24-Eyj" customClass="SSBouncyButton">
-                                <rect key="frame" x="274" y="289" width="120" height="36"/>
+                                <rect key="frame" x="274" y="340" width="120" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Oshidashi-M-Gothic-Regular" family="Oshidashi-M-Gothic" pointSize="20"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="もう一度遊ぶ">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -79,12 +80,23 @@
                                     <action selector="replyButtonTapped:" destination="Au2-6O-ED5" eventType="touchUpInside" id="JOz-Nj-6jj"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="n vs m" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tg-6Z-HAf" userLabel="Partition Text">
+                                <rect key="frame" x="20" y="285" width="374" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" hint="Question Text" label="質問文">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="Oshidashi-M-Gothic-Regular" family="Oshidashi-M-Gothic" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.68190638699999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="Uyi-y5-TXg"/>
                     </view>
                     <connections>
                         <outlet property="animationPanel" destination="OLP-eJ-usd" id="KR0-bJ-S54"/>
+                        <outlet property="partitionText" destination="6tg-6Z-HAf" id="68Y-5a-BV9"/>
                         <outlet property="pieChartView" destination="ICH-Cg-5HQ" id="LrD-se-bEn"/>
                         <outlet property="questionText" destination="1AG-GU-Ejm" id="gDC-kV-NSH"/>
                         <outlet property="replyButton" destination="bWu-24-Eyj" id="l5X-3f-jxW"/>

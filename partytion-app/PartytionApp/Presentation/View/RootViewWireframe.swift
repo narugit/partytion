@@ -21,7 +21,9 @@ internal struct RootViewWireframe: Wireframe {
         if !rootViewController.children.isEmpty {
             rootViewController.children.forEach { (childViewController: UIViewController) in
                 childViewController.willMove(toParent: nil)
-                childViewController.view.removeFromSuperview()
+                UIView.transition(with: rootViewController.view, duration: 0.5, options: [.transitionCrossDissolve], animations: {
+                    childViewController.view.removeFromSuperview()
+                }, completion: nil)
                 childViewController.removeFromParent()
             }
 
@@ -29,7 +31,9 @@ internal struct RootViewWireframe: Wireframe {
         
         rootViewController.addChild(viewController)
         viewController.view.frame = UIScreen.main.bounds
-        rootViewController.view.addSubview(viewController.view)
+        UIView.transition(with: rootViewController.view, duration: 0.5, options: [.transitionCrossDissolve], animations: {
+            rootViewController.view.addSubview(viewController.view)
+        }, completion: nil)
         viewController.didMove(toParent: viewController)
     }
 }
