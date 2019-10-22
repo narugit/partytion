@@ -10,6 +10,8 @@ import UIKit
 import SSBouncyButton
 
 class HowToViewController: UIViewController {
+    
+    @IBOutlet var text: UITextView?
     @IBOutlet var contentLabel: UILabel! = UILabel(frame: .zero)
     @IBOutlet weak var nextButton: SSBouncyButton!
     @IBOutlet weak var backButton: SSBouncyButton!
