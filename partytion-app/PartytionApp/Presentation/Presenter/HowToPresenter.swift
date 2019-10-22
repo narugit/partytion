@@ -17,10 +17,10 @@ class HowToPresenter: BasePresenter {
     // Page Manager
     private var pageIndex: Int! = 0
     private var pageHeader: [String] = [
-        "1. 人数の入力",
-        "2. 質問文の作成",
-        "3. 回答",
-        "4. 結果発表"
+        "人数の入力",
+        "質問文の作成",
+        "回答",
+        "結果発表"
     ]
     private var pageContent: [String]! = [
         "プレイヤー数を入力します。",
@@ -41,6 +41,7 @@ class HowToPresenter: BasePresenter {
         return self.pageHeader.count
     }
     
+    // ページ情報の取得
     func getPageContent() -> [ String ] {
         return [
             self.pageHeader[self.pageIndex],
