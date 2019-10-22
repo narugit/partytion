@@ -189,22 +189,9 @@
 		27264E9A22F840E700839EBA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				27264E9C22F8434100839EBA /* SplashViewController.swift */,
-				27264EA022F844EF00839EBA /* SplashScreen.storyboard */,
-				4376139C22F9A2340011B4E8 /* HowToViewController.swift */,
-				4376139E22F9A33D0011B4E8 /* HowToScreen.storyboard */,
-				437613A022F9B2B80011B4E8 /* PlayerViewController.swift */,
-				437613A222F9B3100011B4E8 /* PlayerScreen.storyboard */,
-				27CEAAEA22F99CE9004C864B /* QuestionViewController.swift */,
-				27CEAAEC22F99D05004C864B /* QuestionScreen.storyboard */,
-				27CEAAEE22F9A324004C864B /* AnswerViewController.swift */,
-				27CEAAF022F9A338004C864B /* AnswerScreen.storyboard */,
-				43D5114422FA7D8B00C3D89C /* ResultViewController.swift */,
-				43D5114622FA7DC600C3D89C /* ResultScreen.storyboard */,
-				4321886F23568D5800278EF8 /* RootViewWireframe.swift */,
-				4321887123568D7800278EF8 /* RootViewController.swift */,
-				432188732356969E00278EF8 /* RootScreen.storyboard */,
-				27EDDA91235EBF9B00696FFB /* WalkThroughViewController.swift */,
+				27EDDA95235EC0A800696FFB /* WireFrame */,
+				27EDDA94235EC07700696FFB /* Controllers */,
+				27EDDA93235EC05E00696FFB /* Storyboards */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -319,6 +306,43 @@
 				277839A222E5E109009F5C61 /* Info.plist */,
 			);
 			path = PartytionAppUITests;
+			sourceTree = "<group>";
+		};
+		27EDDA93235EC05E00696FFB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				27264EA022F844EF00839EBA /* SplashScreen.storyboard */,
+				4376139E22F9A33D0011B4E8 /* HowToScreen.storyboard */,
+				437613A222F9B3100011B4E8 /* PlayerScreen.storyboard */,
+				27CEAAEC22F99D05004C864B /* QuestionScreen.storyboard */,
+				27CEAAF022F9A338004C864B /* AnswerScreen.storyboard */,
+				43D5114622FA7DC600C3D89C /* ResultScreen.storyboard */,
+				432188732356969E00278EF8 /* RootScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		27EDDA94235EC07700696FFB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				27264E9C22F8434100839EBA /* SplashViewController.swift */,
+				4376139C22F9A2340011B4E8 /* HowToViewController.swift */,
+				437613A022F9B2B80011B4E8 /* PlayerViewController.swift */,
+				27CEAAEA22F99CE9004C864B /* QuestionViewController.swift */,
+				27CEAAEE22F9A324004C864B /* AnswerViewController.swift */,
+				43D5114422FA7D8B00C3D89C /* ResultViewController.swift */,
+				27EDDA91235EBF9B00696FFB /* WalkThroughViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		27EDDA95235EC0A800696FFB /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				4321886F23568D5800278EF8 /* RootViewWireframe.swift */,
+				4321887123568D7800278EF8 /* RootViewController.swift */,
+			);
+			path = WireFrame;
 			sourceTree = "<group>";
 		};
 		435E07C82344C8DE0038D810 /* Components */ = {
