@@ -11,61 +11,54 @@ import SSBouncyButton
 
 class HowToViewController: UIViewController {
     
-    @IBOutlet var text: UITextView?
     @IBOutlet var contentLabel: UILabel! = UILabel(frame: .zero)
-    @IBOutlet weak var nextButton: SSBouncyButton!
-    @IBOutlet weak var backButton: SSBouncyButton!
+    @IBOutlet var contentText: UITextView!
+    @IBOutlet var nextButton: SSBouncyButton!
+    @IBOutlet var skipButton: SSBouncyButton!
     
-    var pages: [String]! = [
-        "1. プレイヤー数を入力します。",
-        "2.プレイヤー数がランダムに2分されます。\n2分された比率になるような質問文を考えてみてください！",
-        "3. スマホを一人づつ回していって、\n回答してください。",
-        "4. 結果発表！\n提示された比率になっていましたか？"
-    ]
+    @IBOutlet var walkThroughPageControl: UIPageControl!
 
-    var page: Int! = 0
     private var presenter: HowToPresenter!
     private let wireframe: RootViewWireframe = RootViewWireframe()
+    private var currentIndex: Int = 0
     
     // プログラムの読み込みが完了
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = HowToPresenter()
-        self.backButton.isHidden = true
+        self.presenter.setPageIndex(index: self.currentIndex)
+
+        self.walkThroughPageControl.numberOfPages = self.presenter.getPageCount()
+        self.displayPageContent()
     }
     
     // nextボタンをタップ
     @IBAction func nextButtonTapped(_ sender: Any) {
-        page += 1
-        
-        if(page > 0){
-            backButton.isHidden = false
-        }
-        
-        if(self.page > self.pages.count - 1){
-            self.page = self.pages.count - 1
+        self.currentIndex += 1
+        self.presenter.setPageIndex(index: self.currentIndex)
+        self.walkThroughPageControl.currentPage = self.currentIndex
+
+        if(self.currentIndex > self.presenter.getPageCount() - 1){
             // ページ遷移する
-            self.movePlayerScreen()
+            return self.movePlayerScreen()
         }
-        
-        contentLabel.text = self.pages[self.page]
+
+        self.displayPageContent()
     }
     
-    // backボタンをタップ
-    // 1ページ目はbackボタンが表示されない
-    @IBAction func backButtonTapped(_ sender: Any) {
-        page -= 1
-        
-        if(page <= 0){
-            page = 0
-            backButton.isHidden = true
-        }
-        
-        contentLabel.text = self.pages[self.page]
+    @IBAction func skipButtonTapped(_ sender: Any) {
+        self.movePlayerScreen()
     }
     
     // プレイヤー画面への移行
     private func movePlayerScreen() {
         self.wireframe.transition(to: self.presenter.viewController!)
+    }
+    
+    // コンテンツのセット
+    private func displayPageContent() {
+        let contents: [String] = self.presenter.getPageContent()
+        contentLabel.text = contents[0]
+        contentText.text = contents[1]
     }
 }

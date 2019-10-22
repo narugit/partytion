@@ -14,8 +14,38 @@ class HowToPresenter: BasePresenter {
     private var storyboard: UIStoryboard? = nil
     public private(set) var viewController: UIViewController? = nil
     
+    // Page Manager
+    private var pageIndex: Int! = 0
+    private var pageHeader: [String] = [
+        "1. 人数の入力",
+        "2. 質問文の作成",
+        "3. 回答",
+        "4. 結果発表"
+    ]
+    private var pageContent: [String]! = [
+        "プレイヤー数を入力します。",
+        "プレイヤー数がランダムに2分されます。\n2分された比率になるような質問文を考えてみてください！",
+        "スマホを一人づつ回していって、\n回答してください。",
+        "結果発表！\n提示された比率になっていましたか？"
+    ]
+    
     init() {
         self.setNextViewController()
+    }
+    
+    func setPageIndex(index: Int) -> Void {
+        self.pageIndex = index
+    }
+    
+    func getPageCount() -> Int {
+        return self.pageHeader.count
+    }
+    
+    func getPageContent() -> [ String ] {
+        return [
+            self.pageHeader[self.pageIndex],
+    self.pageContent[self.pageIndex]
+        ]
     }
     
     func setNextViewController() -> Void {
