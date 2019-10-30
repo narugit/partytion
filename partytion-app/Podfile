@@ -6,6 +6,7 @@ target 'PartytionApp' do
   use_frameworks!
   pod 'SSBouncyButton', '~> 1.0'
   pod "GMStepper"
+  pod 'SwiftyGif'
 
   # Pods for PartytionApp
 

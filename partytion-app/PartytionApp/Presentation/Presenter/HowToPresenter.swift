@@ -28,6 +28,12 @@ class HowToPresenter: BasePresenter {
         "スマホを一人づつ回していって、\n回答してください。",
         "結果発表！\n提示された比率になっていましたか？"
     ]
+    private var pageImage: [String] = [
+        "sample.gif",
+        "sample.gif",
+        "sample.gif",
+        "sample.gif"
+    ]
     
     init() {
         self.setNextViewController()
@@ -45,7 +51,8 @@ class HowToPresenter: BasePresenter {
     func getPageContent() -> [ String ] {
         return [
             self.pageHeader[self.pageIndex],
-    self.pageContent[self.pageIndex]
+            self.pageContent[self.pageIndex],
+            self.pageImage[self.pageIndex]
         ]
     }
     

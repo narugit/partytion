@@ -8,11 +8,13 @@
 
 import UIKit
 import SSBouncyButton
+import SwiftyGif
 
 class HowToViewController: UIViewController {
     
     @IBOutlet var contentLabel: UILabel! = UILabel(frame: .zero)
     @IBOutlet var contentText: UITextView!
+    @IBOutlet var contentImage: UIImageView!
     @IBOutlet var nextButton: SSBouncyButton!
     @IBOutlet var skipButton: SSBouncyButton!
     
@@ -45,14 +47,13 @@ class HowToViewController: UIViewController {
     }
     
     // スワイプの検知
+    // right
     @objc private func handleRight () {
-        print("right")
         self.currentIndex -= 1
         self.movePage()
     }
-    @objc private func handleLeft () {
-        print("left")
-        self.currentIndex += 1
+    // left
+    @objc private func handleLeft () {                self.currentIndex += 1
         self.movePage()
     }
     
@@ -62,6 +63,7 @@ class HowToViewController: UIViewController {
         self.movePage()
     }
     
+    // ページスキップ
     @IBAction func skipButtonTapped(_ sender: Any) {
         self.movePlayerScreen()
     }
@@ -89,8 +91,14 @@ class HowToViewController: UIViewController {
     
     // コンテンツのセット
     private func displayPageContent() {
-        let contents: [String] = self.presenter.getPageContent()
-        contentLabel.text = contents[0]
-        contentText.text = contents[1]
+        do {
+            let contents: [String] = self.presenter.getPageContent()
+            contentLabel.text = contents[0]
+            contentText.text = contents[1]
+            let gif = try UIImage.init(gifName: contents[2])
+            contentImage.setGifImage(gif)
+        } catch {
+            print(error)
+        }
     }
 }

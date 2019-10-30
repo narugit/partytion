@@ -29,6 +29,7 @@
 		277839A122E5E109009F5C61 /* partytion_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277839A022E5E109009F5C61 /* partytion_appUITests.swift */; };
 		278D73B1234854DB007EE478 /* FileIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278D73B0234854DB007EE478 /* FileIO.swift */; };
 		278D73B523485E0A007EE478 /* QuestionThemeJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278D73B423485E0A007EE478 /* QuestionThemeJSONParser.swift */; };
+		2795EEEB2369D09B0023D887 /* sample.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2795EEEA2369D09B0023D887 /* sample.gif */; };
 		279FC9B2231B7CDD00DE300D /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FC9B1231B7CDD00DE300D /* SplashPresenter.swift */; };
 		279FC9B6231B863F00DE300D /* PlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FC9B5231B863F00DE300D /* PlayerPresenter.swift */; };
 		279FC9B8231B898F00DE300D /* HowToPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FC9B7231B898F00DE300D /* HowToPresenter.swift */; };
@@ -116,6 +117,7 @@
 		277839A222E5E109009F5C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		278D73B0234854DB007EE478 /* FileIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileIO.swift; sourceTree = "<group>"; };
 		278D73B423485E0A007EE478 /* QuestionThemeJSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionThemeJSONParser.swift; sourceTree = "<group>"; };
+		2795EEEA2369D09B0023D887 /* sample.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sample.gif; sourceTree = "<group>"; };
 		279FC9B1231B7CDD00DE300D /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		279FC9B5231B863F00DE300D /* PlayerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPresenter.swift; sourceTree = "<group>"; };
 		279FC9B7231B898F00DE300D /* HowToPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPresenter.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 		2744B02623479E3000AD8520 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				2795EEEA2369D09B0023D887 /* sample.gif */,
 				2744B02923479E6400AD8520 /* SeedData.json */,
 				2744B02823479E6400AD8520 /* BeerBubbles.json */,
 				2744B02723479E6400AD8520 /* Oshidashi-M-Gothic.otf */,
@@ -432,6 +435,9 @@
 		2778397522E5E108009F5C61 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					gif,
+				);
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = naruhiyo;
@@ -489,6 +495,7 @@
 				4376139F22F9A33D0011B4E8 /* HowToScreen.storyboard in Resources */,
 				2744B02C23479E6400AD8520 /* SeedData.json in Resources */,
 				27CEAAED22F99D05004C864B /* QuestionScreen.storyboard in Resources */,
+				2795EEEB2369D09B0023D887 /* sample.gif in Resources */,
 				2744B02A23479E6400AD8520 /* Oshidashi-M-Gothic.otf in Resources */,
 				27CEAAF122F9A338004C864B /* AnswerScreen.storyboard in Resources */,
 			);
@@ -811,9 +818,10 @@
 			baseConfigurationReference = 39912F1908118FA314359A1F /* Pods-PartytionApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2N83T76JEX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -837,9 +845,10 @@
 			baseConfigurationReference = 06C5117F7702EA13985993A7 /* Pods-PartytionApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2N83T76JEX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

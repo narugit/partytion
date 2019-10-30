@@ -85,6 +85,7 @@
                         <viewLayoutGuide key="safeArea" id="9gN-WF-KKI"/>
                     </view>
                     <connections>
+                        <outlet property="contentImage" destination="ZpM-6X-TDF" id="EDv-V6-2xZ"/>
                         <outlet property="contentLabel" destination="4hW-8d-GRb" id="sIc-Uh-9f6"/>
                         <outlet property="contentText" destination="dod-5x-7Ht" id="cZ8-Tf-Mtk"/>
                         <outlet property="nextButton" destination="0J5-vh-Mgg" id="NCq-eP-Cg6"/>
