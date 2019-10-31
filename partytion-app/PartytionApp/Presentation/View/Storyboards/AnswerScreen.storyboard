@@ -21,30 +21,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Question" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzB-Nz-xr0" userLabel="QuestionText">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Question" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzB-Nz-xr0" userLabel="QuestionText">
                                 <rect key="frame" x="57" y="124" width="300" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" hint="質問文">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="Rzm-IO-veB"/>
+                                    <constraint firstAttribute="height" constant="128" id="rc9-ei-XJK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Oshidashi-M-Gothic-Regular" family="Oshidashi-M-Gothic" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="* / *" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJl-gm-adv" userLabel="AnswererCount">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="* / *" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJl-gm-adv" userLabel="AnswererCount">
                                 <rect key="frame" x="57" y="280" width="300" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" hint="質問文">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="RCT-yj-9XI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Oshidashi-M-Gothic-Regular" family="Oshidashi-M-Gothic" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sW-G5-fAH" customClass="SSBouncyButton">
-                                <rect key="frame" x="57" y="592" width="300" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sW-G5-fAH" customClass="SSBouncyButton">
+                                <rect key="frame" x="30" y="759" width="354" height="75"/>
                                 <color key="backgroundColor" red="0.93071061372756958" green="0.48199635744094849" blue="0.18812045454978943" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="LIJ-CZ-Qjh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Oshidashi-M-Gothic-Regular" family="Oshidashi-M-Gothic" pointSize="40"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="No">
@@ -55,10 +62,27 @@
                                     <action selector="noButtonTapped:" destination="iaT-Wt-l2e" eventType="touchUpInside" id="e2w-xj-v7g"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSQ-LK-vkm" customClass="SSBouncyButton">
-                                <rect key="frame" x="57" y="415" width="300" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="Sc1-3J-R1V">
+                                <rect key="frame" x="57" y="348" width="300" height="2.5"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES" updatesFrequently="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="csb-nv-Fqq"/>
+                                </constraints>
+                                <color key="progressTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSQ-LK-vkm" customClass="SSBouncyButton">
+                                <rect key="frame" x="30" y="647" width="354" height="75"/>
                                 <color key="backgroundColor" red="0.97555051810777205" green="0.68998797484583685" blue="0.16748606202707006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="VYf-dP-3ZK"/>
+                                    <constraint firstAttribute="width" constant="354" id="jnG-Jo-64q"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Oshidashi-M-Gothic-Regular" family="Oshidashi-M-Gothic" pointSize="40"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Yes">
@@ -69,20 +93,26 @@
                                     <action selector="yesButtonTapped:" destination="iaT-Wt-l2e" eventType="touchUpInside" id="C1j-4S-qOu"/>
                                 </connections>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" progress="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="Sc1-3J-R1V">
-                                <rect key="frame" x="57" y="374.5" width="300" height="1.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" notEnabled="YES" updatesFrequently="YES"/>
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
-                                <color key="progressTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </progressView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.81470673520000003" blue="0.22343490890000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="lAj-7t-2UB" firstAttribute="trailing" secondItem="MSQ-LK-vkm" secondAttribute="trailing" constant="30" id="1E7-aK-JRz"/>
+                            <constraint firstItem="lAj-7t-2UB" firstAttribute="bottom" secondItem="1sW-G5-fAH" secondAttribute="bottom" constant="28" id="20R-x2-h7J"/>
+                            <constraint firstItem="lAj-7t-2UB" firstAttribute="trailing" secondItem="sJl-gm-adv" secondAttribute="trailing" constant="57" id="4Xj-W4-pyA"/>
+                            <constraint firstItem="Sc1-3J-R1V" firstAttribute="centerX" secondItem="iic-lK-cAX" secondAttribute="centerX" id="E3y-yG-Se1"/>
+                            <constraint firstItem="yzB-Nz-xr0" firstAttribute="centerX" secondItem="iic-lK-cAX" secondAttribute="centerX" id="Fq2-S4-ckE"/>
+                            <constraint firstItem="1sW-G5-fAH" firstAttribute="top" secondItem="MSQ-LK-vkm" secondAttribute="bottom" constant="37" id="GUW-26-es6"/>
+                            <constraint firstItem="sJl-gm-adv" firstAttribute="top" secondItem="yzB-Nz-xr0" secondAttribute="bottom" constant="28" id="Juh-C6-9Zx"/>
+                            <constraint firstItem="yzB-Nz-xr0" firstAttribute="top" secondItem="lAj-7t-2UB" secondAttribute="top" constant="80" id="QeV-hy-M4b"/>
+                            <constraint firstItem="lAj-7t-2UB" firstAttribute="trailing" secondItem="yzB-Nz-xr0" secondAttribute="trailing" constant="57" id="Vo1-ud-xEF"/>
+                            <constraint firstItem="sJl-gm-adv" firstAttribute="centerX" secondItem="iic-lK-cAX" secondAttribute="centerX" id="Zxf-8M-rVO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Sc1-3J-R1V" secondAttribute="trailing" constant="37" id="bsB-fU-0kI"/>
+                            <constraint firstItem="1sW-G5-fAH" firstAttribute="centerX" secondItem="iic-lK-cAX" secondAttribute="centerX" id="fhN-0J-qD1"/>
+                            <constraint firstItem="1sW-G5-fAH" firstAttribute="centerX" secondItem="iic-lK-cAX" secondAttribute="centerX" id="fpe-fg-gWF"/>
+                            <constraint firstItem="Sc1-3J-R1V" firstAttribute="top" secondItem="sJl-gm-adv" secondAttribute="bottom" constant="20" id="nhl-l1-kJA"/>
+                            <constraint firstItem="MSQ-LK-vkm" firstAttribute="centerX" secondItem="iic-lK-cAX" secondAttribute="centerX" id="qWc-Kb-lU5"/>
+                            <constraint firstItem="lAj-7t-2UB" firstAttribute="trailing" secondItem="1sW-G5-fAH" secondAttribute="trailing" constant="30" id="smF-73-bs2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lAj-7t-2UB"/>
                     </view>
                     <connections>

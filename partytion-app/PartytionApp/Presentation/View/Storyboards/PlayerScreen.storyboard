@@ -21,10 +21,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Svt-bd-40v" customClass="SSBouncyButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Svt-bd-40v" customClass="SSBouncyButton">
                                 <rect key="frame" x="313" y="455" width="67" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91386010360000003" green="0.64860062129999996" blue="0.1609713086" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="Uev-BJ-80e"/>
+                                    <constraint firstAttribute="width" constant="67" id="oYS-Ge-aff"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Oshidashi-M-Gothic-Regular" family="Oshidashi-M-Gothic" pointSize="24"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Next">
@@ -35,23 +38,24 @@
                                     <action selector="nextButtonTapped:" destination="5u8-FC-htc" eventType="touchUpInside" id="s73-SH-Ser"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBV-Gb-Lrp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBV-Gb-Lrp">
                                 <rect key="frame" x="118" y="222" width="178" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="ewt-v4-YOp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Oshidashi-M-Gothic-Regular" family="Oshidashi-M-Gothic" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HSc-r6-pYp">
-                                <rect key="frame" x="35" y="317" width="345" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HSc-r6-pYp">
+                                <rect key="frame" x="34" y="317" width="346" height="81"/>
                                 <subviews>
                                     <view autoresizesSubviews="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VNu-KR-bkk" customClass="GMStepper" customModule="GMStepper">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="81"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="346" height="81"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <accessibility key="accessibilityConfiguration">
@@ -80,9 +84,21 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="CTf-iv-wpb"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.81470673522221437" blue="0.22343490893666618" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="cJq-c3-4tj" firstAttribute="trailing" secondItem="Svt-bd-40v" secondAttribute="trailing" constant="34" id="60N-Eo-WVf"/>
+                            <constraint firstItem="cBV-Gb-Lrp" firstAttribute="centerX" secondItem="KVe-BP-WLi" secondAttribute="centerX" id="8oW-l5-07c"/>
+                            <constraint firstItem="Svt-bd-40v" firstAttribute="top" secondItem="HSc-r6-pYp" secondAttribute="bottom" constant="57" id="9L7-Co-eMW"/>
+                            <constraint firstItem="HSc-r6-pYp" firstAttribute="top" secondItem="cBV-Gb-Lrp" secondAttribute="bottom" constant="61" id="MiM-Yf-Ue1"/>
+                            <constraint firstItem="cBV-Gb-Lrp" firstAttribute="top" secondItem="cJq-c3-4tj" secondAttribute="top" constant="178" id="l0a-Wb-Tpk"/>
+                            <constraint firstItem="HSc-r6-pYp" firstAttribute="trailing" secondItem="Svt-bd-40v" secondAttribute="trailing" id="nSH-Wh-14m"/>
+                            <constraint firstItem="HSc-r6-pYp" firstAttribute="centerX" secondItem="KVe-BP-WLi" secondAttribute="centerX" id="wNB-mf-Rk9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cJq-c3-4tj"/>
                     </view>
                     <connections>

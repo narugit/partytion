@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="top" semanticContentAttribute="playback" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt2-b4-Z3H" customClass="AnimationView">
+                            <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="top" semanticContentAttribute="playback" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt2-b4-Z3H" customClass="AnimationView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="SplashAnimationView">
                                     <accessibilityTraits key="traits" none="YES"/>
                                     <bool key="isElement" value="YES"/>
@@ -26,6 +25,12 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lt2-b4-Z3H" firstAttribute="trailing" secondItem="yyj-Va-tyb" secondAttribute="trailing" id="5pM-TU-4st"/>
+                            <constraint firstAttribute="bottom" secondItem="lt2-b4-Z3H" secondAttribute="bottom" id="Lo7-Jd-S0O"/>
+                            <constraint firstItem="lt2-b4-Z3H" firstAttribute="top" secondItem="ill-eh-6U5" secondAttribute="top" id="WpA-tS-h3c"/>
+                            <constraint firstItem="lt2-b4-Z3H" firstAttribute="leading" secondItem="yyj-Va-tyb" secondAttribute="leading" id="sbu-cG-2kn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yyj-Va-tyb"/>
                     </view>
                     <connections>
