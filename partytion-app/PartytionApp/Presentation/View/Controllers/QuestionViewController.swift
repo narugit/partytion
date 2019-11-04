@@ -16,6 +16,7 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
     public var playerNumber: Int = 1
     private var presenter: QuestionPresenter!
     private let wireframe: RootViewWireframe = RootViewWireframe()
+    @IBOutlet var errorText: UITextView!
     
     // プログラムの読み込みが完了
     override func viewDidLoad() {
@@ -23,7 +24,6 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
         
         self.questionText.keyboardType = UIKeyboardType.namePhonePad
         self.questionText.delegate = self as? UITextViewDelegate
-        self.questionText.placeholder = "質問文"
 
         self.presenter = QuestionPresenter(playerNumber: playerNumber)
         
@@ -32,9 +32,18 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
-        presenter.registerText(text: questionText.text)
-        moveNextScreen()
+        if ((questionText?.text.count)! > 0) {
+
+            print(questionText?.text.isEmpty)
+            print(questionText?.text.count)
+            print(questionText?.text)
+            presenter.registerText(text: questionText.text)
+            moveNextScreen()
+        } else {
+            errorText.isHidden = false
+        }
     }
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // キーボードを閉じる
         textField.resignFirstResponder()

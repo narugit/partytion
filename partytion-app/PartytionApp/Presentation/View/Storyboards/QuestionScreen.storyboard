@@ -84,6 +84,13 @@
                                     <action selector="nextButtonTapped:" destination="I2d-Yy-qIT" eventType="touchUpInside" id="C98-bj-3VW"/>
                                 </connections>
                             </button>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="※ 質問文を入力してください" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnL-8K-wwY" userLabel="Error Text">
+                                <rect key="frame" x="31" y="836" width="363" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.81470673520000003" blue="0.22343490890000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -105,6 +112,7 @@
                     </view>
                     <connections>
                         <outlet property="answerNumbers" destination="oZt-3p-otE" id="Iez-LL-rTs"/>
+                        <outlet property="errorText" destination="FnL-8K-wwY" id="BXX-wy-y2E"/>
                         <outlet property="nextButton" destination="qda-tg-J7E" id="SXo-9D-cWc"/>
                         <outlet property="questionText" destination="op4-qn-cf1" id="Zw0-SG-iYj"/>
                         <outlet property="questionTheme" destination="dvO-e9-MWh" id="JIp-E2-HTr"/>
