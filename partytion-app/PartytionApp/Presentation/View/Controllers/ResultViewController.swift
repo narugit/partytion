@@ -33,7 +33,7 @@ class ResultViewController: UIViewController {
 
         let question: Questions? = presenter.getQuestion()
         questionText.text = question!.question
-        partitionText.text = "\(question!.partition_text)になりましたか？"
+        partitionText.text = "\(question!.partition_text!)になりましたか？"
         self.setupPieChartView()
     }
     
