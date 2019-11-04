@@ -28,7 +28,7 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
         self.presenter = QuestionPresenter(playerNumber: playerNumber)
         
         self.questionTheme.text = presenter.theme
-        self.answerNumbers.text = "\(presenter.answerPair.0) vs \(presenter.answerPair.1)になるような質問を 考えましょう！"
+        self.answerNumbers.text = "\(presenter.answerPair.0) vs \(presenter.answerPair.1) になるような質問を 考えましょう！"
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
