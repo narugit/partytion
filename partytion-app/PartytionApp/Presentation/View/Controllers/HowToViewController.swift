@@ -53,7 +53,8 @@ class HowToViewController: UIViewController {
         self.movePage()
     }
     // left
-    @objc private func handleLeft () {                self.currentIndex += 1
+    @objc private func handleLeft () {
+        self.currentIndex += 1
         self.movePage()
     }
     

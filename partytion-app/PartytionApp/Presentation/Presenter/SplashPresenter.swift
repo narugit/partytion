@@ -33,8 +33,8 @@ class SplashPresenter: BasePresenter {
         if(!UserDefaults.standard.bool(forKey: "isInitialLaunch")) {
             UserDefaults.standard.set(true, forKey: "isInitialLaunch")
         } else {
-            //2回目以降はプレイヤー数入力画面への移行
-            //nextView = "Player"
+            // 2回目以降はプレイヤー数入力画面への移行
+            // nextView = "Player"
         }
         
         self.storyboard = UIStoryboard(name: "\(nextView)Screen", bundle: nil)
