@@ -79,7 +79,7 @@
                                         </connections>
                                     </button>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="l5L-fH-Yph">
-                                        <rect key="frame" x="175" y="0.0" width="64" height="37"/>
+                                        <rect key="frame" x="187.5" y="0.0" width="39" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="M7V-5m-JfY"/>
                                         </constraints>
@@ -101,9 +101,8 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="0J5-vh-Mgg" firstAttribute="centerX" secondItem="mmX-4v-dDH" secondAttribute="centerX" id="02b-am-Gq1"/>
-                                    <constraint firstAttribute="trailing" secondItem="l5L-fH-Yph" secondAttribute="trailing" constant="175" id="1bp-95-v3h"/>
                                     <constraint firstAttribute="height" constant="159" id="4zR-HR-peD"/>
-                                    <constraint firstItem="l5L-fH-Yph" firstAttribute="leading" secondItem="mmX-4v-dDH" secondAttribute="leading" constant="175" id="IQh-D0-Dpm"/>
+                                    <constraint firstItem="l5L-fH-Yph" firstAttribute="centerX" secondItem="mmX-4v-dDH" secondAttribute="centerX" id="EWN-Bl-ujp"/>
                                     <constraint firstItem="l5L-fH-Yph" firstAttribute="top" secondItem="mmX-4v-dDH" secondAttribute="top" id="Loo-Gl-OpX"/>
                                     <constraint firstItem="sQn-co-NkZ" firstAttribute="top" secondItem="0J5-vh-Mgg" secondAttribute="bottom" constant="8" id="a4B-Zx-R3j"/>
                                     <constraint firstAttribute="trailing" secondItem="0J5-vh-Mgg" secondAttribute="trailing" constant="79" id="cEV-TN-TJL"/>
