@@ -16,7 +16,7 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
     public var playerNumber: Int = 1
     private var presenter: QuestionPresenter!
     private let wireframe: RootViewWireframe = RootViewWireframe()
-    @IBOutlet var errorText: UITextView!
+    @IBOutlet var errorText: UILabel!
     
     // プログラムの読み込みが完了
     override func viewDidLoad() {
