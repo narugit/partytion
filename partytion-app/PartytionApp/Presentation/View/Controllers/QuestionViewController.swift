@@ -22,6 +22,8 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.errorText.isHidden = true
+        
         self.questionText.keyboardType = UIKeyboardType.namePhonePad
         self.questionText.delegate = self as? UITextViewDelegate
 

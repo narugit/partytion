@@ -36,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="op4-qn-cf1" userLabel="Question Text" customClass="PlaceHolderTextView" customModule="PartytionApp" customModuleProvider="target">
-                                <rect key="frame" x="31" y="317" width="352" height="444"/>
+                                <rect key="frame" x="31" y="317" width="352" height="405"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Oshidashi-M-Gothic-Regular" family="Oshidashi-M-Gothic" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -68,7 +68,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qda-tg-J7E" userLabel="Next Button" customClass="SSBouncyButton">
-                                <rect key="frame" x="316" y="791" width="67" height="46"/>
+                                <rect key="frame" x="316" y="811" width="67" height="46"/>
                                 <color key="backgroundColor" red="0.91386010360000003" green="0.64860062129999996" blue="0.1609713086" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="67" id="hfM-NN-qhl"/>
@@ -84,14 +84,15 @@
                                     <action selector="nextButtonTapped:" destination="I2d-Yy-qIT" eventType="touchUpInside" id="C98-bj-3VW"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="※ 質問文を入力してください" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwE-5l-PXn">
-                                <rect key="frame" x="31" y="783" width="277" height="63"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="※ 質問文を入力してください" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwE-5l-PXn">
+                                <rect key="frame" x="31" y="732" width="277" height="30"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="JB3-8I-MPN"/>
+                                    <constraint firstAttribute="height" constant="30" id="JB3-8I-MPN"/>
+                                    <constraint firstAttribute="width" constant="277" id="ncf-J8-p8u"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Oshidashi-M-Gothic-Regular" family="Oshidashi-M-Gothic" pointSize="18"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -100,19 +101,21 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.81470673520000003" blue="0.22343490890000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="gIT-vG-IQh" firstAttribute="bottom" secondItem="qda-tg-J7E" secondAttribute="bottom" constant="5" id="45E-xD-Zhf"/>
                             <constraint firstItem="gIT-vG-IQh" firstAttribute="trailing" secondItem="qda-tg-J7E" secondAttribute="trailing" constant="31" id="9hT-pr-yg2"/>
-                            <constraint firstItem="qda-tg-J7E" firstAttribute="top" secondItem="op4-qn-cf1" secondAttribute="bottom" constant="30" id="BI6-v8-k5z"/>
+                            <constraint firstItem="gIT-vG-IQh" firstAttribute="bottom" secondItem="op4-qn-cf1" secondAttribute="bottom" constant="140" id="9pV-Jk-WjI"/>
                             <constraint firstItem="dvO-e9-MWh" firstAttribute="top" secondItem="8k1-eY-r9P" secondAttribute="bottom" constant="7" id="FIo-VE-BE2"/>
                             <constraint firstItem="dvO-e9-MWh" firstAttribute="centerX" secondItem="FGD-Ah-zgA" secondAttribute="centerX" id="Gae-mf-S5O"/>
                             <constraint firstItem="oZt-3p-otE" firstAttribute="centerX" secondItem="FGD-Ah-zgA" secondAttribute="centerX" id="XL3-fj-pAw"/>
                             <constraint firstItem="8k1-eY-r9P" firstAttribute="centerX" secondItem="FGD-Ah-zgA" secondAttribute="centerX" id="Y8U-I5-15j"/>
                             <constraint firstItem="op4-qn-cf1" firstAttribute="top" secondItem="oZt-3p-otE" secondAttribute="bottom" constant="29" id="d4e-QF-pwY"/>
                             <constraint firstItem="oZt-3p-otE" firstAttribute="top" secondItem="dvO-e9-MWh" secondAttribute="bottom" constant="10" id="g6L-8w-vs8"/>
-                            <constraint firstItem="gIT-vG-IQh" firstAttribute="bottom" secondItem="op4-qn-cf1" secondAttribute="bottom" constant="101" id="heU-1d-LXB"/>
                             <constraint firstItem="op4-qn-cf1" firstAttribute="centerX" secondItem="FGD-Ah-zgA" secondAttribute="centerX" id="iLC-b0-XkM"/>
                             <constraint firstItem="gIT-vG-IQh" firstAttribute="trailing" secondItem="op4-qn-cf1" secondAttribute="trailing" constant="31" id="lqc-W9-tIG"/>
+                            <constraint firstItem="FwE-5l-PXn" firstAttribute="top" secondItem="op4-qn-cf1" secondAttribute="bottom" constant="10" id="m0j-Ft-yAb"/>
                             <constraint firstItem="op4-qn-cf1" firstAttribute="leading" secondItem="gIT-vG-IQh" secondAttribute="leading" constant="31" id="tSj-G4-Ijh"/>
                             <constraint firstItem="8k1-eY-r9P" firstAttribute="top" secondItem="gIT-vG-IQh" secondAttribute="top" constant="49" id="ui0-Ox-8nA"/>
+                            <constraint firstItem="FwE-5l-PXn" firstAttribute="leading" secondItem="gIT-vG-IQh" secondAttribute="leading" constant="31" id="zZp-sa-stm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gIT-vG-IQh"/>
                     </view>
