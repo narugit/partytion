@@ -27,6 +27,10 @@
 		2778398822E5E109009F5C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2778398722E5E109009F5C61 /* Assets.xcassets */; };
 		2778399622E5E109009F5C61 /* partytion_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778399522E5E109009F5C61 /* partytion_appTests.swift */; };
 		277839A122E5E109009F5C61 /* partytion_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277839A022E5E109009F5C61 /* partytion_appUITests.swift */; };
+		277B45EF237988E5005702BE /* partytion-tutorial-1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 277B45EE237988E5005702BE /* partytion-tutorial-1.gif */; };
+		277B45F323798975005702BE /* partytion-tutorial-2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 277B45F023798974005702BE /* partytion-tutorial-2.gif */; };
+		277B45F423798975005702BE /* partytion-tutorial-4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 277B45F123798974005702BE /* partytion-tutorial-4.gif */; };
+		277B45F523798975005702BE /* partytion-tutorial-3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 277B45F223798975005702BE /* partytion-tutorial-3.gif */; };
 		278D73B1234854DB007EE478 /* FileIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278D73B0234854DB007EE478 /* FileIO.swift */; };
 		278D73B523485E0A007EE478 /* QuestionThemeJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278D73B423485E0A007EE478 /* QuestionThemeJSONParser.swift */; };
 		2795EEEB2369D09B0023D887 /* sample.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2795EEEA2369D09B0023D887 /* sample.gif */; };
@@ -115,6 +119,10 @@
 		2778399C22E5E109009F5C61 /* PartytionAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PartytionAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		277839A022E5E109009F5C61 /* partytion_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = partytion_appUITests.swift; sourceTree = "<group>"; };
 		277839A222E5E109009F5C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		277B45EE237988E5005702BE /* partytion-tutorial-1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "partytion-tutorial-1.gif"; sourceTree = "<group>"; };
+		277B45F023798974005702BE /* partytion-tutorial-2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "partytion-tutorial-2.gif"; sourceTree = "<group>"; };
+		277B45F123798974005702BE /* partytion-tutorial-4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "partytion-tutorial-4.gif"; sourceTree = "<group>"; };
+		277B45F223798975005702BE /* partytion-tutorial-3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "partytion-tutorial-3.gif"; sourceTree = "<group>"; };
 		278D73B0234854DB007EE478 /* FileIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileIO.swift; sourceTree = "<group>"; };
 		278D73B423485E0A007EE478 /* QuestionThemeJSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionThemeJSONParser.swift; sourceTree = "<group>"; };
 		2795EEEA2369D09B0023D887 /* sample.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sample.gif; sourceTree = "<group>"; };
@@ -245,6 +253,10 @@
 			isa = PBXGroup;
 			children = (
 				2795EEEA2369D09B0023D887 /* sample.gif */,
+				277B45EE237988E5005702BE /* partytion-tutorial-1.gif */,
+				277B45F023798974005702BE /* partytion-tutorial-2.gif */,
+				277B45F223798975005702BE /* partytion-tutorial-3.gif */,
+				277B45F123798974005702BE /* partytion-tutorial-4.gif */,
 				2744B02923479E6400AD8520 /* SeedData.json */,
 				2744B02823479E6400AD8520 /* BeerBubbles.json */,
 				2744B02723479E6400AD8520 /* Oshidashi-M-Gothic.otf */,
@@ -485,8 +497,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				277B45F423798975005702BE /* partytion-tutorial-4.gif in Resources */,
 				432188742356969E00278EF8 /* RootScreen.storyboard in Resources */,
+				277B45EF237988E5005702BE /* partytion-tutorial-1.gif in Resources */,
 				27264EAD22F854AA00839EBA /* Lottie.framework in Resources */,
+				277B45F323798975005702BE /* partytion-tutorial-2.gif in Resources */,
 				43D5114722FA7DC600C3D89C /* ResultScreen.storyboard in Resources */,
 				2744B02B23479E6400AD8520 /* BeerBubbles.json in Resources */,
 				2778398822E5E109009F5C61 /* Assets.xcassets in Resources */,
@@ -495,6 +510,7 @@
 				4376139F22F9A33D0011B4E8 /* HowToScreen.storyboard in Resources */,
 				2744B02C23479E6400AD8520 /* SeedData.json in Resources */,
 				27CEAAED22F99D05004C864B /* QuestionScreen.storyboard in Resources */,
+				277B45F523798975005702BE /* partytion-tutorial-3.gif in Resources */,
 				2795EEEB2369D09B0023D887 /* sample.gif in Resources */,
 				2744B02A23479E6400AD8520 /* Oshidashi-M-Gothic.otf in Resources */,
 				27CEAAF122F9A338004C864B /* AnswerScreen.storyboard in Resources */,
