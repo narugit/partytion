@@ -32,7 +32,7 @@ class AnswerViewController: UIViewController {
         
         self.questionText.text = question!.value(forKey: "question") as? String
         self.players = (question!.value(forKey: "players") as? Int)!
-        self.answererCount.text = "\(self.counter+1) / \(self.players)"
+        self.answererCount.text = "\(self.counter+1) 人目/ \(self.players) 人中"
         
         self.answerProgress.progress = 0.0
     }
@@ -52,7 +52,7 @@ class AnswerViewController: UIViewController {
         let progress: Float = Float(self.counter) / Float(self.players)
         self.answerProgress.setProgress(progress, animated: true)
 
-        if (counter >= players) {
+        if (self.answerProgress.progress >= 1.0) {
             // プログレスバーが100%になってから遷移
             Timer.scheduledTimer(
                 timeInterval: 0.3,
@@ -62,7 +62,7 @@ class AnswerViewController: UIViewController {
                 repeats: false
             )
         } else {
-            self.answererCount.text = "\(self.counter+1) / \(self.players)"
+            self.answererCount.text = "\(self.counter+1) 人目/ \(self.players) 人中"
         }
     }
 

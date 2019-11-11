@@ -16,25 +16,36 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
     public var playerNumber: Int = 1
     private var presenter: QuestionPresenter!
     private let wireframe: RootViewWireframe = RootViewWireframe()
+    @IBOutlet var errorText: UILabel!
     
     // プログラムの読み込みが完了
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.errorText.isHidden = true
+        
         self.questionText.keyboardType = UIKeyboardType.namePhonePad
         self.questionText.delegate = self as? UITextViewDelegate
-        self.questionText.placeholder = "質問文"
 
         self.presenter = QuestionPresenter(playerNumber: playerNumber)
         
         self.questionTheme.text = presenter.theme
-        self.answerNumbers.text = "\(presenter.answerPair.0) vs \(presenter.answerPair.1)になるような質問を 考えましょう！"
+        self.answerNumbers.text = "\(presenter.answerPair.0) vs \(presenter.answerPair.1) になるような質問を 考えましょう！"
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
-        presenter.registerText(text: questionText.text)
-        moveNextScreen()
+        if ((questionText?.text.count)! > 0) {
+
+            print(questionText?.text.isEmpty)
+            print(questionText?.text.count)
+            print(questionText?.text)
+            presenter.registerText(text: questionText.text)
+            moveNextScreen()
+        } else {
+            errorText.isHidden = false
+        }
     }
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // キーボードを閉じる
         textField.resignFirstResponder()

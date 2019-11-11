@@ -29,10 +29,10 @@ class HowToPresenter: BasePresenter {
         "結果発表！\n提示された比率になっていましたか？"
     ]
     private var pageImage: [String] = [
-        "sample.gif",
-        "sample.gif",
-        "sample.gif",
-        "sample.gif"
+        "partytion-tutorial-1.gif",
+        "partytion-tutorial-2.gif",
+        "partytion-tutorial-3.gif",
+        "partytion-tutorial-4.gif"
     ]
     
     init() {
