@@ -107,7 +107,7 @@
 		2744B02723479E6400AD8520 /* Oshidashi-M-Gothic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oshidashi-M-Gothic.otf"; sourceTree = "<group>"; };
 		2744B02823479E6400AD8520 /* BeerBubbles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BeerBubbles.json; sourceTree = "<group>"; };
 		2744B02923479E6400AD8520 /* SeedData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SeedData.json; sourceTree = "<group>"; };
-		2778397D22E5E108009F5C61 /* PartytionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartytionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2778397D22E5E108009F5C61 /* Partytion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Partytion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2778398022E5E108009F5C61 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2778398722E5E109009F5C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2778398A22E5E109009F5C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -278,7 +278,7 @@
 		2778397E22E5E108009F5C61 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2778397D22E5E108009F5C61 /* PartytionApp.app */,
+				2778397D22E5E108009F5C61 /* Partytion.app */,
 				2778399122E5E109009F5C61 /* PartytionAppTests.xctest */,
 				2778399C22E5E109009F5C61 /* PartytionAppUITests.xctest */,
 			);
@@ -397,7 +397,7 @@
 			);
 			name = PartytionApp;
 			productName = "partytion-app";
-			productReference = 2778397D22E5E108009F5C61 /* PartytionApp.app */;
+			productReference = 2778397D22E5E108009F5C61 /* Partytion.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2778399022E5E109009F5C61 /* PartytionAppTests */ = {
@@ -833,7 +833,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2N83T76JEX;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -843,8 +843,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = naruhiyo.PartytionApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = naruhiyo.Partytion;
+				PRODUCT_NAME = Partytion;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT)/Partytion-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -860,7 +860,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2N83T76JEX;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -870,8 +870,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = naruhiyo.PartytionApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = naruhiyo.Partytion;
+				PRODUCT_NAME = Partytion;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT)/Partytion-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
