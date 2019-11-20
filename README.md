@@ -4,8 +4,7 @@
 [![Lang: Swift 5.0](https://img.shields.io/badge/Lang-Swift%205.0-orange.svg)](https://developer.apple.com/jp/swift/)
 
 - [概要](#概要)
-- [インストール方法](#インストール方法)
-- [遊び方](#遊び方)
+- [デモ](#デモ)
 - [開発者向け](#開発者向け)
     - [環境導入](#環境導入)
         - [開発環境](#開発環境)
@@ -18,11 +17,8 @@
 飲み会でのミニゲームとして使えるiPhoneアプリです。  
 回答の割合がn対mになるような質問を考えて、みんなで回答しましょう！
 
-## インストール方法
-Coming soon...
-
-## 遊び方
-Coming soon...
+## デモ
+<img src="https://github.com/naruhiyo/partytion/blob/master/Documentations/demo.gif" width="30%">
 
 ## 開発者向け
 ### 環境導入
