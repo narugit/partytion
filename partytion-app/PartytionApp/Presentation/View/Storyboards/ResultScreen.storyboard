@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Au2-6O-ED5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Oshidashi-M-Gothic.otf">
+            <string>Oshidashi-M-Gothic-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Result View Controller-->
+        <scene sceneID="TAt-Ip-06s">
+            <objects>
+                <viewController storyboardIdentifier="ResultViewController" id="Au2-6O-ED5" customClass="ResultViewController" customModule="PartytionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AMV-8N-7J1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="top" semanticContentAttribute="playback" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLP-eJ-usd" userLabel="Animation Panel" customClass="AnimationView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="SplashAnimationView">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICH-Cg-5HQ" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="621" width="374" height="221"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ICH-Cg-5HQ" secondAttribute="height" multiplier="22:13" id="nwB-Nn-aYU"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="質問" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GN-Yx-1mg">
+                                <rect key="frame" x="20" y="100" width="374" height="32"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="d3R-zN-9Vu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Oshidashi-M-Gothic-Regular" family="Oshidashi-M-Gothic" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果発表" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpl-IT-ake">
+                                <rect key="frame" x="20" y="50" width="374" height="36"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="WHm-br-1Mi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Oshidashi-M-Gothic-Regular" family="Oshidashi-M-Gothic" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="質問" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AG-GU-Ejm">
+                                <rect key="frame" x="20" y="173" width="374" height="113"/>
+                                <accessibility key="accessibilityConfiguration" hint="Question Text" label="質問文">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="113" id="LQH-RQ-und"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Oshidashi-M-Gothic-Regular" family="Oshidashi-M-Gothic" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWu-24-Eyj" customClass="SSBouncyButton">
+                                <rect key="frame" x="274" y="550" width="120" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Owh-Y9-CpQ"/>
+                                    <constraint firstAttribute="width" constant="120" id="Wr8-b2-zNV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Oshidashi-M-Gothic-Regular" family="Oshidashi-M-Gothic" pointSize="20"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="もう一度遊ぶ">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="replyButtonTapped:" destination="Au2-6O-ED5" eventType="touchUpInside" id="JOz-Nj-6jj"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="n vs m" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tg-6Z-HAf" userLabel="Partition Text">
+                                <rect key="frame" x="20" y="285" width="374" height="44"/>
+                                <accessibility key="accessibilityConfiguration" hint="Question Text" label="質問文">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="fdH-TC-2VE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Oshidashi-M-Gothic-Regular" family="Oshidashi-M-Gothic" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.68190638699999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="jpl-IT-ake" firstAttribute="top" secondItem="Uyi-y5-TXg" secondAttribute="top" constant="6" id="20V-DE-UiO"/>
+                            <constraint firstItem="ICH-Cg-5HQ" firstAttribute="top" secondItem="bWu-24-Eyj" secondAttribute="bottom" constant="35" id="24X-Zx-bM5"/>
+                            <constraint firstItem="6tg-6Z-HAf" firstAttribute="leading" secondItem="Uyi-y5-TXg" secondAttribute="leading" constant="20" id="79e-Sv-oYe"/>
+                            <constraint firstItem="ICH-Cg-5HQ" firstAttribute="leading" secondItem="Uyi-y5-TXg" secondAttribute="leading" constant="20" id="Ae0-2x-iBb"/>
+                            <constraint firstItem="9GN-Yx-1mg" firstAttribute="leading" secondItem="Uyi-y5-TXg" secondAttribute="leading" constant="20" id="Imc-gk-e62"/>
+                            <constraint firstItem="6tg-6Z-HAf" firstAttribute="top" secondItem="9GN-Yx-1mg" secondAttribute="bottom" constant="153" id="JeR-bt-fMj"/>
+                            <constraint firstItem="Uyi-y5-TXg" firstAttribute="trailing" secondItem="6tg-6Z-HAf" secondAttribute="trailing" constant="20" id="MDR-M0-Nw0"/>
+                            <constraint firstItem="Uyi-y5-TXg" firstAttribute="bottom" secondItem="ICH-Cg-5HQ" secondAttribute="bottom" constant="20" id="NqE-ni-MZC"/>
+                            <constraint firstItem="Uyi-y5-TXg" firstAttribute="trailing" secondItem="9GN-Yx-1mg" secondAttribute="trailing" constant="20" id="P1f-Oe-qep"/>
+                            <constraint firstItem="1AG-GU-Ejm" firstAttribute="top" secondItem="9GN-Yx-1mg" secondAttribute="bottom" constant="41" id="bL3-zj-SJm"/>
+                            <constraint firstItem="Uyi-y5-TXg" firstAttribute="trailing" secondItem="bWu-24-Eyj" secondAttribute="trailing" constant="20" id="dgr-CS-t3V"/>
+                            <constraint firstItem="9GN-Yx-1mg" firstAttribute="top" secondItem="jpl-IT-ake" secondAttribute="bottom" constant="14" id="e1r-38-BXE"/>
+                            <constraint firstItem="jpl-IT-ake" firstAttribute="leading" secondItem="Uyi-y5-TXg" secondAttribute="leading" constant="20" id="kse-Dz-Ctt"/>
+                            <constraint firstItem="Uyi-y5-TXg" firstAttribute="trailing" secondItem="1AG-GU-Ejm" secondAttribute="trailing" constant="20" id="pIb-9M-9ki"/>
+                            <constraint firstItem="Uyi-y5-TXg" firstAttribute="trailing" secondItem="ICH-Cg-5HQ" secondAttribute="trailing" constant="20" id="qME-pc-8sn"/>
+                            <constraint firstItem="1AG-GU-Ejm" firstAttribute="leading" secondItem="Uyi-y5-TXg" secondAttribute="leading" constant="20" id="wwo-7f-1w1"/>
+                            <constraint firstItem="Uyi-y5-TXg" firstAttribute="trailing" secondItem="jpl-IT-ake" secondAttribute="trailing" constant="20" id="zgX-aE-s6j"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Uyi-y5-TXg"/>
+                    </view>
+                    <connections>
+                        <outlet property="animationPanel" destination="OLP-eJ-usd" id="KR0-bJ-S54"/>
+                        <outlet property="partitionText" destination="6tg-6Z-HAf" id="68Y-5a-BV9"/>
+                        <outlet property="pieChartView" destination="ICH-Cg-5HQ" id="LrD-se-bEn"/>
+                        <outlet property="questionText" destination="1AG-GU-Ejm" id="gDC-kV-NSH"/>
+                        <outlet property="replyButton" destination="bWu-24-Eyj" id="l5X-3f-jxW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UK4-V5-KeN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="155.07246376811597" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+</document>

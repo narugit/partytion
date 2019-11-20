@@ -3,25 +3,48 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03691879A41138B75228581D /* Pods_PartytionAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC524F970F6258EFA7CDED58 /* Pods_PartytionAppTests.framework */; };
 		27264E9D22F8434100839EBA /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27264E9C22F8434100839EBA /* SplashViewController.swift */; };
 		27264EA122F844EF00839EBA /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27264EA022F844EF00839EBA /* SplashScreen.storyboard */; };
-		27264EA422F850DF00839EBA /* BeerBubbles.json in Resources */ = {isa = PBXBuildFile; fileRef = 27264EA322F850DF00839EBA /* BeerBubbles.json */; };
 		27264EAC22F8533800839EBA /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27264EA722F8521B00839EBA /* Lottie.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		27264EAD22F854AA00839EBA /* Lottie.framework in Resources */ = {isa = PBXBuildFile; fileRef = 27264EA722F8521B00839EBA /* Lottie.framework */; };
 		27264EAF22F855D700839EBA /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27264EA722F8521B00839EBA /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2736892B230ECBE4000EC4B5 /* PartytionDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27368929230ECBE4000EC4B5 /* PartytionDB.xcdatamodeld */; };
+		2737BB57230AD562007E4C2E /* QuestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2737BB56230AD562007E4C2E /* QuestionPresenter.swift */; };
+		2737BB59230AE23B007E4C2E /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2737BB58230AE23B007E4C2E /* BasePresenter.swift */; };
+		2743B34823155E0200960F52 /* AnswerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743B34723155E0200960F52 /* AnswerPresenter.swift */; };
+		2744B01A2347802B00AD8520 /* CustomUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2744B0192347802B00AD8520 /* CustomUIColor.swift */; };
+		2744B01C234793EB00AD8520 /* QuestionThemeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2744B01B234793EB00AD8520 /* QuestionThemeEntity.swift */; };
+		2744B0202347949200AD8520 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2744B01F2347949200AD8520 /* JSONParser.swift */; };
+		2744B02A23479E6400AD8520 /* Oshidashi-M-Gothic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2744B02723479E6400AD8520 /* Oshidashi-M-Gothic.otf */; };
+		2744B02B23479E6400AD8520 /* BeerBubbles.json in Resources */ = {isa = PBXBuildFile; fileRef = 2744B02823479E6400AD8520 /* BeerBubbles.json */; };
+		2744B02C23479E6400AD8520 /* SeedData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2744B02923479E6400AD8520 /* SeedData.json */; };
 		2778398122E5E108009F5C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778398022E5E108009F5C61 /* AppDelegate.swift */; };
 		2778398822E5E109009F5C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2778398722E5E109009F5C61 /* Assets.xcassets */; };
-		2778398B22E5E109009F5C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2778398922E5E109009F5C61 /* LaunchScreen.storyboard */; };
 		2778399622E5E109009F5C61 /* partytion_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778399522E5E109009F5C61 /* partytion_appTests.swift */; };
 		277839A122E5E109009F5C61 /* partytion_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277839A022E5E109009F5C61 /* partytion_appUITests.swift */; };
+		277B45EF237988E5005702BE /* partytion-tutorial-1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 277B45EE237988E5005702BE /* partytion-tutorial-1.gif */; };
+		277B45F323798975005702BE /* partytion-tutorial-2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 277B45F023798974005702BE /* partytion-tutorial-2.gif */; };
+		277B45F423798975005702BE /* partytion-tutorial-4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 277B45F123798974005702BE /* partytion-tutorial-4.gif */; };
+		277B45F523798975005702BE /* partytion-tutorial-3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 277B45F223798975005702BE /* partytion-tutorial-3.gif */; };
+		278D73B1234854DB007EE478 /* FileIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278D73B0234854DB007EE478 /* FileIO.swift */; };
+		278D73B523485E0A007EE478 /* QuestionThemeJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278D73B423485E0A007EE478 /* QuestionThemeJSONParser.swift */; };
+		279FC9B2231B7CDD00DE300D /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FC9B1231B7CDD00DE300D /* SplashPresenter.swift */; };
+		279FC9B6231B863F00DE300D /* PlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FC9B5231B863F00DE300D /* PlayerPresenter.swift */; };
+		279FC9B8231B898F00DE300D /* HowToPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279FC9B7231B898F00DE300D /* HowToPresenter.swift */; };
 		27CEAAEB22F99CE9004C864B /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CEAAEA22F99CE9004C864B /* QuestionViewController.swift */; };
 		27CEAAED22F99D05004C864B /* QuestionScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CEAAEC22F99D05004C864B /* QuestionScreen.storyboard */; };
 		27CEAAEF22F9A324004C864B /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CEAAEE22F9A324004C864B /* AnswerViewController.swift */; };
 		27CEAAF122F9A338004C864B /* AnswerScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CEAAF022F9A338004C864B /* AnswerScreen.storyboard */; };
+		27ECB878231A30B5003AC9E1 /* ResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECB877231A30B5003AC9E1 /* ResultPresenter.swift */; };
+		4321887023568D5800278EF8 /* RootViewWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4321886F23568D5800278EF8 /* RootViewWireframe.swift */; };
+		4321887223568D7800278EF8 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4321887123568D7800278EF8 /* RootViewController.swift */; };
+		432188742356969E00278EF8 /* RootScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432188732356969E00278EF8 /* RootScreen.storyboard */; };
+		435E07CA2344C8DE0038D810 /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435E07C92344C8DE0038D810 /* PlaceHolderTextView.swift */; };
 		4376139D22F9A2340011B4E8 /* HowToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4376139C22F9A2340011B4E8 /* HowToViewController.swift */; };
 		4376139F22F9A33D0011B4E8 /* HowToScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4376139E22F9A33D0011B4E8 /* HowToScreen.storyboard */; };
 		437613A122F9B2B80011B4E8 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437613A022F9B2B80011B4E8 /* PlayerViewController.swift */; };
@@ -30,6 +53,8 @@
 		43D5114722FA7DC600C3D89C /* ResultScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D5114622FA7DC600C3D89C /* ResultScreen.storyboard */; };
 		43D5114922FA7FF200C3D89C /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D5114822FA7FF200C3D89C /* Charts.framework */; };
 		43D5114A22FA7FF200C3D89C /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43D5114822FA7FF200C3D89C /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BC3AFECF4D63D3A3833968C6 /* Pods_PartytionAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73722A01798EA4C24A126240 /* Pods_PartytionAppUITests.framework */; };
+		C46DEEFE6E8EDEA43254F7D3 /* Pods_PartytionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A78B1CCB8309BE23838FF1 /* Pods_PartytionApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,12 +90,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		06A63B30507F97D89ABF2744 /* Pods-PartytionAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartytionAppUITests.release.xcconfig"; path = "Target Support Files/Pods-PartytionAppUITests/Pods-PartytionAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		06C5117F7702EA13985993A7 /* Pods-PartytionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartytionApp.release.xcconfig"; path = "Target Support Files/Pods-PartytionApp/Pods-PartytionApp.release.xcconfig"; sourceTree = "<group>"; };
 		27264E9C22F8434100839EBA /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		27264EA022F844EF00839EBA /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 		27264EA222F84EE400839EBA /* Partytion-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Partytion-Bridging-Header.h"; sourceTree = "<group>"; };
-		27264EA322F850DF00839EBA /* BeerBubbles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BeerBubbles.json; sourceTree = "<group>"; };
 		27264EA722F8521B00839EBA /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
-		2778397D22E5E108009F5C61 /* PartytionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartytionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2736891E230EC842000EC4B5 /* PartytionApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PartytionApp.entitlements; sourceTree = "<group>"; };
+		2736892A230ECBE4000EC4B5 /* PartytionDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PartytionDB.xcdatamodel; sourceTree = "<group>"; };
+		2737BB56230AD562007E4C2E /* QuestionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenter.swift; sourceTree = "<group>"; };
+		2737BB58230AE23B007E4C2E /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		2743B34723155E0200960F52 /* AnswerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerPresenter.swift; sourceTree = "<group>"; };
+		2744B0192347802B00AD8520 /* CustomUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIColor.swift; sourceTree = "<group>"; };
+		2744B01B234793EB00AD8520 /* QuestionThemeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionThemeEntity.swift; sourceTree = "<group>"; };
+		2744B01F2347949200AD8520 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		2744B02723479E6400AD8520 /* Oshidashi-M-Gothic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oshidashi-M-Gothic.otf"; sourceTree = "<group>"; };
+		2744B02823479E6400AD8520 /* BeerBubbles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BeerBubbles.json; sourceTree = "<group>"; };
+		2744B02923479E6400AD8520 /* SeedData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SeedData.json; sourceTree = "<group>"; };
+		2778397D22E5E108009F5C61 /* Partytion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Partytion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2778398022E5E108009F5C61 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2778398722E5E109009F5C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2778398A22E5E109009F5C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,10 +118,27 @@
 		2778399C22E5E109009F5C61 /* PartytionAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PartytionAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		277839A022E5E109009F5C61 /* partytion_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = partytion_appUITests.swift; sourceTree = "<group>"; };
 		277839A222E5E109009F5C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		277B45EE237988E5005702BE /* partytion-tutorial-1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "partytion-tutorial-1.gif"; sourceTree = "<group>"; };
+		277B45F023798974005702BE /* partytion-tutorial-2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "partytion-tutorial-2.gif"; sourceTree = "<group>"; };
+		277B45F123798974005702BE /* partytion-tutorial-4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "partytion-tutorial-4.gif"; sourceTree = "<group>"; };
+		277B45F223798975005702BE /* partytion-tutorial-3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "partytion-tutorial-3.gif"; sourceTree = "<group>"; };
+		278D73B0234854DB007EE478 /* FileIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileIO.swift; sourceTree = "<group>"; };
+		278D73B423485E0A007EE478 /* QuestionThemeJSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionThemeJSONParser.swift; sourceTree = "<group>"; };
+		279FC9B1231B7CDD00DE300D /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		279FC9B5231B863F00DE300D /* PlayerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPresenter.swift; sourceTree = "<group>"; };
+		279FC9B7231B898F00DE300D /* HowToPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPresenter.swift; sourceTree = "<group>"; };
 		27CEAAEA22F99CE9004C864B /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		27CEAAEC22F99D05004C864B /* QuestionScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuestionScreen.storyboard; sourceTree = "<group>"; };
 		27CEAAEE22F9A324004C864B /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		27CEAAF022F9A338004C864B /* AnswerScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnswerScreen.storyboard; sourceTree = "<group>"; };
+		27ECB877231A30B5003AC9E1 /* ResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPresenter.swift; sourceTree = "<group>"; };
+		30C2F3056C94BB5463594BCF /* Pods-PartytionAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartytionAppTests.debug.xcconfig"; path = "Target Support Files/Pods-PartytionAppTests/Pods-PartytionAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		38A7B04F94E69DC71695CE08 /* Pods-PartytionAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartytionAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-PartytionAppUITests/Pods-PartytionAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		39912F1908118FA314359A1F /* Pods-PartytionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartytionApp.debug.xcconfig"; path = "Target Support Files/Pods-PartytionApp/Pods-PartytionApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4321886F23568D5800278EF8 /* RootViewWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewWireframe.swift; sourceTree = "<group>"; };
+		4321887123568D7800278EF8 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		432188732356969E00278EF8 /* RootScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RootScreen.storyboard; sourceTree = "<group>"; };
+		435E07C92344C8DE0038D810 /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
 		4376139C22F9A2340011B4E8 /* HowToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToViewController.swift; sourceTree = "<group>"; };
 		4376139E22F9A33D0011B4E8 /* HowToScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HowToScreen.storyboard; sourceTree = "<group>"; };
 		437613A022F9B2B80011B4E8 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +146,10 @@
 		43D5114422FA7D8B00C3D89C /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		43D5114622FA7DC600C3D89C /* ResultScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultScreen.storyboard; sourceTree = "<group>"; };
 		43D5114822FA7FF200C3D89C /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
+		73722A01798EA4C24A126240 /* Pods_PartytionAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PartytionAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0A78B1CCB8309BE23838FF1 /* Pods_PartytionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PartytionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C37DE46CA75693220B9D24F0 /* Pods-PartytionAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartytionAppTests.release.xcconfig"; path = "Target Support Files/Pods-PartytionAppTests/Pods-PartytionAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		FC524F970F6258EFA7CDED58 /* Pods_PartytionAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PartytionAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +159,7 @@
 			files = (
 				27264EAC22F8533800839EBA /* Lottie.framework in Frameworks */,
 				43D5114922FA7FF200C3D89C /* Charts.framework in Frameworks */,
+				C46DEEFE6E8EDEA43254F7D3 /* Pods_PartytionApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03691879A41138B75228581D /* Pods_PartytionAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC3AFECF4D63D3A3833968C6 /* Pods_PartytionAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +185,7 @@
 		27264E9922F83FE100839EBA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				435E07C82344C8DE0038D810 /* Components */,
 				27264E9B22F840FB00839EBA /* Presenter */,
 				27264E9A22F840E700839EBA /* View */,
 			);
@@ -133,18 +195,9 @@
 		27264E9A22F840E700839EBA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				27264E9C22F8434100839EBA /* SplashViewController.swift */,
-				27264EA022F844EF00839EBA /* SplashScreen.storyboard */,
-				4376139C22F9A2340011B4E8 /* HowToViewController.swift */,
-				4376139E22F9A33D0011B4E8 /* HowToScreen.storyboard */,
-				437613A022F9B2B80011B4E8 /* PlayerViewController.swift */,
-				437613A222F9B3100011B4E8 /* PlayerScreen.storyboard */,
-				27CEAAEA22F99CE9004C864B /* QuestionViewController.swift */,
-				27CEAAEC22F99D05004C864B /* QuestionScreen.storyboard */,
-				27CEAAEE22F9A324004C864B /* AnswerViewController.swift */,
-				27CEAAF022F9A338004C864B /* AnswerScreen.storyboard */,
-				43D5114422FA7D8B00C3D89C /* ResultViewController.swift */,
-				43D5114622FA7DC600C3D89C /* ResultScreen.storyboard */,
+				27EDDA95235EC0A800696FFB /* WireFrame */,
+				27EDDA94235EC07700696FFB /* Controllers */,
+				27EDDA93235EC05E00696FFB /* Storyboards */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,24 +205,60 @@
 		27264E9B22F840FB00839EBA /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				2737BB56230AD562007E4C2E /* QuestionPresenter.swift */,
+				2737BB58230AE23B007E4C2E /* BasePresenter.swift */,
+				2743B34723155E0200960F52 /* AnswerPresenter.swift */,
+				27ECB877231A30B5003AC9E1 /* ResultPresenter.swift */,
+				279FC9B1231B7CDD00DE300D /* SplashPresenter.swift */,
+				279FC9B5231B863F00DE300D /* PlayerPresenter.swift */,
+				279FC9B7231B898F00DE300D /* HowToPresenter.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		27264EA522F850E600839EBA /* assets */ = {
-			isa = PBXGroup;
-			children = (
-				27264EA322F850DF00839EBA /* BeerBubbles.json */,
-			);
-			path = assets;
 			sourceTree = "<group>";
 		};
 		27264EA622F8521A00839EBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				27264EA722F8521B00839EBA /* Lottie.framework */,
+				C0A78B1CCB8309BE23838FF1 /* Pods_PartytionApp.framework */,
+				FC524F970F6258EFA7CDED58 /* Pods_PartytionAppTests.framework */,
+				73722A01798EA4C24A126240 /* Pods_PartytionAppUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2736891F230EC9D8000EC4B5 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2744B0212347949700AD8520 /* Components */,
+				27368929230ECBE4000EC4B5 /* PartytionDB.xcdatamodeld */,
+				2744B01B234793EB00AD8520 /* QuestionThemeEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		2744B0212347949700AD8520 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				278D73B423485E0A007EE478 /* QuestionThemeJSONParser.swift */,
+				2744B01F2347949200AD8520 /* JSONParser.swift */,
+				278D73B0234854DB007EE478 /* FileIO.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2744B02623479E3000AD8520 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				277B45EE237988E5005702BE /* partytion-tutorial-1.gif */,
+				277B45F023798974005702BE /* partytion-tutorial-2.gif */,
+				277B45F223798975005702BE /* partytion-tutorial-3.gif */,
+				277B45F123798974005702BE /* partytion-tutorial-4.gif */,
+				2744B02923479E6400AD8520 /* SeedData.json */,
+				2744B02823479E6400AD8520 /* BeerBubbles.json */,
+				2744B02723479E6400AD8520 /* Oshidashi-M-Gothic.otf */,
+			);
+			path = assets;
 			sourceTree = "<group>";
 		};
 		2778397422E5E108009F5C61 = {
@@ -182,13 +271,14 @@
 				2778399F22E5E109009F5C61 /* PartytionAppUITests */,
 				2778397E22E5E108009F5C61 /* Products */,
 				27264EA622F8521A00839EBA /* Frameworks */,
+				5A1554849A4039538D97A35B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		2778397E22E5E108009F5C61 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2778397D22E5E108009F5C61 /* PartytionApp.app */,
+				2778397D22E5E108009F5C61 /* Partytion.app */,
 				2778399122E5E109009F5C61 /* PartytionAppTests.xctest */,
 				2778399C22E5E109009F5C61 /* PartytionAppUITests.xctest */,
 			);
@@ -198,7 +288,9 @@
 		2778397F22E5E108009F5C61 /* PartytionApp */ = {
 			isa = PBXGroup;
 			children = (
-				27264EA522F850E600839EBA /* assets */,
+				2744B02623479E3000AD8520 /* assets */,
+				2736891F230EC9D8000EC4B5 /* Entity */,
+				2736891E230EC842000EC4B5 /* PartytionApp.entitlements */,
 				2778398022E5E108009F5C61 /* AppDelegate.swift */,
 				27264E9922F83FE100839EBA /* Presentation */,
 				2778398722E5E109009F5C61 /* Assets.xcassets */,
@@ -226,6 +318,64 @@
 			path = PartytionAppUITests;
 			sourceTree = "<group>";
 		};
+		27EDDA93235EC05E00696FFB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				27264EA022F844EF00839EBA /* SplashScreen.storyboard */,
+				4376139E22F9A33D0011B4E8 /* HowToScreen.storyboard */,
+				437613A222F9B3100011B4E8 /* PlayerScreen.storyboard */,
+				27CEAAEC22F99D05004C864B /* QuestionScreen.storyboard */,
+				27CEAAF022F9A338004C864B /* AnswerScreen.storyboard */,
+				43D5114622FA7DC600C3D89C /* ResultScreen.storyboard */,
+				432188732356969E00278EF8 /* RootScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		27EDDA94235EC07700696FFB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				27264E9C22F8434100839EBA /* SplashViewController.swift */,
+				4376139C22F9A2340011B4E8 /* HowToViewController.swift */,
+				437613A022F9B2B80011B4E8 /* PlayerViewController.swift */,
+				27CEAAEA22F99CE9004C864B /* QuestionViewController.swift */,
+				27CEAAEE22F9A324004C864B /* AnswerViewController.swift */,
+				43D5114422FA7D8B00C3D89C /* ResultViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		27EDDA95235EC0A800696FFB /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				4321886F23568D5800278EF8 /* RootViewWireframe.swift */,
+				4321887123568D7800278EF8 /* RootViewController.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		435E07C82344C8DE0038D810 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				435E07C92344C8DE0038D810 /* PlaceHolderTextView.swift */,
+				2744B0192347802B00AD8520 /* CustomUIColor.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5A1554849A4039538D97A35B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39912F1908118FA314359A1F /* Pods-PartytionApp.debug.xcconfig */,
+				06C5117F7702EA13985993A7 /* Pods-PartytionApp.release.xcconfig */,
+				30C2F3056C94BB5463594BCF /* Pods-PartytionAppTests.debug.xcconfig */,
+				C37DE46CA75693220B9D24F0 /* Pods-PartytionAppTests.release.xcconfig */,
+				38A7B04F94E69DC71695CE08 /* Pods-PartytionAppUITests.debug.xcconfig */,
+				06A63B30507F97D89ABF2744 /* Pods-PartytionAppUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -233,11 +383,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 277839A522E5E109009F5C61 /* Build configuration list for PBXNativeTarget "PartytionApp" */;
 			buildPhases = (
+				8F5C524708ADDF6BC34C35D4 /* [CP] Check Pods Manifest.lock */,
 				2778397922E5E108009F5C61 /* Sources */,
 				2778397A22E5E108009F5C61 /* Frameworks */,
 				2778397B22E5E108009F5C61 /* Resources */,
 				27264EB022F855D700839EBA /* Embed Frameworks */,
 				43D5114B22FA819E00C3D89C /* ShellScript */,
+				D5FF0862A104D1C73E1BC19E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -245,13 +397,14 @@
 			);
 			name = PartytionApp;
 			productName = "partytion-app";
-			productReference = 2778397D22E5E108009F5C61 /* PartytionApp.app */;
+			productReference = 2778397D22E5E108009F5C61 /* Partytion.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2778399022E5E109009F5C61 /* PartytionAppTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 277839A822E5E109009F5C61 /* Build configuration list for PBXNativeTarget "PartytionAppTests" */;
 			buildPhases = (
+				61E5302DADB6EE7DBB75DB1B /* [CP] Check Pods Manifest.lock */,
 				2778398D22E5E109009F5C61 /* Sources */,
 				2778398E22E5E109009F5C61 /* Frameworks */,
 				2778398F22E5E109009F5C61 /* Resources */,
@@ -270,6 +423,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 277839AB22E5E109009F5C61 /* Build configuration list for PBXNativeTarget "PartytionAppUITests" */;
 			buildPhases = (
+				4C80E0519E790F1C98F05C45 /* [CP] Check Pods Manifest.lock */,
 				2778399822E5E109009F5C61 /* Sources */,
 				2778399922E5E109009F5C61 /* Frameworks */,
 				2778399A22E5E109009F5C61 /* Resources */,
@@ -290,12 +444,20 @@
 		2778397522E5E108009F5C61 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					gif,
+				);
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = naruhiyo;
 				TargetAttributes = {
 					2778397C22E5E108009F5C61 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 0;
+							};
+						};
 					};
 					2778399022E5E109009F5C61 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -332,15 +494,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				277B45F423798975005702BE /* partytion-tutorial-4.gif in Resources */,
+				432188742356969E00278EF8 /* RootScreen.storyboard in Resources */,
+				277B45EF237988E5005702BE /* partytion-tutorial-1.gif in Resources */,
 				27264EAD22F854AA00839EBA /* Lottie.framework in Resources */,
+				277B45F323798975005702BE /* partytion-tutorial-2.gif in Resources */,
 				43D5114722FA7DC600C3D89C /* ResultScreen.storyboard in Resources */,
-				2778398B22E5E109009F5C61 /* LaunchScreen.storyboard in Resources */,
+				2744B02B23479E6400AD8520 /* BeerBubbles.json in Resources */,
 				2778398822E5E109009F5C61 /* Assets.xcassets in Resources */,
 				437613A322F9B3100011B4E8 /* PlayerScreen.storyboard in Resources */,
-				27264EA422F850DF00839EBA /* BeerBubbles.json in Resources */,
 				27264EA122F844EF00839EBA /* SplashScreen.storyboard in Resources */,
 				4376139F22F9A33D0011B4E8 /* HowToScreen.storyboard in Resources */,
+				2744B02C23479E6400AD8520 /* SeedData.json in Resources */,
 				27CEAAED22F99D05004C864B /* QuestionScreen.storyboard in Resources */,
+				277B45F523798975005702BE /* partytion-tutorial-3.gif in Resources */,
+				2744B02A23479E6400AD8520 /* Oshidashi-M-Gothic.otf in Resources */,
 				27CEAAF122F9A338004C864B /* AnswerScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +548,89 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
+		4C80E0519E790F1C98F05C45 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PartytionAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61E5302DADB6EE7DBB75DB1B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PartytionAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F5C524708ADDF6BC34C35D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PartytionApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5FF0862A104D1C73E1BC19E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PartytionApp/Pods-PartytionApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PartytionApp/Pods-PartytionApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PartytionApp/Pods-PartytionApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -387,13 +638,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27ECB878231A30B5003AC9E1 /* ResultPresenter.swift in Sources */,
+				279FC9B6231B863F00DE300D /* PlayerPresenter.swift in Sources */,
+				278D73B523485E0A007EE478 /* QuestionThemeJSONParser.swift in Sources */,
+				279FC9B2231B7CDD00DE300D /* SplashPresenter.swift in Sources */,
 				4376139D22F9A2340011B4E8 /* HowToViewController.swift in Sources */,
+				4321887023568D5800278EF8 /* RootViewWireframe.swift in Sources */,
+				2744B01A2347802B00AD8520 /* CustomUIColor.swift in Sources */,
+				2737BB59230AE23B007E4C2E /* BasePresenter.swift in Sources */,
+				2744B01C234793EB00AD8520 /* QuestionThemeEntity.swift in Sources */,
+				435E07CA2344C8DE0038D810 /* PlaceHolderTextView.swift in Sources */,
+				2744B0202347949200AD8520 /* JSONParser.swift in Sources */,
 				27264E9D22F8434100839EBA /* SplashViewController.swift in Sources */,
+				4321887223568D7800278EF8 /* RootViewController.swift in Sources */,
+				2737BB57230AD562007E4C2E /* QuestionPresenter.swift in Sources */,
+				2743B34823155E0200960F52 /* AnswerPresenter.swift in Sources */,
+				279FC9B8231B898F00DE300D /* HowToPresenter.swift in Sources */,
 				27CEAAEF22F9A324004C864B /* AnswerViewController.swift in Sources */,
+				2736892B230ECBE4000EC4B5 /* PartytionDB.xcdatamodeld in Sources */,
 				27CEAAEB22F99CE9004C864B /* QuestionViewController.swift in Sources */,
 				2778398122E5E108009F5C61 /* AppDelegate.swift in Sources */,
 				437613A122F9B2B80011B4E8 /* PlayerViewController.swift in Sources */,
 				43D5114522FA7D8B00C3D89C /* ResultViewController.swift in Sources */,
+				278D73B1234854DB007EE478 /* FileIO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,9 +827,11 @@
 		};
 		277839A622E5E109009F5C61 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39912F1908118FA314359A1F /* Pods-PartytionApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -574,20 +843,22 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = naruhiyo.PartytionApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = naruhiyo.Partytion;
+				PRODUCT_NAME = Partytion;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT)/Partytion-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		277839A722E5E109009F5C61 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06C5117F7702EA13985993A7 /* Pods-PartytionApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -599,17 +870,18 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = naruhiyo.PartytionApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = naruhiyo.Partytion;
+				PRODUCT_NAME = Partytion;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT)/Partytion-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		277839A922E5E109009F5C61 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30C2F3056C94BB5463594BCF /* Pods-PartytionAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -630,6 +902,7 @@
 		};
 		277839AA22E5E109009F5C61 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C37DE46CA75693220B9D24F0 /* Pods-PartytionAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -650,6 +923,7 @@
 		};
 		277839AC22E5E109009F5C61 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38A7B04F94E69DC71695CE08 /* Pods-PartytionAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -669,6 +943,7 @@
 		};
 		277839AD22E5E109009F5C61 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06A63B30507F97D89ABF2744 /* Pods-PartytionAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -726,6 +1001,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		27368929230ECBE4000EC4B5 /* PartytionDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2736892A230ECBE4000EC4B5 /* PartytionDB.xcdatamodel */,
+			);
+			currentVersion = 2736892A230ECBE4000EC4B5 /* PartytionDB.xcdatamodel */;
+			path = PartytionDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2778397522E5E108009F5C61 /* Project object */;
 }

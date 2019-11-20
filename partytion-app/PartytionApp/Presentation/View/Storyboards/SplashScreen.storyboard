@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Pc-4q-0W8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="wU8-m7-9OX">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" id="6Pc-4q-0W8" customClass="SplashViewController" customModule="PartytionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ill-eh-6U5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="top" semanticContentAttribute="playback" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt2-b4-Z3H" customClass="AnimationView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <accessibility key="accessibilityConfiguration" identifier="SplashAnimationView">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lt2-b4-Z3H" firstAttribute="trailing" secondItem="yyj-Va-tyb" secondAttribute="trailing" id="5pM-TU-4st"/>
+                            <constraint firstAttribute="bottom" secondItem="lt2-b4-Z3H" secondAttribute="bottom" id="Lo7-Jd-S0O"/>
+                            <constraint firstItem="lt2-b4-Z3H" firstAttribute="top" secondItem="ill-eh-6U5" secondAttribute="top" id="WpA-tS-h3c"/>
+                            <constraint firstItem="lt2-b4-Z3H" firstAttribute="leading" secondItem="yyj-Va-tyb" secondAttribute="leading" id="sbu-cG-2kn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yyj-Va-tyb"/>
+                    </view>
+                    <connections>
+                        <outlet property="animationPanel" destination="lt2-b4-Z3H" id="VWh-bN-Xnf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uAh-7y-7uM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-217.39130434782609" y="-133.25892857142856"/>
+        </scene>
+    </scenes>
+</document>
